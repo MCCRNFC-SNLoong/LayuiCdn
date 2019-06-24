@@ -11,7 +11,7 @@
 
 #### 安装教程
 
-1. 测试
+1. LayuiCdn官方网址 ：https://www.layuicdn.com/
 2. xxxx
 3. xxxx
 
