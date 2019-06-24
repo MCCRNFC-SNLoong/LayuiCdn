@@ -1,0 +1,17 @@
+document.writeln("        <ul class=\"layui-nav\">");
+document.writeln("          <li class=\"layui-nav-item layui-this\">");
+document.writeln("            <a class=\"cursor-pointer\" onclick=\"linkjump(\'_self\',\'./\');\">");
+document.writeln("              文档");
+document.writeln("            </a>");
+document.writeln("          </li>");
+document.writeln("          <li class=\"layui-nav-item layui-hide-xs\">");
+document.writeln("            <a class=\"cursor-pointer\" onclick=\"linkjump(\'_self\',\'http://fly.layui.com/\');\">");
+document.writeln("              Layui社区<span class=\"layui-badge-dot\"></span>");
+document.writeln("            </a>");
+document.writeln("          </li>");
+document.writeln("          <li class=\"layui-nav-item layui-hide-xs\">");
+document.writeln("            <a class=\"cursor-pointer\" onclick=\"linkjump(\'_self\',\'http://www.layui.com/\');\">");
+document.writeln("              Layui官网");
+document.writeln("            </a>");
+document.writeln("          </li>");
+document.writeln("        </ul>");
