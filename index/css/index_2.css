@@ -8,7 +8,7 @@ html, body {
 }
 .header {
   background-color: #16171A;
-  border-bottom-color: #2F313E;
+  border-bottom-color: #16171A;
 }
 .alone-banner {
   height: auto;
@@ -66,7 +66,7 @@ html, body {
   background-color: #ddd;
 }
 .chc-friendship {
-  padding: 10px 0;
+  /*padding: 10px 0;*/
   line-height: 30px;
   text-align: center;
   color: #333;

@@ -4,6 +4,9 @@ html, body {
   /*min-width: 1480px;*/
   /*max-width: 4096px;*/
 }
+html, body, * {
+  font-family: "Microsoft YaHei","微软雅黑",sans-serif;
+}
 /*整体部分*/
 ::-webkit-scrollbar {
   width: 14px;
@@ -57,7 +60,7 @@ h1, h2, h3 {
   top: 16px;
 }
 .logo img {
-  width: 122px;
+  /*width: 122px;*/
   height: 31px;
 }
 .header .layui-nav {
@@ -151,7 +154,7 @@ h1, h2, h3 {
 .component {
   position: absolute;
   width: 200px;
-  left: 130px;
+  left: 230px;
   top: 16px;
 }
 .component .layui-input {
@@ -633,6 +636,7 @@ body .layui-layer-dir .layui-layer-content {
 }
 .site-tree .layui-tree .site-tree-noicon a cite {
   padding-left: 15px;
+  font-size: 13px;
 }
 .site-tree .layui-tree li a em {
   font-size: 12px;
