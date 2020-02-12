@@ -11,7 +11,8 @@
 #### 依托架构
  **LayuiCdn 基于 [猫云](https://www.maoyuncloud.com/?from=LayuiCdn)[Cdn] + 腾讯云 [API网关 + SCF无服务器云函数 + DSA动态网络加速 + COS对象储存] 等，全局托管实现全年不休的云上计算业务，全程无需人为干预即可提供自动运行等计算能力,进行实时监控，并24小时内更新到LayuiCdn API** 
 
-#### 基础用法
+
+#### 1-基础用法
 
 1. 通常我们使用Layui需要在面页下载并加载Layui目录下文件如下
 
@@ -91,7 +92,7 @@
 <script src="https://www.layuicdn.com/layui-v2.5.6/layui.js"></script>
 ```
 
-#### 高级用法
+#### 2-高级用法
 1. 当我们感觉上述方法使用LayuiCdn还是很臃肿，那么您可以尝试以下写法
 
 ```
