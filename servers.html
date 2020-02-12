@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <!--浏览器内核控制-->
+    <meta name="renderer" content="webkit" />
+    <title>节点检测 - LayuiCDN静态库 免费 CDN 加速服务</title>
+    <meta name="description" content="LayuiCDN为广大Layui用户提供免费前端UI框架cdn加速服务。" />
+    <meta name="keywords" content="layui,layuicdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
+    <meta name="copyright" content="CHC云计算" />
+    <!--公共样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/layui/css/layui.css" />
+    <!--前端样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
+    <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!--[if lt IE 9]>
+      <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="//cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- CHC云计算旗下 | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2020-01-30 | 官网：cloud.hcwl520.com.cn -->
+    <!--全局脚本元素start-->
+    <script type="text/javascript">
+      var $Port    = 'https:';
+      $protocol    = location.protocol;
+      if ($protocol != $Port) {
+        location.href = $Port + location.href.substring($Port.length);
+      }
+      $port        = location.port;
+      $host        = location.hostname;
+      $path        = location.pathname;
+      $curl        = location.href;
+      $hosts       = $protocol + '//' + $host + '/';
+      $Chc_Copy    = false;
+      $update_Time = '202002121820';
+      $domain      = 'www.layuicdn.com';
+      $api         = '//api.layuicdn.com/';
+      if ($host != $domain) {
+        location.href = $protocol + '//' + $domain + '/';
+      }
+    </script>
+    <style type="text/css">
+      .header {
+        background: linear-gradient(120deg, #4affcc, #0abf5b);
+        border-color: none;
+        border: none;
+      }
+      .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
+        background-color: #FF5722 !important;
+      }
+      .green {
+        color: #33b86c !important;
+      }
+      .red {
+        color: #FF5722 !important;
+      }
+      .delayes, .ttl {
+        display: none;
+      }
+      .control {
+        font-size: 12px;
+      }
+      .control .layui-input-inline {
+        width: 190px;
+      }
+      .control-label {
+        width: auto;
+        margin-top: 5px;
+      }
+      .control-mid {
+        font-size: 12px;
+        color: #999;
+        margin-top: 5px;
+      }
+      .control .layui-progress {
+        margin-top: 22px;
+      }
+      .layui-progress-bar {
+        background-color: #0abf5b;
+      }
+      .layui-table .layui-progress-bar {
+        background: linear-gradient(120deg, #0abf5b, #4affcc);
+      }
+      .refresh {
+        background: linear-gradient(120deg, #4efffb, #0abf5b);
+        color: #fff;
+      }
+      .load {
+        color: #0abf5b;
+        font-size: 15px;
+        margin-left: 10px;
+      }
+      .layui-card-body [lay-id="LayuiCdn_Table_Top"] [data-index="0"] {
+        color: #FF5722;
+      }
+      .layui-card-body [lay-id="LayuiCdn_Table_Top"] [data-index="1"] {
+        color: #FFB800;
+      }
+      .layui-card-body [lay-id="LayuiCdn_Table_Top"] [data-index="2"] {
+        color: #006EFF;
+      }
+    </style>
+  </head>
+  <!--主体元素start-->
+  <body ondragstart="return false">
+    <!--头部元素start-->
+    <div class="layui-header header header-doc">
+      <div class="layui-main">
+        <a class="logo" href="/?rurl=CdnLogo">
+          <img src="./index/images/logo.png" alt="LayuiCdn" />
+        </a>
+        <ul class="layui-nav">
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./index.html',0);">
+              首页
+            </a>
+          </li>
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./api.html',0);">
+              API
+            </a>
+          </li>
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./extend.html',0);">
+              组件
+            </a>
+          </li>
+          <li class="layui-nav-item layui-this">
+            <a class="cursor-pointer">
+              检测
+            </a>
+          </li>
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./feedback.html',0);">
+              反馈<span class="layui-badge-dot"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="layui-main">
+      <div style="padding: 20px;">
+        <div class="layui-row layui-col-space15">
+          <div class="layui-col-md12 faq">
+            <div class="layui-card">
+              <div class="layui-card-header">
+                宿机负载状态
+                <i class="load layui-icon layui-icon-loading-1 layui-anim layui-anim-rotate layui-anim-loop"></i>
+              </div>
+              <div class="layui-card-body">
+                <div class="layui-form-item">
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">华东大区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="east">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">集群负载</div>
+                  </div>
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">华南大区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="south">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">集群负载</div>
+                  </div>
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">华中大区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="central">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">集群负载</div>
+                  </div>
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">华北大区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="north">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">集群负载</div>
+                  </div>
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">西北大区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="northwest">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">宿机负载</div>
+                  </div>
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">西南大区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="southwest">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">集群负载</div>
+                  </div>
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">东北大区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="northeast">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">宿机负载</div>
+                  </div>
+                  <div class="layui-inline control">
+                    <label class="layui-form-label control-label">港澳台区</label>
+                    <div class="layui-input-inline">
+                      <div class="layui-progress" lay-showpercent="true" lay-filter="HkMoTwn">
+                        <div class="layui-progress-bar" lay-percent="0%"></div>
+                      </div>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux control-mid">宿机负载</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-main">
+      <div style="padding: 20px;">
+        <div class="layui-row layui-col-space15">
+          <div class="layui-col-md12 faq">
+            <div class="layui-card">
+              <div class="layui-card-header">
+                节点随机探测1~10%
+                <button class="layui-btn layui-btn-xs refresh" onClick="window.location.href = './servers.html?v=' +(new Date()).getTime();">
+                  重新探测
+                </button>
+              </div>
+              <div class="layui-card-body">
+                <table class="layui-table" lay-size="sm">
+                  <colgroup>
+                    <col width="20" />
+                    <col width="150" />
+                    <col width="400" />
+                    <col width="80" />
+                    <col width="80" />
+                    <col width="150" />
+                    <col width="150" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>
+                        序号
+                      </th>
+                      <th>
+                        节点IP
+                      </th>
+                      <th>
+                        机房信息
+                      </th>
+                      <th>
+                        延时
+                      </th>
+                      <th>
+                        TTL
+                      </th>
+                      <th>
+                        状态
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="ServersList">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-main">
+      <div style="padding: 20px;">
+        <div class="layui-row layui-col-space15">
+          <div class="layui-col-md12 faq">
+            <div class="layui-card">
+              <div class="layui-card-header">
+                全国机房负载Top100
+                <span style="font-size: 11px;" class="layui-word-aux">60分钟更新一次瞬时数据</span>
+                <button class="layui-btn layui-btn-xs refresh" onClick="LayuiCdn_Table_Top();">
+                  刷新
+                </button>
+              </div>
+              <div class="layui-card-body">
+                <table class="layui-hide" lay-filter="LayuiCdn_Table_Top" id="LayuiCdn_Table_Top"></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-footer footer">
+      <p class="beian">
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/hongdun.gif" style="height: 21px;" alt="工信备案" />
+          京ICP备17014996号-7
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302000755" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/gonganbei.png" style="height: 21px;" alt="公安备案" />
+          京公网安备11011302000755号
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://verify.nic.xin/xinDetail/xinAuthInfoDetail?domainName=layuicdn.com" onmouseover="layer.tips('XIN站认证',this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/alxin.png" style="height: 21px;" alt="阿里信用" />
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.maoyuncloud.com/?from=LayuiCdn" onmouseover="layer.tips('独家CDN赞助商',this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/maoyun_logo.png" style="height: 21px;" alt="猫云" />
+        </a>
+      </p>
+      <div class="chc-friendship">
+        友情链接：
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/admin/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          LayAdmin
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://fly.layui.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui社区
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://pay.umistrong.com.cn/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          个人免签支付
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.qllh.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          手机靓号
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://layui.newphper.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui主题生成
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://cloud.hcwl520.com.cn/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          CHC云计算
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.maoyuncloud.com/?from=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          猫云CDN
+        </a>
+      </div>
+      <div class="layui-main">
+        <p>
+          Copyright&nbsp;&copy;&nbsp;2012-<script>document.write(new Date().getFullYear());</script>&nbsp;
+          <a class="cursor-pointer" rel="nofollow" onClick="linkjump('_self','//cloud.hcwl520.com.cn/');">
+            cloud.hcwl520.com.cn
+          </a>
+          &nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;锦江区未来滴网络工作室-CHC云计算官网&nbsp;版权所有
+        </p>
+      </div>
+    </div>
+    <!--内容主体元素end-->
+    <!--公共脚本元素start-->
+    <script src="./index/js/jquery-3.4.1.min.js"></script>
+    <script src="./index/layui/layui.js"></script>
+    <!--前端脚本元素start-->
+    <script src="./index/js/index_1.js"></script>
+    <script src="./index/js/index_2.js"></script>
+    <script src="./index/js/index_7.js"></script>
+    <!--信息上报脚本元素start-->
+    <script src="//cdn-1.cache-1.hcwl520.com.cn/oauth2.0/cloud/api.js" async></script>
+    <!--自动推送脚本元素start-->
+    <script src="./index/js/link_push.js"></script>
+    <!--前端统计脚本元素start-->
+    <div style="display: none;">
+      <script src="https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871" language="JavaScript"></script>
+    </div>
+  </body>
+  <!--主体元素end-->
+</html>

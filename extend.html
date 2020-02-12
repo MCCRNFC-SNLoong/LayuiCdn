@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <!--浏览器内核控制-->
+    <meta name="renderer" content="webkit" />
+    <title>开放组件 - LayuiCDN静态库 免费 CDN 加速服务</title>
+    <meta name="description" content="LayuiCDN为广大Layui用户提供免费前端UI框架cdn加速服务。" />
+    <meta name="keywords" content="layui,layuicdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
+    <meta name="copyright" content="CHC云计算" />
+    <!--公共样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/layui/css/layui.css" />
+    <!--前端样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
+    <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!--[if lt IE 9]>
+      <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="//cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- CHC云计算旗下 | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2019-08-03 | 官网：cloud.hcwl520.com.cn -->
+    <!--全局脚本元素start-->
+    <script type="text/javascript">
+      var $Port    = 'https:';
+      $protocol    = location.protocol;
+      if ($protocol != $Port) {
+        location.href = $Port + location.href.substring($Port.length);
+      }
+      $port        = location.port;
+      $host        = location.hostname;
+      $path        = location.pathname;
+      $curl        = location.href;
+      $hosts       = $protocol + '//' + $host + '/';
+      $Chc_Copy    = true;
+      $update_Time = '202002081503';
+      $domain      = 'www.layuicdn.com';
+      $api         = '//api.layuicdn.com/';
+      if ($host != $domain) {
+        location.href = $protocol + '//' + $domain + '/';
+      }
+    </script>
+    <style type="text/css">
+      .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
+        background-color: #FF5722 !important;
+      }
+      .layui-table tbody tr:hover, .layui-table thead tr, .layui-table-click, .layui-table-header, .layui-table-hover, .layui-table-mend, .layui-table-patch, .layui-table-tool, .layui-table[lay-even] tr:nth-child(even) {
+        background-color: #fff;
+      }
+      .layui-table-view .layui-table[lay-size=sm] .layui-table-cell {
+        height: 25px;
+        line-height: 24px;
+      }
+      .layui-laypage .layui-laypage-curr .layui-laypage-em {
+        background-color: #006eff !important;
+      }
+      .layui-laypage input:focus, .layui-laypage select:focus {
+        border-color: #006eff !important;
+      }
+      .layui-laypage-prev:hover, .layui-laypage a:hover {
+        color: #01AAED;
+      }
+      .layui-laypage-btn:hover {
+        border-color: #006eff !important;
+      }
+      .cursor-pointer {
+        cursor: pointer !important;
+      }
+      .api-a {
+        color: #0abf5b;
+      }
+      .api-a:hover {
+        color: #0abf5b;
+      }
+      .layui-field-title {
+        margin-top: 50px;
+      }
+      .faq {
+        margin-top: 20px;
+      }
+      .faq .layui-card-body {
+        padding: 20px 20px;
+      }
+      #Index-extend-release-extend-View {
+        margin-top: 20px;
+      }
+      .qq-login, .btn-submit, .release-extend, .layui-layer-release-extend .layui-layer-title, .layui-layer-qq-login .layui-layer-title {
+        background: linear-gradient(120deg, #bc00e3, #4efffb);
+        color: #fff;
+      }
+      .btn-right {
+        background: linear-gradient(120deg, #4efffb, #bc00e3);
+        color: #fff;
+      }
+      .btn-left {
+        background: linear-gradient(120deg, #bc00e3, #4efffb);
+        color: #fff;
+      }
+      .header {
+        background: linear-gradient(120deg, #bc00e3, #4efffb);
+        border-color: none;
+        border: none;
+      }
+      .userlogo {
+        border-radius: 100%;
+      }
+      .btn-submit {
+        width: 190px;
+      }
+      .input-url {
+        width: 350px !important;
+      }
+      .ys-red {
+        color: #FF5722;
+      }
+      .ys-orange {
+        color: #FFB800;
+      }
+      .ys-green {
+        color: #0abf5b;
+      }
+      .ys-gray {
+        color: #c3c3c3;
+      }
+      .layui-input, .layui-select, .layui-textarea, .layui-form-select dl {
+        border-radius: 0 !important;
+      }
+      .layui-input:focus, .layui-textarea:focus {
+        border-color: #006eff !important;
+      }
+      .layui-input:hover, .layui-textarea:hover {
+        /*border-color: #33CC99 !important;*/
+      }
+    </style>
+  </head>
+  <!--主体元素start-->
+  <body ondragstart="return false">
+    <!--头部元素start-->
+    <div class="layui-header header header-doc">
+      <div class="layui-main">
+        <a class="logo" href="/?rurl=CdnLogo">
+          <img src="./index/images/logo.png" alt="LayuiCdn" />
+        </a>
+        <ul class="layui-nav">
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./index.html',0);">
+              首页
+            </a>
+          </li>
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./api.html',0);">
+              API
+            </a>
+          </li>
+          <li class="layui-nav-item layui-this">
+            <a class="cursor-pointer">
+              组件
+            </a>
+          </li>
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./servers.html',0);">
+              检测<span class="layui-badge-dot"></span>
+            </a>
+          </li>
+          <li class="layui-nav-item layui-hide-xs">
+            <a class="cursor-pointer" onclick="linkjump('_self','./feedback.html',0);">
+              反馈
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="layui-main">
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>
+          Layui第三方组件加速
+        </legend>
+      </fieldset>
+      <div style="padding: 20px;">
+        <div class="layui-row layui-col-space15">
+          <div class="layui-col-md12 faq">
+            <div class="layui-card">
+              <div class="layui-card-header">
+                我的组件
+              </div>
+              <div class="layui-card-body">
+                <div id="Index-extend-user-View"></div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md12 faq">
+            <div class="layui-card">
+              <div class="layui-card-header">
+                开放组件
+              </div>
+              <div class="layui-card-body">
+                <table class="layui-hide" id="extend-lists" lay-filter="extend-lists"></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-footer footer">
+      <p class="beian">
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/hongdun.gif" style="height: 21px;" alt="工信备案" />
+          京ICP备17014996号-7
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302000755" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/gonganbei.png" style="height: 21px;" alt="公安备案" />
+          京公网安备11011302000755号
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://verify.nic.xin/xinDetail/xinAuthInfoDetail?domainName=layuicdn.com" onmouseover="layer.tips('XIN站认证',this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/alxin.png" style="height: 21px;" alt="阿里信用" />
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.maoyuncloud.com/?from=LayuiCdn" onmouseover="layer.tips('独家CDN赞助商',this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/maoyun_logo.png" style="height: 21px;" alt="猫云" />
+        </a>
+      </p>
+      <div class="chc-friendship">
+        友情链接：
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/admin/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          LayAdmin
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://fly.layui.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui社区
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://pay.umistrong.com.cn/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          个人免签支付
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.qllh.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          手机靓号
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://layui.newphper.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui主题生成
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://cloud.hcwl520.com.cn/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          CHC云计算
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.maoyuncloud.com/?from=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          猫云CDN
+        </a>
+      </div>
+      <div class="layui-main">
+        <p>
+          Copyright&nbsp;&copy;&nbsp;2012-<script>document.write(new Date().getFullYear());</script>&nbsp;
+          <a class="cursor-pointer" rel="nofollow" onClick="linkjump('_self','//cloud.hcwl520.com.cn/');">
+            cloud.hcwl520.com.cn
+          </a>
+          &nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;锦江区未来滴网络工作室-CHC云计算官网&nbsp;版权所有
+        </p>
+      </div>
+    </div>
+    <script id="Index-extend-user-Template" type="text/html">
+      欢迎您
+      <img class="userlogo" src="{{ d.userlogo }}" alt="LayuiCdnUserLogo" />
+        {{ d.username }}
+      <button type="button" class="layui-btn release-extend">发布组件</button>
+      <table class="layui-hide" id="extend-list" lay-filter="extend-list"></table>
+    </script>
+    <script id="Index-extend-user-null-Template" type="text/html">
+      <button type="button" class="layui-btn qq-login">发布组件？点我登录QQ</button>
+    </script>
+    <script id="Index-extend-release-extend-Template" type="text/html">
+      <form class="layui-form">
+        <div class="layui-form-item">
+          <label class="layui-form-label">组件名称</label>
+          <div class="layui-input-inline">
+            <input type="text" name="name" lay-verify="required|name" placeholder="请输入组件名称" autocomplete="off" class="layui-input" />
+          </div>
+          <div class="layui-form-mid layui-word-aux">组件名称 = 组件根目录，只能存在大小写英文或大小写英文加数字，审核通过后为：{{ $hosts }}extend/名称/</div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">组件版本</label>
+          <div class="layui-input-inline">
+            <input type="text" name="version" lay-verify="required|version" placeholder="请输入组件版本" autocomplete="off" class="layui-input" />
+          </div>
+          <div class="layui-form-mid layui-word-aux">版本建议为数字，审核通过后为：{{ $hosts }}extend/名称/版本/</div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">文档地址</label>
+          <div class="layui-input-inline input-url">
+            <input type="text" name="url" lay-verify="required|url" placeholder="请输入组件文档地址" autocomplete="off" class="layui-input" />
+          </div>
+          <div class="layui-form-mid layui-word-aux">例：{{ $hosts }}api.html 注意上传文件只能上传zip压缩包</div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <button type="button" class="layui-btn btn-submit" lay-submit="" lay-filter="submit">提交组件</button>
+          </div>
+        </div>
+      </form>
+    </script>
+    <!--内容主体元素end-->
+    <!--公共脚本元素start-->
+    <script src="./index/js/jquery-3.4.1.min.js"></script>
+    <script src="./index/js/clipboard.min.js"></script>
+    <script src="./index/js/base64.min.js"></script>
+    <script src="./index/layui/layui.js"></script>
+    <!--前端脚本元素start-->
+    <script src="./index/js/index_1.js"></script>
+    <script src="./index/js/index_2.js"></script>
+    <script src="./index/js/index_6.js"></script>
+    <!--信息上报脚本元素start-->
+    <script src="//cdn-1.cache-1.hcwl520.com.cn/oauth2.0/cloud/api.js" async></script>
+    <!--自动推送脚本元素start-->
+    <script src="./index/js/link_push.js"></script>
+    <!--前端统计脚本元素start-->
+    <div style="display: none;">
+      <script src="https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871" language="JavaScript"></script>
+    </div>
+  </body>
+  <!--主体元素end-->
+</html>
