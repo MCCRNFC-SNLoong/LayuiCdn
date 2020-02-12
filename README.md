@@ -99,7 +99,14 @@
 <script src="https://www.layuicdn.com/auto/layui.js" v="layui" e="layui"></script>
 ```
 
-2. 将自动实现  **基础用法** 的全部逻辑加载！务必将代码写在面页头部的<head></head>标签内
+2. 将自动实现  **基础用法** 的全部逻辑加载！务必将代码写在面页头部的head标签内
+
+```
+<head>
+  <script src="https://www.layuicdn.com/auto/layui.js"></script>
+</head>
+```
+标签内
 3. v参数为版本, 如v="2.5.6" 即自动引入2.5.6版本的layui, 如值为 layui 或 不携带v参数 则默认为最新版本的layui 例: 
 
 ```
