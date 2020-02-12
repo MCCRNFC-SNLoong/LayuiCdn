@@ -119,7 +119,8 @@
 
 建议写法: 强制版本+模块版 解析为2.5.6版本layui模块
 
-```<script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6" e="layui"></script>
+```
+<script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6" e="layui"></script>
 ```
 
 #### 高级示例：  
@@ -156,9 +157,7 @@
 </html>
     
 ```
-
 ### 相关
-    [官网](https://www.layuicdn.com/) [API](https://www.layuicdn.com/api.html) [组件](https://www.layuicdn.com/extend.html) [检测](https://www.layuicdn.com/servers.html) [反馈](https://www.layuicdn.com/feedback.html)
-
+[官网](https://www.layuicdn.com/) [API](https://www.layuicdn.com/api.html) [组件](https://www.layuicdn.com/extend.html) [检测](https://www.layuicdn.com/servers.html) [反馈](https://www.layuicdn.com/feedback.html)
 
 
