@@ -1,6 +1,12 @@
-[![LayuiCdnLOGO](https://images.gitee.com/uploads/images/2020/0213/002613_404069a2_1333791.png "logo3.png")](https://www.layuicdn.com/)
+<p align="center">
+  <a href="https://www.layuicdn.com/">
+    <img src="https://images.gitee.com/uploads/images/2020/0213/012006_90aa61f8_1333791.png" alt="LayuiCdn" width="360" />
+  </a>
+</p>
+<p align="center">
+    LayuiCdn为广大前端用户提供免费CDN静态资源库的加速服务，快速，稳定，开放，自由
+</p>
 
- **LayuiCdn为广大前端用户提供免费CDN静态资源库的加速服务，快速，稳定，开放，自由** 
 
 #### 依托架构
  **LayuiCdn 基于 [猫云](https://www.maoyuncloud.com/?from=LayuiCdn)[Cdn] + 腾讯云 [API网关 + SCF无服务器云函数 + DSA动态网络加速 + COS对象储存] 等，全局托管实现全年不休的云上计算业务，全程无需人为干预即可提供自动运行等计算能力,进行实时监控，并24小时内更新到LayuiCdn API** 
