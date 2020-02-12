@@ -158,6 +158,6 @@
     
 ```
 ### 相关
-[官网](https://www.layuicdn.com/) [API](https://www.layuicdn.com/api.html) [组件](https://www.layuicdn.com/extend.html) [检测](https://www.layuicdn.com/servers.html) [反馈](https://www.layuicdn.com/feedback.html)
+[官网](https://www.layuicdn.com/)  [API](https://www.layuicdn.com/api.html)  [组件](https://www.layuicdn.com/extend.html)  [检测](https://www.layuicdn.com/servers.html)  [反馈](https://www.layuicdn.com/feedback.html)
 
 
