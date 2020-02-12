@@ -4,7 +4,7 @@
   </a>
 </p>
 <p align="center">
-    LayuiCdn为广大前端用户提供免费CDN静态资源库的加速服务，快速，稳定，开放，自由
+    LayuiCdn为广大前端用户提供免费CDN静态资源库的加速服务，快速，稳定，开放，自由（自主上传文件）加速任意项目
 </p>
 
 
@@ -101,18 +101,26 @@
 2. 将自动实现  **基础用法** 的全部逻辑加载！务必将代码写在面页头部的<head></head>标签内
 3. v参数为版本, 如v="2.5.6" 即自动引入2.5.6版本的layui, 如值为 layui 或 不携带v参数 则默认为最新版本的layui 例: 
 
-`<script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6"></script> `
+```
+<script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6"></script> 
+```
 
 4. e参数为模块, 如e="layui" 或 e="layui.all" 即自动引入 layui 或 layui.all 的js模块, 如不携带e参数则默认为layui 例: 
 
-`<script src="https://www.layuicdn.com/auto/layui.js" e="layui.all"></script>`
+```
+<script src="https://www.layuicdn.com/auto/layui.js" e="layui.all"></script>
+```
 
 最简写法: 自动最新版
 
-`<script src="https://www.layuicdn.com/auto/layui.js"></script>`
+```
+<script src="https://www.layuicdn.com/auto/layui.js"></script>
+```
 
-建议写法: 强制版本+模块版
-`<script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6" e="layui"></script>` 解析为2.5.6版本layui模块
+建议写法: 强制版本+模块版 解析为2.5.6版本layui模块
+
+```<script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6" e="layui"></script>
+```
 
 #### 高级示例：  
 
@@ -148,5 +156,9 @@
 </html>
     
 ```
+
+### 相关
+    [官网](https://www.layuicdn.com/) [API](https://www.layuicdn.com/api.html) [组件](https://www.layuicdn.com/extend.html) [检测](https://www.layuicdn.com/servers.html) [反馈](https://www.layuicdn.com/feedback.html)
+
 
 
