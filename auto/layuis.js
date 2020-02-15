@@ -2,7 +2,7 @@
 (function() {
   var v = 'layui'; //layui最新版本
   var e = 'layui'; //layui模块化
-  var u = '//www.layuicdn.com/'; //layui Url
+  var u = 'https://www.layuicdn.com/'; //layui Url
   var scripts = document.getElementsByTagName('script');
   for (var i = 0; i < scripts.length; i++) {
     var script = scripts[i];
