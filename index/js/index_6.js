@@ -338,7 +338,7 @@ layui.config({
         ,anim: 2
         ,area: ['50%', '55%']
         ,shadeClose: true
-        ,content: 'https://cloud.hcwl520.xin/open/qq_login/?rurl=' + $rurl + '&type=extend&token=' + (new Date()).getTime()
+        ,content: $api + 'QqLogin?rurl=' + $rurl + '&type=layuicdn&token=' + new Date().getTime()
       });
     });
   }
