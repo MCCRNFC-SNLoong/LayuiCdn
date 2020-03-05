@@ -35,7 +35,7 @@
       $curl        = location.href;
       $hosts       = $protocol + '//' + $host + '/';
       $Chc_Copy    = true;
-      $update_Time = '202002081503';
+      $update_Time = '202003051618';
       $domain      = 'www.layuicdn.com';
       $api         = '//api.layuicdn.com/';
       if ($host != $domain) {
@@ -153,6 +153,18 @@
               </cite>
               <em>
                 全新 / 极速 / 自动
+              </em>
+              <span class="layui-badge-dot" style="position: relative;top: -3px;left: -3px;"></span>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" target="_blank" href="https://pro.layuicdn.com/">
+              <cite>
+                <i class="layui-icon layui-icon-diamond" style="font-size: 13px;"></i>
+                付费计划
+              </cite>
+              <em>
+                全球 / 智能 / 调度
               </em>
               <span class="layui-badge-dot" style="position: relative;top: -3px;left: -3px;"></span>
             </a>
@@ -586,6 +598,9 @@
         <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/admin/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
           LayAdmin
         </a>
+        <a class="cursor-pointer" target="_blank" href="./sitemap.html" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          SiteMap
+        </a>
         <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://fly.layui.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
           Layui社区
         </a>
@@ -628,7 +643,24 @@
     <!--信息上报脚本元素start-->
     <script src="//cdn-1.cache-1.hcwl520.com.cn/oauth2.0/cloud/api.js" async></script>
     <!--自动推送脚本元素start-->
-    <script src="./index/js/link_push.js"></script>
+    <!--<script src="./index/js/link_push.js"></script>-->
+    <script type="text/javascript">
+      (function() {
+        //*百度推送**/
+        var bp = document.createElement('script');
+        var s = document.getElementsByTagName("script")[0];
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        s.parentNode.insertBefore(bp, s);
+        /**360推送**/
+        var sozz_src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba';
+        document.write('<script src="' + sozz_src + '" id="sozz"><\/script>'); 
+      })();
+    </script>
     <!--前端统计脚本元素start-->
     <div style="display: none;">
       <script src="https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871" language="JavaScript"></script>
