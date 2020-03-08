@@ -1,7 +1,7 @@
 document.writeln("        <ul class=\"layui-nav\">");
 document.writeln("          <li class=\"layui-nav-item layui-hide-xs\">");
 document.writeln("            <a class=\"cursor-pointer\" target=\"_blank\" href=\"https://pro.layuicdn.com/\">");
-document.writeln("              Pro<span class=\"layui-badge-dot\"></span>");
+document.writeln("              定制<span class=\"layui-badge-dot\"></span>");
 document.writeln("            </a>");
 document.writeln("          </li>");
 document.writeln("          <li class=\"layui-nav-item layui-hide-xs\">");
