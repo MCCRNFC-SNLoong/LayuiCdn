@@ -106,8 +106,8 @@
   <script src="https://www.layuicdn.com/auto/layui.js"></script>
 </head>
 ```
-标签内
-3. v参数为版本, 如v="2.5.6" 即自动引入2.5.6版本的layui, 如值为 layui 或 不携带v参数 则默认为最新版本的layui 例: 
+
+3. 标签内v参数为版本, 如v="2.5.6" 即自动引入2.5.6版本的layui, 如值为 layui 或 不携带v参数 则默认为最新版本的layui 例: 
 
 ```
 <script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6"></script> 
