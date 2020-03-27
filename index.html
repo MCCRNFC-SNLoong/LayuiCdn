@@ -6,144 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <!--浏览器内核控制-->
     <meta name="renderer" content="webkit" />
-    <title>Layui免费CDN静态库</title>
-    <meta name="description" content="Layui是一款采用自身模块规范编写的情怀型前端UI框架。" />
-    <meta name="keywords" content="layui,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
-    <meta name="copyright" content="CHC云计算" />
-    <!--公共样式元素start-->
-    <link rel="stylesheet" type="text/css" href="./index/layui/css/layui.css?v=201801090202" />
+    <title>Layui免费CDN静态库 - LayuiCdn静态库 免费 CDN 加速服务</title>
+    <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
+    <meta name="keywords" content="layui,layuicdn,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
+    <meta name="copyright" content="LayuiCdnPro" />
+    <!--自动化加载start-->
+    <script src="./auto/layui.js" v="2.5.6" e="layui.all"></script>
     <!--前端样式元素start-->
-    <link rel="stylesheet" type="text/css" href="./index/css/index_1.css?v=201801090202" />
-    <link rel="stylesheet" type="text/css" href="./index/css/index_2.css?v=201801090202" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico?v=201801090202" />
+    <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
+    <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
+    <link rel="stylesheet" type="text/css" href="./index/css/index_3.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <!--[if lt IE 9]>
-      <script src="//cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-      <script src="//cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+      <script src="//cache.layuicdn.com/html5shiv/r29/html5.min.js"></script>
+      <script src="//cache.layuicdn.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- CHC云计算旗下 | 设计：丹妹 | 重构：法海 | 创建：2018-01-09 | 官网：cloud.hcwl520.com.cn -->
-
-                      <!--===版权所有===-->
-<!--
-/*****************************************************************
- *                                                               *
- *   Chinese China network flow technique of cloud top Dynasty   *
- *            中国顶尖云流量技术-CHC云-China皇朝网络云           *
- *                 China皇朝网络科技有限责任公司                 *
- *                     www.hcwl520.com.cn                        *
- *   Chinese China network flow technique of cloud top Dynasty   *
- *                                                               *
- *****************************************************************
-*/
--->
-<!--
-                                                                  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-                                                                  ▓                                                        ▓
-                                                                  ▓                  cloud.hcwl520.com.cn                  ▓
-                                                                  ▓                                                        ▓
-                                                                  ▓             China皇朝网络科技有限责任公司              ▓
-                                                                  ▓                                                        ▓
-                                                                  ▓                      CHC云计算                         ▓
-                                                                  ▓                                                        ▓
-                                                                  ▓      ┏━━━━━━━━━━━━━━━┑┌────┒    ▓
-                                                                  ▓      ┃CHC云计算                     ││百度一下┃    ▓
-                                                                  ▓      ┖───────────────┘┕━━━━┛    ▓
-                                                                  ▓                                                        ▓
-                                                                  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
--->
+    <!-- LayuiCdnPro | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
     <!--全局脚本元素start-->
     <script type="text/javascript">
-      var $Port = 'https:';
-      if (location.protocol != $Port) {
-        location.href = $Port + location.href.substring(location.protocol.length);
+      var $Port    = 'https:';
+      $protocol    = location.protocol;
+      if ($protocol != $Port) {
+        location.href = $Port + location.href.substring($Port.length);
       }
-      $port = location.port;
-      $host = location.hostname;
-      $path = location.pathname;
-      $curl = location.href;
-      $Chc_Copy = true;
-      $update_Time = '201801090202';
+      $port        = location.port;
+      $host        = location.hostname;
+      $path        = location.pathname;
+      $curl        = location.href;
+      $hosts       = $protocol + '//' + $host + '/';
+      $Chc_Copy    = true;
+      $update_Time = '202003271805';
+      $domain      = 'www.layuicdn.com';
+      $api         = '//api.layuicdn.com/';
+      if ($host != $domain) {
+        location.href = $protocol + '//' + $domain + '/';
+      }
     </script>
-    <style type="text/css">
-    <!--
-    .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
-      background-color: #01AAED !important;
-    }
-    .layui-form-select dl dd.layui-this {
-      background-color: #01AAED !important;
-    }
-    .layui-elem-quote, .site-tree .layui-tree li h2 {
-      border-left: 5px solid #1E9FFF !important;
-    }
-    .layui-elem-quote a:hover {
-      color: #00a4ff !important;
-    }
-    .layui-elem-quote a {
-      font-weight: bold !important;
-    }
-    .layui-table thead tr {
-      text-align: center !important;
-      color: #FFFFFF !important;
-      background-color: #292a2b !important;
-    }
-    .layui-table thead tr th, .layui-table[lay-skin=line] td, .layui-table[lay-skin=line] th {
-      text-align: center !important;
-    }
-    .border-table-tr:hover {
-      border: 2px solid #1E9FFF !important;
-      background-color: #FFFFFF !important;
-    }
-    .alone-version-desc {
-      width: 70% !important;
-      margin-left: 10% !important;
-    }
-    .check {
-      padding: 0 10px !important;
-      font-size: 12px !important;
-      height: 23px !important;
-      line-height: 23px !important;
-      margin-left: 5px !important;
-    }
-    .check:hover {
-      border-color: #00a4ff !important;
-    }
-    .ttips {
-      height: 40px !important;
-      line-height: 40px !important;
-    }
-    .ctips {
-      color: #FF0000;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .layui-textarea {
-      background-color: #13151A !important;
-      color: #C2BE9E !important;
-      min-height: 820px !important;
-      resize: none !important;
-      overflow: hidden !important;
-    }
-    .layui-input-inline {
-      width: 500px !important;
-    }
-    /*.layui-form-label {
-      width: 120px !important;
-    }*/
-    .layui-form-mid {
-      padding: 5px 0 !important;
-    }
-    </style>
   </head>
   <!--主体元素start-->
   <body ondragstart="return false">
     <!--头部元素start-->
     <div class="layui-header header header-doc">
       <div class="layui-main">
-        <a class="logo" href="//cloud.hcwl520.com.cn/?rurl=CHC-CDN">
-          <img src="./index/images/logo.png?v=201801090202" />
+        <a class="logo" href="/?rurl=CdnLogo">
+          <img src="./index/images/logo4.png" alt="LayuiCDN" />
         </a>
-        <script src="./index/js/index_3.js?v=201801090202"></script>
-        <script src="./index/js/index_4.js?v=201801090202"></script>
+        <script src="./index/js/index_3.js"></script>
+        <script src="./index/js/index_4.js"></script>
       </div>
+    </div>
+    <div class="layuicdnbanner">
+      <img class="layuicdnbanner-img" src="./index/images/banner.png" alt="LayuiCdnbanner" />
+      <span class="layuicdnbanner-text">
+        心有大格局，麻雀岂能承载的了 · LayuiCdn
+      </span>
     </div>
     <ul class="site-dir">
       <li>
@@ -154,40 +70,21 @@
         </a>
       </li>
       <li>
+        <a class="cursor-pointer" onClick="AutoLayui();">
+          <cite>
+            高级加载
+          </cite>
+          <span class="layui-badge-dot" style="position: relative;top: -3px;"></span>
+        </a>
+      </li>
+      <li>
         <a href="#Layui">
           <cite>
             Layui
           </cite>
         </a>
       </li>
-      <ul style="margin-left: 15px;">
-        <li><a href="#layui-news" onClick="mlonclick('#layui-news');"><cite>layui[最新]</cite></a></li>
-        <li><a href="#layui-v2.5.4" onClick="mlonclick('#layui-v2-5-4');"><cite>2.5.4</cite></a></li>
-        <li><a href="#layui-v2.5.3" onClick="mlonclick('#layui-v2-5-3');"><cite>2.5.3</cite></a></li>
-        <li><a href="#layui-v2.5.2" onClick="mlonclick('#layui-v2-5-2');"><cite>2.5.2</cite></a></li>
-        <li><a href="#layui-v2.5.1" onClick="mlonclick('#layui-v2-5-1');"><cite>2.5.1</cite></a></li>
-        <li><a href="#layui-v2.5.0" onClick="mlonclick('#layui-v2-5-0');"><cite>2.5.0</cite></a></li>
-        <li><a href="#layui-v2.4.5" onClick="mlonclick('#layui-v2-4-5');"><cite>2.4.5</cite></a></li>
-        <li><a href="#layui-v2.4.4" onClick="mlonclick('#layui-v2-4-4');"><cite>2.4.4</cite></a></li>
-        <li><a href="#layui-v2.4.3" onClick="mlonclick('#layui-v2-4-3');"><cite>2.4.3</cite></a></li>
-        <li><a href="#layui-v2.4.2" onClick="mlonclick('#layui-v2-4-2');"><cite>2.4.2</cite></a></li>
-        <li><a href="#layui-v2.4.1" onClick="mlonclick('#layui-v2-4-1');"><cite>2.4.1</cite></a></li>
-        <li><a href="#layui-v2.4.0" onClick="mlonclick('#layui-v2-4-0');"><cite>2.4.0</cite></a></li>
-        <li><a href="#layui-v2.3.0" onClick="mlonclick('#layui-v2-3-0');"><cite>2.3.0</cite></a></li>
-        <li><a href="#layui-v2.2.6" onClick="mlonclick('#layui-v2-2-6');"><cite>2.2.6</cite></a></li>
-        <li><a href="#layui-v2.2.5" onClick="mlonclick('#layui-v2-2-5');"><cite>2.2.5</cite></a></li>
-        <li><a href="#layui-v2.2.45" onClick="mlonclick('#layui-v2-2-45');"><cite>2.2.45</cite></a></li>
-        <li><a href="#layui-v2.2.4" onClick="mlonclick('#layui-v2-2-4');"><cite>2.2.4</cite></a></li>
-        <li><a href="#layui-v2.2.3" onClick="mlonclick('#layui-v2-2-3');"><cite>2.2.3</cite></a></li>
-        <li><a href="#layui-v2.2.0" onClick="mlonclick('#layui-v2-2-0');"><cite>2.2.0</cite></a></li>
-        <li><a href="#layui-v2.1.5" onClick="mlonclick('#layui-v2-1-5');"><cite>2.1.5</cite></a></li>
-        <li><a href="#layui-v2.1.4" onClick="mlonclick('#layui-v2-1-4');"><cite>2.1.4</cite></a></li>
-        <li><a href="#layui-v2.1.2" onClick="mlonclick('#layui-v2-1-2');"><cite>2.1.2</cite></a></li>
-        <li><a href="#layui-v2.1.0" onClick="mlonclick('#layui-v2-1-0');"><cite>2.1.0</cite></a></li>
-        <li><a href="#layui-v2.0.2" onClick="mlonclick('#layui-v2-0-2');"><cite>2.0.2</cite></a></li>
-        <li><a href="#layui-v2.0.1" onClick="mlonclick('#layui-v2-0-1');"><cite>2.0.1</cite></a></li>
-        <li><a href="#layui-v1.0.9" onClick="mlonclick('#layui-v1-0-9');"><cite>1.0.9</cite></a></li>
-      </ul>
+      <ul style="margin-left: 15px;" id="layuiuili"></ul>
       <li>
         <a href="#Layer">
           <cite>
@@ -195,12 +92,7 @@
           </cite>
         </a>
       </li>
-      <ul style="margin-left: 15px;">
-        <li><a href="#layer-news" onClick="mlonclick('#layer-news');"><cite>layer[最新]</cite></a></li>
-        <li><a href="#layer-v3.1.1" onClick="mlonclick('#layer-v3-1-1');"><cite>3.1.1</cite></a></li>
-        <li><a href="#layer-v3.1.0" onClick="mlonclick('#layer-v3-1-0');"><cite>3.1.0</cite></a></li>
-        <li><a href="#layer-v3.0.3" onClick="mlonclick('#layer-v3-0-3');"><cite>3.0.3</cite></a></li>
-      </ul>
+      <ul style="margin-left: 15px;" id="layeruili"></ul>
       <li>
         <a href="#LayDate">
           <cite>
@@ -208,22 +100,15 @@
           </cite>
         </a>
       </li>
-      <ul style="margin-left: 15px;">
-        <li><a href="#layDate-news" onClick="mlonclick('#layDate-news');"><cite>LayDate[最新]</cite></a></li>
-        <li><a href="#layDate-v5.0.9" onClick="mlonclick('#layDate-v5-0-9');"><cite>5.0.9</cite></a></li>
-        <li><a href="#layDate-v5.0.1" onClick="mlonclick('#layDate-v5-0-1');"><cite>5.0.1</cite></a></li>
-      </ul>
+      <ul style="margin-left: 15px;" id="laydateuili"></ul>
       <li>
-        <a href="#LayDate">
+        <a href="#FlyTemplate">
           <cite>
             fly
           </cite>
         </a>
       </li>
-      <ul style="margin-left: 15px;">
-        <li><a href="#fly-news" onClick="mlonclick('#fly-news');"><cite>fly[最新]</cite></a></li>
-        <li><a href="#fly-v3.0" onClick="mlonclick('#fly-v3-0');"><cite>3.0</cite></a></li>
-      </ul>
+      <ul style="margin-left: 15px;" id="flyuili"></ul>
       <li>
         <a href="#Zip">
           <cite>
@@ -241,13 +126,18 @@
         </div>
         <ul class="layui-tree">
           <li>
-            <h2>
-              基础说明
+            <h2 style="color: #FFF;border-left: 3px solid #797c88 !important;background: linear-gradient(120deg, #16171A, #848790);">
+              全部服务&nbsp;
+              <span class="ys-gray" style="font-size: 11px;">
+                <script>document.write($update_Time);</script>
+                <a class="ys-gray" style="font-size: 11px;" rel="nofollow" target="_blank" href="https://gitee.com/LayuiCdn">码云</a>
+              </span>
             </h2>
           </li>
           <li class="site-tree-noicon layui-this">
             <a class="cursor-pointer" onClick="linkjump('_self','./');">
               <cite>
+                <i class="layui-icon layui-icon-home" style="font-size: 12px;"></i>
                 开始使用
               </cite>
               <em>
@@ -255,26 +145,187 @@
               </em>
             </a>
           </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" onClick="AutoLayui();">
+              <cite>
+                <i class="layui-icon layui-icon-slider" style="font-size: 13px;"></i>
+                高级加载
+              </cite>
+              <em>
+                全新 / 极速 / 自动
+              </em>
+              <span class="layui-badge-dot" style="position: relative;top: -3px;left: -3px;"></span>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" target="_blank" href="https://pro.layuicdn.com/">
+              <cite>
+                <i class="layui-icon layui-icon-diamond" style="font-size: 13px;"></i>
+                付费计划
+              </cite>
+              <em>
+                全球 / 智能 / 调度
+              </em>
+              <span class="layui-badge-dot" style="position: relative;top: -3px;left: -3px;"></span>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" href="./api.html">
+              <cite>
+                <i class="layui-icon layui-icon-chart" style="font-size: 13px;"></i>
+                开放接口
+              </cite>
+              <em>
+                公共 / 开放 / 便捷
+              </em>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" href="./extend.html">
+              <cite>
+                <i class="layui-icon layui-icon-app" style="font-size: 13px;"></i>
+                组件加速
+              </cite>
+              <em>
+                自主 / 自由 / 自有
+              </em>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" onClick="Sponsor();">
+              <cite>
+                <i class="layui-icon layui-icon-fire" style="font-size: 13px;"></i>
+                赞助广告
+              </cite>
+              <em>
+                支持 / 支持 / 支柱
+              </em>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" onClick="SponsorList();">
+              <cite>
+                <i class="layui-icon layui-icon-auz" style="font-size: 13px;"></i>
+                赞助列表
+              </cite>
+              <em>
+                物质 / 意义 / 非凡
+              </em>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" href="./servers.html">
+              <cite>
+                <i class="layui-icon layui-icon-chart" style="font-size: 13px;"></i>
+                服务检测
+              </cite>
+              <em>
+                全面 / 安全 / 稳定
+              </em>
+            </a>
+          </li>
+          <li class="site-tree-noicon">
+            <a class="cursor-pointer" href="./feedback.html">
+              <cite>
+                <i class="layui-icon layui-icon-service" style="font-size: 13px;"></i>
+                问题反馈
+              </cite>
+              <em>
+                专业 / 专注 / 效率
+              </em>
+            </a>
+          </li>
+        </ul>
+        <ul class="layui-tree">
+          <li>
+            <h2 style="color: #FFF;border-left: 3px solid #029443 !important;background: linear-gradient(120deg, #0abf5b, #4affcc);">
+              爱心赞助
+            </h2>
+          </li>
+          <div id="SponsorView"></div>
+          <script type="text/html" id="SponsorTpl">
+            {{# layui.each(d.data, function(index, item){ }}
+              <li class="site-tree-noicon">
+                <a class="cursor-pointer" rel="{{ item.rel }}" target="{{ item.target }}" href="{{ item.url }}">
+                  <cite>
+                    {{ item.name }}
+                  </cite>
+                  <em>
+                    {{ item.names }}
+                  </em>
+                </a>
+              </li>
+            {{# }); }}
+          </script>
         </ul>
       </div>
       <div class="site-content" id="kssy">
         <h1 class="site-h1">
           开始使用 - 接入Layui
+          <span class="layuicdn-notice"></span>
         </h1>
+        <p style="margin-bottom: 20px;text-align: center;background: linear-gradient(120deg, #33CC99, #4EFFFB);">
+          <img src="./index/images/desc.png" alt="layuicdn" />
+        </p>
+        <blockquote class="layui-elem-quote" style="border-left: 3px solid #FF5722 !important;font-size: 12px !important;">
+          通知：因平台发展，原域名layui.hcwl520.com.cn已于2019年7月31正式下线，且全站301到
+          <a class="cursor-pointer" onClick="linkjump('_self','https://www.layuicdn.com/?rurl=index-v1.0');">
+            www.layuicdn.com
+          </a>
+           <button id="see_announce" type="button" class="layui-btn layui-btn-xs layui-bg-gray">
+             详情<span class="layui-badge-dot"></span>
+           </button>
+        </blockquote>
+        <style type="text/css">
+          #announce .cursor-pointer:hover {
+            color: #00a4ff !important;
+          }
+        </style>
+        <div id="announce" style="padding: 10px;background-color: #F2F2F2;margin-bottom: 10px;display: none;">
+          <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+              <div class="layui-card">
+                <div class="layui-card-header" style="color: #FF5722;font-weight: bold;">域名变更通知</div>
+                <div class="layui-card-body" style="font-size: 12px;">
+                  因平台需要更正式化的面向广大用户，新域名：
+                  <a class="cursor-pointer ys-blue" onClick="linkjump('_self','https://www.layuicdn.com/?rurl=index-v1.0',0);">
+                    www.layuicdn.com
+                  </a>
+                  原域名 layui.hcwl520.com.cn 已于2019年7月31正式下线，且全站301到新的域名，
+                  望 LayuiCdn 的广大用户将线上项目域名及时替换并更新为新域名，以免造成访问中断等不必要的损失。
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+          var $see_announce = document.getElementById('see_announce');
+          var $announce = document.getElementById('announce');
+          $see_announce.onclick = function (){
+            if ($announce.style.display == 'block') {
+              $announce.style.display = 'none';
+              $see_announce.innerHTML = '详情<span class="layui-badge-dot"></span>';
+            } else {
+              $announce.style.display = 'block';
+              $see_announce.innerHTML = '收起';
+            }
+          }
+        </script>
+        <!--<blockquote class="layui-elem-quote" style="border-left: 3px solid #FF5722 !important;font-size: 12px !important;">
+          HTTPS问题：因HTTPS证书需要一些时间，故预计将在2019-07-03前部署完成，在此之前将无法使用，您可以暂时使用上方旧域名进行HTTPS操作。
+        </blockquote>-->
         <blockquote class="layui-elem-quote">
           为
-          <a class="cursor-pointer" onClick="linkjump('_self','http://www.layui.com/');">
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/?rurl=LayuiCdn">
             Layui
           </a>
           的广大用户提供免费的CDN静态库，非常稳定、快速、免费的
-          <a class="cursor-pointer" onClick="linkjump('_self','http://www.layui.com/');">
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/?rurl=LayuiCdn">
             Layui开源组件项目
           </a>
           国内CDN加速服务。
         </blockquote>
-        <p style="margin-bottom: 20px;text-align: center;background-color: #33CC99;">
-          <img src="./index/images/desc.png?v=201801090202" />
-        </p>
+        <img class="cursor-pointer" width="100%" src="./index/images/maoyun_banner.png?v=201906270202" rel="nofollow" onClick="linkjump('_self','https://www.maoyuncloud.com/?from=LayuiCDN',0);" alt="LayuiCDN赞助猫云" />
         <fieldset class="layui-elem-field layui-field-title site-title">
           <legend>
             <a>
@@ -284,23 +335,23 @@
         </fieldset>
         <blockquote class="layui-elem-quote">
           目前
-          <a class="cursor-pointer" onClick="linkjump('_self','http://www.layui.com/');">
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/?rurl=LayuiCdn">
             Layui
           </a>
           免费开源的项目：
-          <a class="cursor-pointer" onClick="linkjump('_self','http://www.layui.com/');">
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/?rurl=LayuiCdn">
             Layui
           </a>
           、
-          <a class="cursor-pointer" onClick="linkjump('_self','http://layer.layui.com/');">
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://layer.layui.com/?rurl=LayuiCdn">
             Layer
           </a>
           、
-          <a class="cursor-pointer" onClick="linkjump('_self','http://www.layui.com/laydate/');">
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/laydate/?rurl=LayuiCdn">
             LayDate
           </a>
           、
-          <a class="cursor-pointer" onClick="linkjump('_self','http://www.layui.com/template/fly/');">
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/template/fly/?rurl=LayuiCdn">
             FlyTemplate
           </a>
           ，无论是前后WAP还是移动APP等，都是开发全栈最佳首选。
@@ -314,12 +365,12 @@
 <html>
 
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="//layui.hcwl520.com.cn/layui/css/layui.css" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
   </head>
 
   <body>
-    <script src="//layui.hcwl520.com.cn/layui/layui.js"></script>
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
     <!--您的Layui代码start-->
     <script type="text/javascript">
     layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
@@ -339,17 +390,25 @@
 
 </html>
 
-    <!--------------------------------------------额外提供font-awesome、jquery、clipboard-------------------------------------------->
-    <link rel="stylesheet" type="text/css" href="//layui.hcwl520.com.cn/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="//layui.hcwl520.com.cn/font-awesome-v4.7.0/css/font-awesome.min.css" />
-    <script src="//layui.hcwl520.com.cn/jquery/jquery-3.4.1.min.js"></script>
-    <script src="//layui.hcwl520.com.cn/jquery/jquery-1.9.1.min.js"></script>
-    <script src="//layui.hcwl520.com.cn/jquery/jquery-1.7.2.min.js"></script>
-    <script src="//layui.hcwl520.com.cn/clipboard/clipboard-2.0.4.min.js"></script>
-    <script src="//layui.hcwl520.com.cn/clipboard/clipboard-1.7.1.min.js"></script>
-
           </textarea>
           <span id="Layui"></span>
+          <script type="text/html" id="LayuiListNewest">
+            {{# if(d.name == 'layui'){ }}
+              <div>最新版[自动更新]</div>
+            {{# } else { }}
+              <div>{{d.name}}</div>
+            {{# } }}
+          </script>
+          <script type="text/html" id="LayuiListToolsTpl">
+            {{#
+              var $url = $hosts + d.name;
+              var $css = $url + '/css/layui.css';
+              var $js  = $url + '/layui.js';
+            }}
+            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$css}}">CSS</button>
+            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">JS</button>
+            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="LayuiSee('{{d.name}}','{{$css}}','{{$js}}');">预览</button>
+          </script>
           <fieldset class="layui-elem-field layui-field-title site-title">
             <legend>
               Layui组件
@@ -357,37 +416,36 @@
           </fieldset>
           <div class="layui-text">
             <table class="layui-table" lay-size="" lay-skin="line">
-              <colgroup>
-                <col width="200" />
-                <col width="200" />
-                <col width="200" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>
-                    组件
-                  </th>
-                  <th>
-                    更新时间
-                  </th>
-                  <th>
-                    操作工具
-                  </th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
                   <td colspan="3" class="ttips">
                     <span class="ctips">
                       注意：引入/layui/不带版本号的即为引入最新的layui，带版本的格式为/layui-v0.0.0/ 强烈建议使用带版本格式！
                     </span>
+                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getLayui();">刷新</button>
+                    <button class="layui-btn layui-btn-xs layui-bg-gray" onclick="AutoLayui();">高级加载</button>
                   </td>
                 </tr>
-                <script src="./index/js/layuis.js?v=201906060202"></script>
+                <table class="layui-hide" id="LayuiList"></table>
               </tbody>
             </table>
           </div>
           <span id="Layer"></span>
+          <script type="text/html" id="LayerListNewest">
+            {{# if(d.name == 'layer'){ }}
+              <div>最新版[自动更新]</div>
+            {{# } else { }}
+              <div>{{d.name}}</div>
+            {{# } }}
+          </script>
+          <script type="text/html" id="LayerListToolsTpl">
+            {{#
+              var $url = $hosts + d.name;
+              var $js  = $url + '/layer.js';
+            }}
+            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">JS</button>
+            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="LayerSee('{{d.name}}','{{$js}}');">预览</button>
+          </script>
           <fieldset class="layui-elem-field layui-field-title site-title">
             <legend>
               Layer组件
@@ -395,37 +453,35 @@
           </fieldset>
           <div class="layui-text">
             <table class="layui-table" lay-size="" lay-skin="line">
-              <colgroup>
-                <col width="200" />
-                <col width="200" />
-                <col width="200" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>
-                    组件
-                  </th>
-                  <th>
-                    更新时间
-                  </th>
-                  <th>
-                    操作工具
-                  </th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
                   <td colspan="3" class="ttips">
                     <span class="ctips">
                       注意：引入/layer/不带版本号的即为引入最新的layer，带版本的格式为/layer-v0.0.0/ 强烈建议使用带版本格式！
                     </span>
+                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getLayer();">刷新</button>
                   </td>
                 </tr>
-                <script src="./index/js/layers.js?v=201801090202"></script>
+                <table class="layui-hide" id="LayerList"></table>
               </tbody>
             </table>
           </div>
           <span id="LayDate"></span>
+          <script type="text/html" id="LayDateListNewest">
+            {{# if(d.name == 'layDate'){ }}
+              <div>最新版[自动更新]</div>
+            {{# } else { }}
+              <div>{{d.name}}</div>
+            {{# } }}
+          </script>
+          <script type="text/html" id="LayDateListToolsTpl">
+            {{#
+              var $url = $hosts + d.name;
+              var $js  = $url + '/laydate.js';
+            }}
+            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">JS</button>
+            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="LayDateSee('{{d.name}}','{{$js}}');">预览</button>
+          </script>
           <fieldset class="layui-elem-field layui-field-title site-title">
             <legend>
               LayDate组件
@@ -433,37 +489,35 @@
           </fieldset>
           <div class="layui-text">
             <table class="layui-table" lay-size="" lay-skin="line">
-              <colgroup>
-                <col width="200" />
-                <col width="200" />
-                <col width="200" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>
-                    组件
-                  </th>
-                  <th>
-                    更新时间
-                  </th>
-                  <th>
-                    操作工具
-                  </th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
                   <td colspan="3" class="ttips">
                     <span class="ctips">
                       注意：引入/layDate/不带版本号的即为引入最新的layDate，带版本的格式为/layDate-v0.0.0/ 强烈建议使用带版本格式！
                     </span>
+                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getLayDate();">刷新</button>
                   </td>
                 </tr>
-                <script src="./index/js/laydates.js?v=201801090202"></script>
+                <table class="layui-hide" id="LayDateList"></table>
               </tbody>
             </table>
           </div>
           <span id="FlyTemplate"></span>
+          <script type="text/html" id="FlyListNewest">
+            {{# if(d.name == 'fly'){ }}
+              <div>最新版[自动更新]</div>
+            {{# } else { }}
+              <div>{{d.name}}</div>
+            {{# } }}
+          </script>
+          <script type="text/html" id="FlyListToolsTpl">
+            {{#
+              var $url = $hosts + d.name;
+              var $js  = $url + '/fly.zip';
+            }}
+            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">链接</button>
+            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="FlySee('{{d.name}}','{{$js}}');">预览</button>
+          </script>
           <fieldset class="layui-elem-field layui-field-title site-title">
             <legend>
               FlyTemplate组件
@@ -471,33 +525,16 @@
           </fieldset>
           <div class="layui-text">
             <table class="layui-table" lay-size="" lay-skin="line">
-              <colgroup>
-                <col width="200" />
-                <col width="200" />
-                <col width="200" />
-              </colgroup>
-              <thead>
-                <tr>
-                  <th>
-                    组件
-                  </th>
-                  <th>
-                    更新时间
-                  </th>
-                  <th>
-                    操作工具
-                  </th>
-                </tr>
-              </thead>
               <tbody>
                 <tr>
                   <td colspan="3" class="ttips">
                     <span class="ctips">
                       注意：由于是模版文件，所以我们只提供版本迭代的压缩包文件进行下载。
                     </span>
+                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getFly();">刷新</button>
                   </td>
                 </tr>
-                <script src="./index/js/flytemplate.js?v=201801090202"></script>
+                <table class="layui-hide" id="FlyList"></table>
               </tbody>
             </table>
           </div>
@@ -533,34 +570,97 @@
         </div>
       </div>
     </div>
-    <script src="./index/js/index_5.js?v=201801090202"></script>
+    <div class="layui-footer footer">
+      <p class="beian">
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://www.beian.miit.gov.cn/" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/hongdun.gif" style="height: 21px;" alt="工信备案" />
+          京ICP备17014996号-7
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302000755" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/gonganbei.png" style="height: 21px;" alt="公安备案" />
+          京公网安备11011302000755号
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://verify.nic.xin/xinDetail/xinAuthInfoDetail?domainName=layuicdn.com" onmouseover="layer.tips('XIN站认证',this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/alxin.png" style="height: 21px;" alt="阿里信用" />
+        </a>
+        &nbsp;
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.maoyuncloud.com/?from=LayuiCdn" onmouseover="layer.tips('独家CDN赞助商',this,{tips:[1,'#000'],time:1000});">
+          <img src="./index/images/maoyun_logo.png" style="height: 21px;" alt="猫云" />
+        </a>
+      </p>
+      <div class="chc-friendship">
+        友情链接：
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.layui.com/admin/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          LayAdmin
+        </a>
+        <a class="cursor-pointer" target="_blank" href="./sitemap.html" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          SiteMap
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://fly.layui.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui社区
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://pay.umistrong.com.cn/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          个人免签支付
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.qllh.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          手机靓号
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://layui.newphper.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          Layui主题生成
+        </a>
+        <a class="cursor-pointer" target="_blank" href="https://pro.layuicdn.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          LayuiCdnPro
+        </a>
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://www.maoyuncloud.com/?from=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+          猫云CDN
+        </a>
+      </div>
+      <div class="layui-main">
+        <p>
+          Copyright&nbsp;&copy;&nbsp;2012-<script>document.write(new Date().getFullYear());</script>&nbsp;
+          <a class="cursor-pointer" onClick="linkjump('_self','//www.layuicdn.com/');">
+            www.layuicdn.com
+          </a>
+          &nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;锦江区未来滴网络工作室-LayuiCdn官网&nbsp;版权所有
+        </p>
+      </div>
+    </div>
     <!--内容主体元素end-->
     <!--公共脚本元素start-->
-    <script src="./index/js/jquery-3.2.1.min.js?v=201801090202"></script>
-    <script src="./index/js/clipboard.min.js?v=201801090202"></script>
-    <script src="./index/layui/layui.js?v=201801090202"></script>
+    <script src="./index/js/clipboard.min.js"></script>
+    <script src="./index/js/typed.min.js"></script>
     <!--前端脚本元素start-->
-    <script src="./index/js/index_1.js?v=201801090202"></script>
-    <script src="./index/js/index_2.js?v=201801090202"></script>
+    <script src="./index/js/index_1.js"></script>
+    <script src="./index/js/index_2.js"></script>
+    <script src="./index/js/index_8.js"></script>
     <!--信息上报脚本元素start-->
-    <script src="//cdn-1.cache-1.hcwl520.com.cn/oauth2.0/cloud/api.js" async></script>
-    <!--百度公共脚本元素start-->
-    <script>
+    <script src="//cache.layuicdn.com/oauth2.0/cloud/api.js" async></script>
+    <!--自动推送脚本元素start-->
+    <script type="text/javascript">
+      var _hmt = _hmt || [];
       (function() {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
+        var d = document
+        ,s = d.getElementsByTagName('script')[0]
+        ,bp = d.createElement('script')
+        ,hm = d.createElement('script')
+        ,qh = d.createElement('script')
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+        ,hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
+        ,qh.src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba'
+        ,qh.id = 'sozz'
+        ,s.parentNode.insertBefore(bp, s)
+        ,s.parentNode.insertBefore(hm, s)
+        ,d.writeln(qh.outerHTML);
       })();
     </script>
     <!--前端统计脚本元素start-->
     <div style="display: none;">
-      <script src="https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871" language="JavaScript"></script>
+      <script src="https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871" language="JavaScript" async></script>
     </div>
   </body>
   <!--主体元素end-->
