@@ -1,13 +1,22 @@
 //*初始化全局渲染*//
-layui.config({
-  version: $update_Time
-}),layui.use(['layer','form','laytpl'], function() {
-  layer = layui.layer
-  ,form = layui.form
-  ,laytpl = layui.laytpl
-  ,device = layui.device();
-});
-//*LAYUI END*//
+$ = layui.$
+,form = layui.form
+,util = layui.util
+,tree = layui.tree
+,rate = layui.rate
+,layer = layui.layer
+,table = layui.table
+,slider = layui.slider
+,laytpl = layui.laytpl
+,upload = layui.upload
+,element = layui.element
+,laydate = layui.laydate
+,laypage = layui.laypage
+,layedit = layui.layedit
+,device = layui.device()
+,transfer = layui.transfer
+,carousel = layui.carousel
+,colorpicker = layui.colorpicker; //Sorry 我并不想这样写
 //*构造链接*//
 function linkjump($type, $link, $rurl) {
   if ($rurl == 0) {

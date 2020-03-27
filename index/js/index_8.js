@@ -193,226 +193,188 @@ function checkflyurl($js, $title) {
   var $btn = $($id).find('.check');
   $btn.click();
 }*/
+window.LayuiVersion = new Object;
+var GetLayuiVersion = function(ext='layui'){
+  if ($.isEmptyObject(LayuiVersion)) {
+    $.post($api + 'GetLayuiVersion', function(res) {
+      LayuiVersion = res.data;
+      return LayuiVersion[ext];
+    });
+  } else {
+    return LayuiVersion[ext];
+  }
+
+};
+GetLayuiVersion();
 //*压缩包列表*//
 function GetCoslist() {
-  layui.use(['layer', 'table'], function() {
-    var table = layui.table;
-    var ziplist = table.render({
-      elem: '#ziplist'
-      ,method: 'post'
-      ,url: $api + 'GetCosLayuiZipListObjects'
-      ,title: 'layui列表'
-      ,parseData: function(res){
-        return {
-          code: res.code
-          ,msg: res.call
-          ,count: res.count
-          ,data: res.data.data
-        };
-      }
-      ,limit: 999999 * 999999
-      ,page: false
-      ,skin: 'line'
-      ,even: true
-      ,toolbar: false
-      ,totalRow: false
-      //,cellMinWidth: 120
-      ,cols: [[
-        {type: 'numbers', fixed: 'left', sort: true, style:'cursor: text;'}
-        ,{field: 'Key', title: '文件名称', minWidth: 200, sort: true, style:'cursor: text;'}
-        ,{field: 'ETag', title: 'MD5校验-点击复制', minWidth: 280, sort: true, style:'cursor: pointer;', templet: '#ZipListMD5Tpl'}
-        ,{field: 'LastModified', title: '上传时间', minWidth: 150, style:'cursor: text;'}
-        ,{field: 'Size', title: '大小', minWidth: 80, style:'cursor: text;'}
-        ,{field: 'tools', title: '操作', minWidth: 80, fixed: 'right', sort: true, style:'text-align: center;', templet: '#ZipListToolsTpl'}
-      ]]
-      ,skin: 'nob'
-      ,size: 'sm'
-    });
+  var ziplist = table.render({
+    elem: '#ziplist'
+    ,method: 'post'
+    ,url: $api + 'GetCosLayuiZipListObjects'
+    ,title: 'layui列表'
+    ,parseData: function(res){
+      return {
+        code: res.code
+        ,msg: res.call
+        ,count: res.count
+        ,data: res.data.data
+      };
+    }
+    ,limit: 999999 * 999999
+    ,page: false
+    ,skin: 'line'
+    ,even: true
+    ,toolbar: false
+    ,totalRow: false
+    //,cellMinWidth: 120
+    ,cols: [[
+      {type: 'numbers', fixed: 'left', sort: true, style:'cursor: text;'}
+      ,{field: 'Key', title: '文件名称', minWidth: 200, sort: true, style:'cursor: text;'}
+      ,{field: 'ETag', title: 'MD5校验-点击复制', minWidth: 280, sort: true, style:'cursor: pointer;', templet: '#ZipListMD5Tpl'}
+      ,{field: 'LastModified', title: '上传时间', minWidth: 170, style:'cursor: text;'}
+      ,{field: 'Size', title: '大小', minWidth: 80, style:'cursor: text;'}
+      ,{field: 'tools', title: '操作', minWidth: 125, fixed: 'right', sort: true, style:'text-align: center;', templet: '#ZipListToolsTpl'}
+    ]]
+    ,skin: 'nob'
+    ,size: 'sm'
   });
 }
 //*layui列表*//
 function getLayui() {
-  layui.use(['layer', 'table'], function() {
-    var table = layui.table;
-    table.render({
-      elem: '#LayuiList'
-      ,method: 'post'
-      ,url: $api + 'GetLayuiVersion'
-      ,title: 'layui列表'
-      ,parseData: function(res){
-        return {
-          code: res.code
-          ,msg: res.call
-          ,count: res.count
-          ,data: res.data.layui
-        };
-      }
-      ,done: function(res) {
-        var $html = '';
-        layui.each(res.data, function(index, item){
-          var $url = $hosts + item.name;
-          var $css = $url + '/css/layui.css';
-          var $js  = $url + '/layui.js';
-          var $onClick = "LayuiSee('" + item.name + "', '" + $css + "', '" + $js + "')";
-          if (item.name == 'layui') {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
-          } else {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
-          }
-        });
-        $('#layuiuili').html($html);
-      }
-      ,limit: 999999 * 999999
-      ,page: false
-      ,skin: 'line'
-      ,even: true
-      ,toolbar: false
-      ,totalRow: false
-      ,cols: [[
-        {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#LayuiListNewest'}
-        ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field: 'tools', title: '操作', minWidth: 80, fixed: 'right', style:'text-align: center;', templet: '#LayuiListToolsTpl'}
-      ]]
-    });
+  table.render({
+    elem: '#LayuiList'
+    ,title: 'layui列表'
+    ,data: GetLayuiVersion('layui')
+    ,limit: GetLayuiVersion('layui').length
+    ,done: function(res) {
+      var $html = '';
+      layui.each(res.data, function(index, item){
+        var $url = $hosts + item.name;
+        var $css = $url + '/css/layui.css';
+        var $js  = $url + '/layui.js';
+        var $onClick = "LayuiSee('" + item.name + "', '" + $css + "', '" + $js + "')";
+        if (item.name == 'layui') {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
+        } else {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
+        }
+      });
+      $('#layuiuili').html($html);
+    }
+    ,page: false
+    ,skin: 'line'
+    ,even: true
+    ,toolbar: false
+    ,totalRow: false
+    ,cols: [[
+      {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#LayuiListNewest'}
+      ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field: 'tools', title: '操作', minWidth: 80, fixed: 'right', style:'text-align: center;', templet: '#LayuiListToolsTpl'}
+    ]]
   });
 }
 //*layer列表*//
 function getLayer() {
-  layui.use(['layer', 'table'], function() {
-    var table = layui.table;
-    table.render({
-      elem: '#LayerList'
-      ,method: 'post'
-      ,url: $api + 'GetLayuiVersion'
-      ,title: 'layer列表'
-      ,parseData: function(res){
-        return {
-          code: res.code
-          ,msg: res.call
-          ,count: res.count
-          ,data: res.data.layer
-        };
-      }
-      ,done: function(res) {
-        var $html = '';
-        layui.each(res.data, function(index, item){
-          var $url = $hosts + item.name;
-          var $js  = $url + '/layer.js';
-          var $onClick = "LayerSee('" + item.name + "', '" + $js + "')";
-          if (item.name == 'layer') {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
-          } else {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
-          }
-        });
-        $('#layeruili').html($html);
-      }
-      ,limit: 999999 * 999999
-      ,page: false
-      ,skin: 'line'
-      ,even: true
-      ,toolbar: false
-      ,totalRow: false
-      ,cols: [[
-        {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#LayerListNewest'}
-        ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field: 'tools', title: '操作', minWidth: 300, fixed: 'right', sort: true, style:'text-align: center;', templet: '#LayerListToolsTpl'}
-      ]]
-    });
+  table.render({
+    elem: '#LayerList'
+    ,title: 'layer列表'
+    ,data: GetLayuiVersion('layer')
+    ,limit: GetLayuiVersion('layer').length
+    ,done: function(res) {
+      var $html = '';
+      layui.each(res.data, function(index, item){
+        var $url = $hosts + item.name;
+        var $js  = $url + '/layer.js';
+        var $onClick = "LayerSee('" + item.name + "', '" + $js + "')";
+        if (item.name == 'layer') {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
+        } else {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
+        }
+      });
+      $('#layeruili').html($html);
+    }
+    ,page: false
+    ,skin: 'line'
+    ,even: true
+    ,toolbar: false
+    ,totalRow: false
+    ,cols: [[
+      {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#LayerListNewest'}
+      ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field: 'tools', title: '操作', minWidth: 300, fixed: 'right', sort: true, style:'text-align: center;', templet: '#LayerListToolsTpl'}
+    ]]
   });
 }
 //*laydate列表*//
 function getLayDate() {
-  layui.use(['layer', 'table'], function() {
-    var table = layui.table;
-    table.render({
-      elem: '#LayDateList'
-      ,method: 'post'
-      ,url: $api + 'GetLayuiVersion'
-      ,title: 'laydate列表'
-      ,parseData: function(res){
-        return {
-          code: res.code
-          ,msg: res.call
-          ,count: res.count
-          ,data: res.data.laydate
-        };
-      }
-      ,done: function(res) {
-        var $html = '';
-        layui.each(res.data, function(index, item){
-          var $url = $hosts + item.name;
-          var $js  = $url + '/laydate.js';
-          var $onClick = "LayDateSee('" + item.name + "', '" + $js + "')";
-          if (item.name == 'layDate') {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
-          } else {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
-          }
-        });
-        $('#laydateuili').html($html);
-      }
-      ,limit: 999999 * 999999
-      ,page: false
-      ,skin: 'line'
-      ,even: true
-      ,toolbar: false
-      ,totalRow: false
-      ,cols: [[
-        {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#LayDateListNewest'}
-        ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field: 'tools', title: '操作', minWidth: 300, fixed: 'right', sort: true, style:'text-align: center;', templet: '#LayDateListToolsTpl'}
-      ]]
-    });
+  table.render({
+    elem: '#LayDateList'
+    ,title: 'laydate列表'
+    ,data: GetLayuiVersion('laydate')
+    ,limit: GetLayuiVersion('laydate').length
+    ,done: function(res) {
+      var $html = '';
+      layui.each(res.data, function(index, item){
+        var $url = $hosts + item.name;
+        var $js  = $url + '/laydate.js';
+        var $onClick = "LayDateSee('" + item.name + "', '" + $js + "')";
+        if (item.name == 'layDate') {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
+        } else {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
+        }
+      });
+      $('#laydateuili').html($html);
+    }
+    ,page: false
+    ,skin: 'line'
+    ,even: true
+    ,toolbar: false
+    ,totalRow: false
+    ,cols: [[
+      {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#LayDateListNewest'}
+      ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field: 'tools', title: '操作', minWidth: 300, fixed: 'right', sort: true, style:'text-align: center;', templet: '#LayDateListToolsTpl'}
+    ]]
   });
 }
 //*Fly列表*//
 function getFly() {
-  layui.use(['layer', 'table'], function() {
-    var table = layui.table;
-    table.render({
-      elem: '#FlyList'
-      ,method: 'post'
-      ,url: $api + 'GetLayuiVersion'
-      ,title: 'Fly列表'
-      ,parseData: function(res){
-        return {
-          code: res.code
-          ,msg: res.call
-          ,count: res.count
-          ,data: res.data.fly
-        };
-      }
-      ,done: function(res) {
-        var $html = '';
-        layui.each(res.data, function(index, item){
-          var $url = $hosts + item.name;
-          var $js  = $url + '/fly.zip';
-          var $onClick = "FlySee('" + item.name + "', '" + $js + "')";
-          if (item.name == 'fly') {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
-          } else {
-            $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
-          }
-        });
-        $('#flyuili').html($html);
-      }
-      ,limit: 999999 * 999999
-      ,page: false
-      ,skin: 'line'
-      ,even: true
-      ,toolbar: false
-      ,totalRow: false
-      ,cols: [[
-        {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#FlyListNewest'}
-        ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
-        ,{field: 'tools', title: '操作', minWidth: 300, fixed: 'right', sort: true, style:'text-align: center;', templet: '#FlyListToolsTpl'}
-      ]]
-    });
+  table.render({
+    elem: '#FlyList'
+    ,title: 'Fly列表'
+    ,data: GetLayuiVersion('fly')
+    ,limit: GetLayuiVersion('fly').length
+    ,done: function(res) {
+      var $html = '';
+      layui.each(res.data, function(index, item){
+        var $url = $hosts + item.name;
+        var $js  = $url + '/fly.zip';
+        var $onClick = "FlySee('" + item.name + "', '" + $js + "')";
+        if (item.name == 'fly') {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>最新版</cite></a></li>';
+        } else {
+          $html += '<li><a href="#' + item.name + '" onClick="' + $onClick + '"><cite>' + item.v + '</cite></a></li>';
+        }
+      });
+      $('#flyuili').html($html);
+    }
+    ,page: false
+    ,skin: 'line'
+    ,even: true
+    ,toolbar: false
+    ,totalRow: false
+    ,cols: [[
+      {type: 'numbers', fixed: 'left', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field:'name', minWidth: 200, title: '版本', sort: true, style:'text-align: center;cursor: text;', templet: '#FlyListNewest'}
+      ,{field:'time', minWidth: 200, title: '更新时间', sort: true, style:'text-align: center;cursor: text;'}
+      ,{field: 'tools', title: '操作', minWidth: 300, fixed: 'right', sort: true, style:'text-align: center;', templet: '#FlyListToolsTpl'}
+    ]]
   });
 }
 //*赞助Open*//
@@ -469,76 +431,73 @@ function Sponsor() {
 }
 //*赞助List*//
 function SponsorList() {
-  layui.use(['layer', 'table'], function() {
-    var table = layui.table;
-    layer.open({
-      type: 1
-      //,btn: '关闭'
-      ,id: 'Sponsors'
-      ,closeBtn: 1
-      //,btnAlign: 'c'
-      ,area: ['800px', '500px']
-      //,shade: false
-      ,resize: false
-      ,scrollbar: false
-      ,content: '<table class="layui-hide" id="sponsor-list" lay-filter="sponsor-list"></table>'
-      ,shadeClose : false
-      ,title: 'LayuiCdn赞助墙<span class="title_tprice"></span>'
-      ,success: function(layero, index) {
-        var $title = layero.find('.layui-layer-title');
-        $($title).css('border', 'none');
-        $($title).css('background-color', '#fff');
-        table.render({
-          elem: '#sponsor-list'
-          ,method: 'post'
-          ,url: $api + 'GetLayuiCdnSponsors'
-          ,title: 'LayuiCdn赞助列表'
-          ,parseData: function(res){
-            return {
-              code: res.code
-              ,msg: res.call
-              ,count: res.count
-              ,tprice: res.data.tprice
-              ,data: res.data.data
-            };
-          }
-          ,cols: [[
-            {field: 'name', title: '赞助者', align: 'center', width: 120}
-            ,{field: 'price', title: '金额', align: 'right', width: 100, templet: function(d){
-              return '<div><span class="ys-red">' + d.price + '&nbsp;元</span></div>'
-            }}
-            ,{field: 'desc', title: '留言', align: 'center', width: 290}
-            ,{field: 'type', title: '方式', align: 'center', width: 100, templet: function(d){
-              var $type;
-              if (d.type == 1) {
-                $type = '支付宝';
-              } else if (d.type == 2) {
-                $type = '微信';
-              } else {
-                $type = '其他渠道';
-              }
-              return '<div><span>' + $type + '</span></div>'
-            }}
-            ,{field: 'time', title: '赞助时间', align: 'center', width: 180}
-          ]]
-          ,page: true
-          ,skin: 'nob'
-          ,even: false
-          ,size: 'sm'
-          ,done: function (res) {
-            $title_tprice = '<span style="font-size: 12px;margin-left: 10px;">'
-                          + '  赞助总额: '
-                          + '    <span class="ys-red">'
-                          +        res.tprice
-                          + '        &nbsp;元'
-                          + '    </span>'
-                          + '</span>';
-            layero.find('.title_tprice').html($title_tprice);
-          }
-        });
-      }
-    });
-   });
+  layer.open({
+    type: 1
+    //,btn: '关闭'
+    ,id: 'Sponsors'
+    ,closeBtn: 1
+    //,btnAlign: 'c'
+    ,area: ['800px', '500px']
+    //,shade: false
+    ,resize: false
+    ,scrollbar: false
+    ,content: '<table class="layui-hide" id="sponsor-list" lay-filter="sponsor-list"></table>'
+    ,shadeClose : false
+    ,title: 'LayuiCdn赞助墙<span class="title_tprice"></span>'
+    ,success: function(layero, index) {
+      var $title = layero.find('.layui-layer-title');
+      $($title).css('border', 'none');
+      $($title).css('background-color', '#fff');
+      table.render({
+        elem: '#sponsor-list'
+        ,method: 'post'
+        ,url: $api + 'GetLayuiCdnSponsors'
+        ,title: 'LayuiCdn赞助列表'
+        ,parseData: function(res){
+          return {
+            code: res.code
+            ,msg: res.call
+            ,count: res.count
+            ,tprice: res.data.tprice
+            ,data: res.data.data
+          };
+        }
+        ,cols: [[
+          {field: 'name', title: '赞助者', align: 'center', width: 120}
+          ,{field: 'price', title: '金额', align: 'right', width: 100, templet: function(d){
+            return '<div><span class="ys-red">' + d.price + '&nbsp;元</span></div>'
+          }}
+          ,{field: 'desc', title: '留言', align: 'center', width: 290}
+          ,{field: 'type', title: '方式', align: 'center', width: 100, templet: function(d){
+            var $type;
+            if (d.type == 1) {
+              $type = '支付宝';
+            } else if (d.type == 2) {
+              $type = '微信';
+            } else {
+              $type = '其他渠道';
+            }
+            return '<div><span>' + $type + '</span></div>'
+          }}
+          ,{field: 'time', title: '赞助时间', align: 'center', width: 180}
+        ]]
+        ,page: true
+        ,skin: 'nob'
+        ,even: false
+        ,size: 'sm'
+        ,done: function (res) {
+          $title_tprice = '<span style="font-size: 12px;margin-left: 10px;">'
+                        + '  赞助总额: '
+                        + '    <span class="ys-red">'
+                        +        res.tprice
+                        + '        &nbsp;元'
+                        + '    </span>'
+                        + '</span>';
+          layero.find('.title_tprice').html($title_tprice);
+        }
+      });
+    }
+  });
 }
 //*赞助商家*//
 function GetSponsor() {

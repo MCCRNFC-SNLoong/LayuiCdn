@@ -10,10 +10,10 @@
     <meta name="description" content="LayuiCdn 网站地图sitemap页 网站导航 为广大Layui用户提供免费前端UI框架cdn加速服务。" />
     <meta name="keywords" content="LayuiCdn网站地图sitemap页,layui,layuicdn,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
     <meta name="copyright" content="LayuiCdnPro" />
-    <!--公共样式元素start-->
-    <link rel="stylesheet" type="text/css" href="./index/layui/css/layui.css" />
+    <!--自动化加载start-->
+    <script src="./auto/layui.js" v="2.5.6" e="layui.all"></script>
     <!--前端样式元素start-->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   </head>
 
   <body>
@@ -21,12 +21,8 @@
     <script type="text/html" id="urlTpl">
       <a href="{{ d.url }}" class="layui-table-link" target="_blank">{{ d.url }}</a>
     </script>
-    <script src="./index/layui/layui.js"></script>
-    <!--您的Layui代码start-->
     <script type="text/javascript">
-    layui.use('table', function() {
-      var $ = layui.$
-      ,table = layui.table;
+      var table = layui.table;
       table.render({
         elem: '#urlList'
         ,method: 'post'
@@ -47,13 +43,10 @@
         ,size: 'sm'
         ,limit: 999999999 * 999999999
       });
-    });
     </script>
     <!--信息上报脚本元素start-->
     <script src="//cache.layuicdn.com/oauth2.0/cloud/api.js" async></script>
     <!--自动推送脚本元素start-->
-    <!--<script src="./index/js/link_push.js"></script>-->
-    <!--<script src="https://zz.bdstatic.com/linksubmit/push.js" async></script>-->
     <script type="text/javascript">
       var _hmt = _hmt || [];
       (function() {

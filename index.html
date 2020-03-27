@@ -10,8 +10,8 @@
     <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
     <meta name="keywords" content="layui,layuicdn,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
     <meta name="copyright" content="LayuiCdnPro" />
-    <!--公共样式元素start-->
-    <link rel="stylesheet" type="text/css" href="./index/layui/css/layui.css" />
+    <!--自动化加载start-->
+    <script src="./auto/layui.js" v="2.5.6" e="layui.all"></script>
     <!--前端样式元素start-->
     <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
     <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
@@ -35,7 +35,7 @@
       $curl        = location.href;
       $hosts       = $protocol + '//' + $host + '/';
       $Chc_Copy    = true;
-      $update_Time = '202003132146';
+      $update_Time = '202003271805';
       $domain      = 'www.layuicdn.com';
       $api         = '//api.layuicdn.com/';
       if ($host != $domain) {
@@ -268,7 +268,7 @@
           <img src="./index/images/desc.png" alt="layuicdn" />
         </p>
         <blockquote class="layui-elem-quote" style="border-left: 3px solid #FF5722 !important;font-size: 12px !important;">
-          通知：因平台发展，原域名layui.hcwl520.com.cn将在2019年7月31正式下线，届时将全站301到
+          通知：因平台发展，原域名layui.hcwl520.com.cn已于2019年7月31正式下线，且全站301到
           <a class="cursor-pointer" onClick="linkjump('_self','https://www.layuicdn.com/?rurl=index-v1.0');">
             www.layuicdn.com
           </a>
@@ -287,12 +287,12 @@
               <div class="layui-card">
                 <div class="layui-card-header" style="color: #FF5722;font-weight: bold;">域名变更通知</div>
                 <div class="layui-card-body" style="font-size: 12px;">
-                  因平台需要更正式化的面向广大用户，故将域名更换为更符合Layui气质的域名：
-                  <a class="cursor-pointer" onClick="linkjump('_self','https://www.layuicdn.com/?rurl=index-v1.0',0);">
+                  因平台需要更正式化的面向广大用户，新域名：
+                  <a class="cursor-pointer ys-blue" onClick="linkjump('_self','https://www.layuicdn.com/?rurl=index-v1.0',0);">
                     www.layuicdn.com
                   </a>
-                  一个全新的域名已经上线，原域名layui.hcwl520.com.cn将在2019年7月31正式下线，届时将全站301到新的域名，
-                  望layuicdn的广大用户将线上项目域名及时替换并更新为新域名，以免造成访问中断等不必要的损失。
+                  原域名 layui.hcwl520.com.cn 已于2019年7月31正式下线，且全站301到新的域名，
+                  望 LayuiCdn 的广大用户将线上项目域名及时替换并更新为新域名，以免造成访问中断等不必要的损失。
                 </div>
               </div>
             </div>
@@ -632,10 +632,8 @@
     </div>
     <!--内容主体元素end-->
     <!--公共脚本元素start-->
-    <script src="./index/js/jquery-3.4.1.min.js"></script>
     <script src="./index/js/clipboard.min.js"></script>
     <script src="./index/js/typed.min.js"></script>
-    <script src="./index/layui/layui.js"></script>
     <!--前端脚本元素start-->
     <script src="./index/js/index_1.js"></script>
     <script src="./index/js/index_2.js"></script>

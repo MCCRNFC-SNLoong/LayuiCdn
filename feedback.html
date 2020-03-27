@@ -10,8 +10,8 @@
     <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
     <meta name="keywords" content="layui,layuicdn,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
     <meta name="copyright" content="LayuiCdnPro" />
-    <!--公共样式元素start-->
-    <link rel="stylesheet" type="text/css" href="./index/layui/css/layui.css" />
+    <!--自动化加载start-->
+    <script src="./auto/layui.js" v="2.5.6" e="layui.all"></script>
     <!--前端样式元素start-->
     <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
     <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
@@ -34,7 +34,7 @@
       $curl        = location.href;
       $hosts       = $protocol + '//' + $host + '/';
       $Chc_Copy    = true;
-      $update_Time = '202003132146';
+      $update_Time = '202003271805';
       $domain      = 'www.layuicdn.com';
       $api         = '//api.layuicdn.com/';
       if ($host != $domain) {
@@ -527,10 +527,8 @@
     </script>
     <!--内容主体元素end-->
     <!--公共脚本元素start-->
-    <script src="./index/js/jquery-3.4.1.min.js"></script>
     <script src="./index/js/clipboard.min.js"></script>
     <script src="./index/js/base64.min.js"></script>
-    <script src="./index/layui/layui.js"></script>
     <!--前端脚本元素start-->
     <script src="./index/js/index_1.js"></script>
     <script src="./index/js/index_2.js"></script>
