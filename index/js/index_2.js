@@ -84,3 +84,4 @@ if (siteDir[0] && $(window).width() > 750) {
     othis.siblings().find('a').removeClass('layui-this');
   });
 }
+form.render();

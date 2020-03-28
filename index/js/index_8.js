@@ -39,6 +39,7 @@ function checklayuiurl($css, $js, $title) {
                 '</div>' +
             '</div>'
     ,success: function(layero) {
+      form.render();
       var $btn = layero.find('.layui-layer-btn');
       var $content = layero.find('.layui-layer-content');
       $content.css('text-align', 'center');
@@ -51,7 +52,6 @@ function checklayuiurl($css, $js, $title) {
       });
     }
   });
-  form.render();
 }
 //*查看Layer*//
 function checklayerurl($js, $title) {
@@ -84,6 +84,7 @@ function checklayerurl($js, $title) {
                 '</div>' +
             '</div>'
     ,success: function(layero) {
+      form.render();
       var $btn = layero.find('.layui-layer-btn');
       var $content = layero.find('.layui-layer-content');
       $content.css('text-align', 'center');
@@ -96,7 +97,6 @@ function checklayerurl($js, $title) {
       });
     }
   });
-  form.render();
 }
 //*查看LayDate*//
 function checklaydateurl($js, $title) {
@@ -129,6 +129,7 @@ function checklaydateurl($js, $title) {
                 '</div>' +
             '</div>'
     ,success: function(layero) {
+      form.render();
       var $btn = layero.find('.layui-layer-btn');
       var $content = layero.find('.layui-layer-content');
       $content.css('text-align', 'center');
@@ -141,7 +142,6 @@ function checklaydateurl($js, $title) {
       });
     }
   });
-  form.render();
 }
 //*查看FlyTemplate*//
 function checkflyurl($js, $title) {
@@ -174,6 +174,7 @@ function checkflyurl($js, $title) {
                 '</div>' +
             '</div>'
     ,success: function(layero) {
+      form.render();
       var $btn = layero.find('.layui-layer-btn');
       var $content = layero.find('.layui-layer-content');
       $content.css('text-align', 'center');
@@ -186,7 +187,6 @@ function checkflyurl($js, $title) {
       });
     }
   });
-  form.render();
 }
 //*目录点击*//
 /*function mlonclick($id) {
