@@ -16,7 +16,19 @@ $ = layui.$
 ,device = layui.device()
 ,transfer = layui.transfer
 ,carousel = layui.carousel
-,colorpicker = layui.colorpicker; //Sorry 我并不想这样写
+,colorpicker = layui.colorpicker //Sorry 我并不想这样写
+,LayuiVersion = new Object;
+function GetLayuiVersion(ext='layui'){
+  if ($.isEmptyObject(LayuiVersion)) {
+    $.post($api + 'GetLayuiVersion', function(res) {
+      LayuiVersion = res.data;
+      return LayuiVersion[ext];
+    });
+  } else {
+    return LayuiVersion[ext];
+  }
+};
+GetLayuiVersion();
 //*构造链接*//
 function linkjump($type, $link, $rurl) {
   if ($rurl == 0) {

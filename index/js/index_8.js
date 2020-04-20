@@ -193,19 +193,6 @@ function checkflyurl($js, $title) {
   var $btn = $($id).find('.check');
   $btn.click();
 }*/
-window.LayuiVersion = new Object;
-var GetLayuiVersion = function(ext='layui'){
-  if ($.isEmptyObject(LayuiVersion)) {
-    $.post($api + 'GetLayuiVersion', function(res) {
-      LayuiVersion = res.data;
-      return LayuiVersion[ext];
-    });
-  } else {
-    return LayuiVersion[ext];
-  }
-
-};
-GetLayuiVersion();
 //*压缩包列表*//
 function GetCoslist() {
   var ziplist = table.render({
