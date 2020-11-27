@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<urlset>
+  <url>
+    <loc>https://www.layuicdn.com/</loc>
+    <lastmod>2020-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.layuicdn.com/api.html</loc>
+    <lastmod>2020-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.layuicdn.com/extend.html</loc>
+    <lastmod>2020-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.layuicdn.com/servers.html</loc>
+    <lastmod>2020-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.layuicdn.com/feedback.html</loc>
+    <lastmod>2020-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.layuicdn.com/sitemap.html</loc>
+    <lastmod>2020-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
