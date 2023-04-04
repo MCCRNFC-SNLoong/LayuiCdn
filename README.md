@@ -9,7 +9,7 @@
 
 
 #### 依托架构
- **LayuiCdn 基于 [猫云](https://www.maoyuncloud.com/?from=LayuiCdn)[Cdn] + 腾讯云 [API网关 + SCF无服务器云函数 + DSA动态网络加速 + COS对象储存] 等，全局托管实现全年不休的云上计算业务，全程无需人为干预即可提供自动运行等计算能力,进行实时监控，并24小时内更新到LayuiCdn API** 
+ **LayuiCdn 基于 [LayuiCdnPro](https://pro.layuicdn.com/?rurl=LayuiCdn)[Cdn] + 腾讯云 [API网关 + SCF无服务器云函数 + DSA动态网络加速 + COS对象储存] 等，全局托管实现全年不休的云上计算业务，全程无需人为干预即可提供自动运行等计算能力,进行实时监控，并24小时内更新到LayuiCdn API** 
 
 
 #### 1-基础用法

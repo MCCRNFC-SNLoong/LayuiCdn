@@ -1,0 +1,15 @@
+{
+  "name": "layuicdns",
+  "version": "1.0.4",
+  "description": "LayuiCdn ABXCdn",
+  "main": "index.js",
+  "directories": {},
+  "author": "MCCRNFC.SNLoong",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MCCRNFC-SNLoong/LayuiCdn.git"
+  },
+  "homepage": "https://github.com/MCCRNFC-SNLoong/LayuiCdn",
+  "dependencies": {}
+}

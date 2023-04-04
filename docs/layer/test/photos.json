@@ -1,0 +1,27 @@
+{
+  "status": 1,
+  "msg": "",
+  "title": "Photos Demo",
+  "id": 8,
+  "start": 0,
+  "data": [
+    {
+      "alt": "layer",
+      "pid": 1,
+      "src": "/docs/v2/static/demo/layer.png",
+      "thumb": ""
+    },
+    {
+      "alt": "壁纸",
+      "pid": 3,
+      "src": "/docs/v2/static/demo/000.jpg",
+      "thumb": ""
+    },
+    {
+      "alt": "浩瀚宇宙",
+      "pid": 5,
+      "src": "/docs/v2/static/demo/outer-space.jpg",
+      "thumb": ""
+    }
+  ]
+}

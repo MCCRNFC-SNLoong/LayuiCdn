@@ -18,6 +18,7 @@ $ = layui.$
 ,carousel = layui.carousel
 ,colorpicker = layui.colorpicker //Sorry 我并不想这样写
 ,LayuiVersion = new Object;
+$('.top-notice').text('禁止将LayuiCdn用于含诈骗、赌博、色情、木马、病毒等违法违规业务，否则将对违规使用者停止CDN加速，以及停止其他一切服务。');
 function GetLayuiVersion(ext='layui'){
   if ($.isEmptyObject(LayuiVersion)) {
     $.post($api + 'GetLayuiVersion', function(res) {
