@@ -1,6 +1,6 @@
 {
   "name": "layuicdns",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "LayuiCdn ABXCdn",
   "main": "index.js",
   "directories": {},
@@ -10,6 +10,6 @@
     "type": "git",
     "url": "https://github.com/MCCRNFC-SNLoong/LayuiCdn.git"
   },
-  "homepage": "https://github.com/MCCRNFC-SNLoong/LayuiCdn",
+  "homepage": "https://www.layuicdn.com/",
   "dependencies": {}
 }
