@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
@@ -15,7 +14,6 @@
     <!--前端样式元素start-->
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   </head>
-
   <body>
     <table class="layui-hide" id="urlList"></table>
     <script type="text/html" id="urlTpl">
@@ -50,22 +48,10 @@
       (function() {
         var d = document
         ,s = d.getElementsByTagName('script')[0]
-        ,bp = d.createElement('script')
         ,hm = d.createElement('script')
-        ,qh = d.createElement('script')
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
-        ,hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-        ,qh.src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba'
-        ,qh.id = 'sozz'
-        ,s.parentNode.insertBefore(bp, s)
-        ,s.parentNode.insertBefore(hm, s)
-        ,d.writeln(qh.outerHTML);
+        hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
+        ,s.parentNode.insertBefore(hm, s);
       })();
     </script>
-    <!--前端统计脚本元素start-->
-    <div style="display: none;">
-      <script src="https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871" language="JavaScript" async></script>
-    </div>
   </body>
-
 </html>

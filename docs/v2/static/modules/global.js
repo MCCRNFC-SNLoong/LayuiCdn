@@ -448,8 +448,8 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
   //底部动态信息
   (function(){
     var list = [
-      '<a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow"><img src="/index/images/hongdun.gif" style="height: 16px;"><span>京ICP备17014996号-7</span></a>'
-      ,'<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302000755" target="_blank" rel="nofollow"><img src="/index/images/gonganbei.png" style="height: 16px;"><span>京公网安备11011302000755号</span></a>'
+      '<a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow"><span>京ICP备17014996号-7</span></a>'
+      //,'<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302000755" target="_blank" rel="nofollow"><span>京公网安备11011302000755号</span></a>'
     ]
     ,footerInfo = $('#LAY-footer-info');
     footerInfo.append(list.join(''));

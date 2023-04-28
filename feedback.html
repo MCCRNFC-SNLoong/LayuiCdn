@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
@@ -16,10 +15,6 @@
     <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
     <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <!--[if lt IE 9]>
-      <script src="//cache.layuicdn.com/html5shiv/r29/html5.min.js"></script>
-      <script src="//cache.layuicdn.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
     <!-- LayuiCdnPro | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2020-02-08 | 官网：www.layuicdn.com -->
     <!--全局脚本元素start-->
     <script type="text/javascript">
@@ -251,7 +246,7 @@
     <div class="layui-footer footer">
       <div class="chc-friendship">
         友情链接：
-        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui/layui" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://layui.dev" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
           Layui
         </a>
         <a class="cursor-pointer" target="_blank" href="./sitemap.html" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
@@ -264,32 +259,16 @@
           ABXCDN
         </a>
       </div>
-      <p class="beian">
-        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://beian.miit.gov.cn/" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          <img src="./index/images/hongdun.gif" style="height: 21px;" alt="工信备案" />
-          京ICP备17014996号-7
-        </a>
-        &nbsp;
-        <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011302000755" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          <img src="./index/images/gonganbei.png" style="height: 21px;" alt="公安备案" />
-          京公网安备11011302000755号
-        </a>
-        &nbsp;
-        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://verify.nic.xin/xinDetail/xinAuthInfoDetail?domainName=layuicdn.com" onmouseover="layer.tips('XIN站认证',this,{tips:[1,'#000'],time:1000});">
-          <img src="./index/images/alxin.png" style="height: 21px;" alt="阿里信用" />
-        </a>
-        &nbsp;
-        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://pro.layuicdn.com/?rurl=LayuiCdn" onmouseover="layer.tips('独家CDN赞助商',this,{tips:[1,'#000'],time:1000});">
-          <img src="./index/images/layuicdnpro_logo.png" style="height: 21px;" alt="LayuiCdnPro" />
-        </a>
-      </p>
       <div class="layui-main">
         <p>
-          Copyright&nbsp;&copy;&nbsp;2012-<script>document.write(new Date().getFullYear());</script>&nbsp;
+          Copyright&nbsp;&copy;&nbsp;<script>document.write(new Date().getFullYear());</script>&nbsp;
           <a class="cursor-pointer" onClick="linkjump('_self','//www.layuicdn.com/');">
             www.layuicdn.com
           </a>
-          &nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;锦江区未来滴网络工作室-LayuiCdn官网&nbsp;版权所有
+          &nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;
+          <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://beian.miit.gov.cn/" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
+            京ICP备17014996号-7
+          </a>
         </p>
       </div>
     </div>
@@ -530,22 +509,11 @@
       (function() {
         var d = document
         ,s = d.getElementsByTagName('script')[0]
-        ,bp = d.createElement('script')
         ,hm = d.createElement('script')
-        ,qh = d.createElement('script')
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
-        ,hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-        ,qh.src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba'
-        ,qh.id = 'sozz'
-        ,s.parentNode.insertBefore(bp, s)
-        ,s.parentNode.insertBefore(hm, s)
-        ,d.writeln(qh.outerHTML);
+        hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
+        ,s.parentNode.insertBefore(hm, s);
       })();
     </script>
-    <!--前端统计脚本元素start-->
-    <div style="display: none;">
-      <script src="https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871" language="JavaScript" async></script>
-    </div>
   </body>
   <!--主体元素end-->
 </html>
