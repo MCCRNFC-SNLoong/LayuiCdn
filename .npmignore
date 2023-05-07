@@ -1,1 +1,12 @@
+auto/
+docs/
+index/
+examples/
 zip/
+fly/
+fly/**/*
+clipboard/
+*.txt
+*.xml
+*.htm
+*.html

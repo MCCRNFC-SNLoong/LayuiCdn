@@ -385,7 +385,7 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
         spread[key] && spread[key](res[key]);
       }
     }, 'jsonp'); */
-    $('#LAY_NAV_TOP').prepend('<li class="layui-nav-item"><a target="_blank" href="https://pro.layuicdn.com/?from=LayuiCdnDoc-v2" title="官方付费计划CDN支持无备案，新用户送30G流量">官方付费计划CDN<span class="layui-badge-dot"></span></a></li>');
+    $('#LAY_NAV_TOP').prepend('<li class="layui-nav-item"><a target="_blank" href="https://www.abxcdn.com/?from=LayuiCdnDoc-v2" title="官方付费计划CDN支持无备案，新用户送30G流量">官方付费计划CDN<span class="layui-badge-dot"></span></a></li>');
     var _hmt = _hmt || [];
     (function() {
       var d = document

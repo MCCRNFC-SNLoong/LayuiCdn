@@ -20,21 +20,14 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
 
 
   if(!0){
-    $('#LAY_NAV_TOP').prepend('<li class="layui-nav-item"><a target="_blank" href="https://pro.layuicdn.com/?from=LayuiCdnDoc-v1" title="官方付费计划CDN支持无备案，新用户送30G流量">官方付费计划CDN<span class="layui-badge-dot"></span></a></li>');
+    $('#LAY_NAV_TOP').prepend('<li class="layui-nav-item"><a target="_blank" href="https://www.abxcdn.com/?from=LayuiCdnDoc-v1" title="官方付费计划CDN支持无备案，新用户送30G流量">官方付费计划CDN<span class="layui-badge-dot"></span></a></li>');
     var _hmt = _hmt || [];
     (function() {
       var d = document
       ,s = d.getElementsByTagName('script')[0]
-      ,bp = d.createElement('script')
       ,hm = d.createElement('script')
-      ,qh = d.createElement('script')
-      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
-      ,hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-      ,qh.src = 'https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba'
-      ,qh.id = 'sozz'
-      ,s.parentNode.insertBefore(bp, s)
-      ,s.parentNode.insertBefore(hm, s)
-      //,d.writeln(qh.outerHTML);
+      hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
+      ,s.parentNode.insertBefore(hm, s);
     })();
   }
 

@@ -20,26 +20,30 @@
       <a href="{{ d.url }}" class="layui-table-link" target="_blank">{{ d.url }}</a>
     </script>
     <script type="text/javascript">
-      var table = layui.table;
-      table.render({
-        elem: '#urlList'
-        ,method: 'post'
-        ,url:'//api.layuicdn.com/GetLayuiCdnMap'
-        ,parseData: function(res){
-          return {
-            code: res.code
-            ,msg: res.call
-            ,count: res.count
-            ,data: res.data.data
-          };
-        }
-        ,cols: [[
-          {field:'url', title: '链接地址', sort: true, align: 'center', templet: '#urlTpl'}
-        ]]
-        ,skin: 'nob'
-        ,even: false
-        ,size: 'sm'
-        ,limit: 999999999 * 999999999
+      var $ = layui.$
+      ,table = layui.table;
+      $.post('//api.layuicdn.com/GetLayuiCdnMap',(res)=>{
+        table.render({
+          elem: '#urlList'
+          ,data: res.data.data
+          // ,parseData: function(res){
+          //   return {
+          //     code: res.code
+          //     ,msg: res.call
+          //     ,count: res.count
+          //     ,data: res.data.data
+          //   };
+          // }
+          ,cols: [[
+            {field:'url', title: '链接地址', sort: true, align: 'center', templet: '#urlTpl'}
+          ]]
+          ,skin: 'nob'
+          ,even: false
+          ,size: 'sm'
+          ,page: true
+          ,limit: 100
+          ,limits: [50,100,150,200,300,400,500,600,900]
+        });
       });
     </script>
     <!--自动推送脚本元素start-->
