@@ -4,8 +4,9 @@ index/
 examples/
 zip/
 fly/
-fly/**/*
+fly-v3.0/
 clipboard/
+jquery/
 *.txt
 *.xml
 *.htm
