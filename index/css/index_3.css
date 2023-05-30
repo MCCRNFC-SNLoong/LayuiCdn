@@ -76,7 +76,7 @@
 .layui-textarea {
   background-color: #13151A !important;
   color: #C2BE9E !important;
-  min-height: 600px !important;
+  /* min-height: 555px !important; */
   resize: none !important;
   overflow: hidden !important;
 }

@@ -218,10 +218,10 @@ function GetCoslist() {
     ,cols: [[
       {type: 'numbers', fixed: 'left', sort: true, style:'cursor: text;'}
       ,{field: 'Key', title: '文件名称', minWidth: 200, sort: true, style:'cursor: text;'}
-      ,{field: 'ETag', title: 'MD5校验-点击复制', minWidth: 280, sort: true, style:'cursor: pointer;', templet: '#ZipListMD5Tpl'}
+      ,{field: 'ETag', title: 'MD5校验-点击复制', minWidth: 280, style:'cursor: pointer;', templet: '#ZipListMD5Tpl'}
       ,{field: 'LastModified', title: '上传时间', minWidth: 170, style:'cursor: text;'}
       ,{field: 'Size', title: '大小', minWidth: 80, style:'cursor: text;'}
-      ,{field: 'tools', title: '操作', minWidth: 125, fixed: 'right', sort: true, style:'text-align: center;', templet: '#ZipListToolsTpl'}
+      ,{field: 'tools', title: '操作', minWidth: 125, fixed: 'right', style:'text-align: center;', templet: '#ZipListToolsTpl'}
     ]]
     ,skin: 'nob'
     ,size: 'sm'
@@ -498,17 +498,14 @@ function GetSponsor() {
 function AutoLayui() {
   var $content = '<div style="padding: 15px; background-color: #fff;">'
                + '  <div class="layui-text" style="margin-top: 10px;">'
-               + '    <iframe src="/auto/auto.html" frameborder="0" width="100%" height="600" scrolling="no"></iframe>'
+               + '    <iframe src="/auto/auto.html" frameborder="0" width="100%" height="415" scrolling="no"></iframe>'
                + '    <br />'
                + '    <blockquote class="layui-elem-quote" style="border: none !important;font-size: 13px !important; margin-bottom: 0px !important;">'
                + '      您只需要写下代码:'
                + '    </blockquote>'
                + '    <blockquote class="layui-elem-quote" style="border: none !important; margin-bottom: 0px !important;">'
-               + '      <blockquote class="layui-elem-quote" style="border-left: 2px solid #FF5722 !important;font-size: 13px !important; margin-bottom: 0px !important;">'
-               + '        压缩版: &lt;script src="https://www.layuicdn.com/auto/layui.js" v="layui" e="layui"&gt;&lt;/script&gt;'
-               + '        <br />'
-               + '        未压缩: &lt;script src="https://www.layuicdn.com/auto/layuis.js" v="layui" e="layui"&gt;&lt;/script&gt;'
-               + '     </blockquote>'
+               + '      <blockquote class="layui-elem-quote" style="border-left: 2px solid #FF5722 !important;font-size: 13px !important;">'
+               + '        script src="https://www.layuicdn.com/auto/layui.js" v="layui"&gt;&lt;/script&gt;'
                + '    </blockquote>'
                + '    <blockquote class="layui-elem-quote" style="border: none !important;font-size: 13px !important; margin-bottom: 0px !important;">'
                + '      即可引入自动化加载layui.js模块以及layui.css'
@@ -517,14 +514,16 @@ function AutoLayui() {
                + '      </span>'
                + '    </blockquote>'
                + '    <blockquote class="layui-elem-quote" style="border: none !important;font-size: 13px !important; margin-bottom: 0px !important;">'
-               + '      v参数为版本, 如v="2.5.6" 即自动引入2.5.6版本的layui, 如值为 layui 或 不携带v参数 则默认为最新版本的layui 例: &lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6"&gt;&lt;/script&gt;'
-               + '        <br />'
-               + '      e参数为模块, 如e="layui" 或 e="layui.all" 即自动引入 layui 或 layui.all 的js模块, 如不携带e参数则默认为layui 例: &lt;script src="https://www.layuicdn.com/auto/layui.js" e="layui.all"&gt;&lt;/script&gt;'
+               + '      v参数为版本, 如v="2.8.0" 即自动引入2.8.0版本的layui, 如值为 layui 或 不携带v参数 则默认为最新版本的layui 例: &lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.8.0"&gt;&lt;/script&gt;'
+               + '      <br />'
+               + '      <br />'
+               + '      <p style="color: #FF5722;">注：此模块仅支持2.6.0以下版本</p>'
+               + '      e参数为模块, 如e="layui" 或 e="layui.all" 即自动引入 layui 或 layui.all 的js模块文件, 如不携带e参数则默认为layui 例: &lt;script src="https://www.layuicdn.com/auto/layui.js" e="layui.all"&gt;&lt;/script&gt;'
                + '    </blockquote>'
                + '    <blockquote class="layui-elem-quote" style="border: none !important;font-size: 13px !important; margin-bottom: 0px !important;">'
                + '      最简写法: &lt;script src="https://www.layuicdn.com/auto/layui.js"&gt;&lt;/script&gt; 自动最新版'
                + '      <br />'
-               + '      建议写法: &lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.5.6" e="layui"&gt;&lt;/script&gt; 解析为2.5.6版本layui模块'
+               + '      建议写法: &lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.8.0"&gt;&lt;/script&gt; 解析为2.8.0版本layui模块'
                + '      <br />'
                + '      <br />'
                + '      <br />'

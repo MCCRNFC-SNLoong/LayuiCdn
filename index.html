@@ -80,8 +80,8 @@
           </cite>
         </a>
       </li>
-      <ul style="margin-left: 15px;" id="layuiuili"></ul>
-      <li>
+     <ul style="margin-left: 15px;" id="layuiuili"></ul>
+      <!-- <li>
         <a href="#Layer">
           <cite>
             Layer
@@ -111,7 +111,7 @@
             全组件下载
           </cite>
         </a>
-      </li>
+      </li> -->
     </ul>
     <div class="layui-main site-inline">
       <div class="site-tree">
@@ -354,38 +354,53 @@
         </blockquote>
         <div class="site-text">
           <p style="font-weight: bold;" id="demo">
-            引用示例：协议支持HTTP和HTTPS，Methods仅开放GET
+            常规-引用示例：
           </p>
-          <textarea class="layui-textarea" spellcheck="false" readonly="readonly">
+          <textarea class="layui-textarea" spellcheck="false" readonly="readonly" style="min-height: 415px;">
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui-v2.8.0/css/layui.css" />
   </head>
-
   <body>
-    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+    <script src="https://www.layuicdn.com/layui-v2.8.0/layui.js"></script>
     <!--您的Layui代码start-->
     <script type="text/javascript">
-    layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
-      var laydate = layui.laydate //日期
-      ,laypage = layui.laypage //分页
-      ,layer = layui.layer //弹层
-      ,table = layui.table //表格
-      ,carousel = layui.carousel //轮播
-      ,upload = layui.upload //上传
-      ,element = layui.element; //元素操作 等等...
+      layui.use(function(){
+        var layer = layui.layer; //弹层 示例...
 
-      /*layer弹出一个示例*/
-      layer.msg('Hello World');
-    });
+        // 弹出一个示例
+        layer.msg('Hello World', {icon: 6});
+
+      });
     </script>
   </body>
-
 </html>
+          </textarea>
+          <p style="font-weight: bold;margin-top: 10px;">
+            自动化-引用示例：<a class="cursor-pointer" onClick="AutoLayui();">高级加载</a>
+          </p>
+          <textarea class="layui-textarea" spellcheck="false" readonly="readonly" style="min-height: 395px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://www.layuicdn.com/auto/layui.js" v="2.8.0"></script>
+  </head>
+  <body>
+    <!--您的Layui代码start-->
+    <script type="text/javascript">
+      layui.use(function(){
+        var layer = layui.layer; //弹层 示例...
 
+        // 弹出一个示例
+        layer.msg('Hello World', {icon: 6});
+
+      });
+    </script>
+  </body>
+</html>
           </textarea>
           <span id="Layui"></span>
           <script type="text/html" id="LayuiListNewest">

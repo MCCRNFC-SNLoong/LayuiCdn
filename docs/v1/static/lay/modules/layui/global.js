@@ -26,8 +26,11 @@ layui.define(['code', 'element', 'table', 'util', 'carousel', 'laytpl'], functio
       var d = document
       ,s = d.getElementsByTagName('script')[0]
       ,hm = d.createElement('script')
+      ,ad = d.createElement('script');
       hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-      ,s.parentNode.insertBefore(hm, s);
+      ,ad.src = '/ads.js'
+      ,s.parentNode.insertBefore(hm, s)
+      ,s.parentNode.insertBefore(ad, s);
     })();
   }
 

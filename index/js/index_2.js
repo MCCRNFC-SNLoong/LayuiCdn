@@ -65,7 +65,7 @@ if (siteDir[0] && $(window).width() > 750) {
       type: 1
       ,content: siteDir
       ,skin: 'layui-layer-dir'
-      ,area: ['150px', '80%']
+      ,area: ['150px', '55%']
       //,maxHeight: $(window).height() - 150
       ,title: '目录'
       //,closeBtn: false
