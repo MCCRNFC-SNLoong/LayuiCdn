@@ -110,17 +110,10 @@ layui/
 <script src="https://www.layuicdn.com/auto/layui.js"></script>
 ```
 
-<<<<<<< Updated upstream
 建议写法: 强制版本 解析为2.8.0版本
 
 ```
 <script src="https://www.layuicdn.com/auto/layui.js" v="2.8.0"></script>
-=======
-建议写法: 强制版本+模块版 解析为2.8.0版本layui模块
-
-```
-<script src="https://www.layuicdn.com/auto/layui.js" v="2.8.0" e="layui"></script>
->>>>>>> Stashed changes
 ```
 
 #### 高级示例：  
@@ -147,6 +140,7 @@ layui/
   </body>
 </html>  
 ```
+
 ### 相关
 [官网](https://www.layuicdn.com/)  [API](https://www.layuicdn.com/api.html)  [文档](https://www.layuicdn.com/docs/)  
 
