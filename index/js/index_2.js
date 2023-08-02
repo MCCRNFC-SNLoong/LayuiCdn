@@ -31,7 +31,7 @@ util.fixbar({
     var stop = $(window).scrollTop();
     if ($(window).width() <= 750) return;
     var bottom = $('.footer').offset().top - $(window).height();
-    if (stop > 61 && stop < bottom) {
+    if (stop > 200 && stop < bottom) {
       if (!main.hasClass('site-fix')) {
         main.addClass('site-fix');
       }
