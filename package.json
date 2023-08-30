@@ -1,6 +1,6 @@
 {
   "name": "layuicdns",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "LayuiCdn ABXCdn",
   "main": "index.js",
   "directories": {},
