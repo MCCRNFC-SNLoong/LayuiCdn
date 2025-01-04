@@ -564,7 +564,7 @@ function FlySee($name, $js) {
   checkflyurl($js ,$name);
 }
 var $layuicdn_options = {
-  strings: ['2023&#x795D;&#x5927;&#x5BB6;...&#x641E;&#x9519;&#x4E86;...&#x518D;&#x6765;','&#x795D;&#x5E7F;&#x5927;&#x7528;&#x6237;&#x5728;2024&#x65B0;&#x65F6;&#x4EE3; Happy New Year&#xFF01;']
+  strings: ['2024&#x795D;&#x5927;&#x5BB6;...&#x641E;&#x9519;&#x4E86;...&#x518D;&#x6765;','&#x795D;&#x5E7F;&#x5927;&#x7528;&#x6237;&#x5728;2025&#x65B0;&#x65F6;&#x4EE3; Happy New Year&#xFF01;']
   //stringsElement: '.layuicdn-notice-strings'
   ,startDelay: 800
   ,typeSpeed: 150
