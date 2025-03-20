@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--浏览器内核控制-->
     <meta name="renderer" content="webkit" />
     <meta name="robots" content="noindex,nofollow" />
     <title>您访问的文件不存在了？</title>
-    <meta name="copyright" content="LayuiCdnPro" />
-    <!--公共样式元素start-->
-    <link rel="stylesheet" type="text/css" href="/index/layui/css/layui.css" />
-    <!--前端样式元素start-->
+    <link rel="stylesheet" type="text/css" href="/layui-v2.10.0/css/layui.css" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <!--[if lt IE 9]>
-      <script src="//cache.layuicdn.com/html5shiv/r29/html5.min.js"></script>
-      <script src="//cache.layuicdn.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- LayuiCdnPro | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
-    <style type="text/css">
-      .tips {
-        margin-top: 30px;
-        text-align: center;
-      }
-      .layui-icon {
-        display: inline-block;
-        font-size: 300px;
-        color: #393D49;
-      }
-      .layui-text {
-        margin-top: 20px;
-        font-size: 24px;
-      }
+    <!-- LayuiCdn | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
+    <style>
+      .tips {margin-top: 30px;text-align: center;}
+      .layui-icon {display: inline-block;font-size: 300px;color: #393D49;}
+      .layui-text {margin-top: 20px;font-size: 24px;}
     </style>
   </head>
   <!--主体元素start-->
@@ -41,24 +24,17 @@
         <i class="layui-icon layui-icon-face-surprised"></i>
         <div class="layui-text">
           很抱歉，您访问的文件不存在了呢？
-          <a href="/feedback.html">
-            反馈问题
-          </a>
+          <a href="/kf.html">反馈问题</a>
         </div>
       </div>
     </div>
     <!--自动推送脚本元素start-->
     <script type="text/javascript">
       var _hmt = _hmt || [];
-      (function() {
-        var d = document
-        ,s = d.getElementsByTagName('script')[0]
-        ,hm = d.createElement('script')
-        ,cn = d.createElement('script')
-        hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-        ,cn.src = 'https://s95.cnzz.com/z_stat.php?id=1260931871&web_id=1260931871'
-        ,s.parentNode.insertBefore(hm, s)
-        ,s.parentNode.insertBefore(cn, s);
+      (() => {
+        let s = document.scripts[0];
+        ['https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852', '/ads.js']
+          .forEach(u => s.parentNode.insertBefore(Object.assign(document.createElement('script'), {src: u}), s));
       })();
     </script>
   </body>

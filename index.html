@@ -3,630 +3,300 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--浏览器内核控制-->
     <meta name="renderer" content="webkit" />
     <title>Layui免费CDN静态库 - LayuiCdn静态库 免费 CDN 加速服务</title>
     <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
     <meta name="keywords" content="layui,layuicdn,abxcdn,LayuiCdnPro,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
-    <meta name="copyright" content="LayuiCdnPro" />
+    <meta name="copyright" content="LayuiCdn" />
     <!--自动化加载start-->
-    <script src="./auto/layui.js" v="2.5.7" e="layui.all"></script>
-    <!--前端样式元素start-->
-    <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
-    <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
-    <link rel="stylesheet" type="text/css" href="./index/css/index_3.css" />
+    <script src="./auto/layui.js" v="2.10.0"></script>
+    <!--全局样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/css/index.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <!-- LayuiCdnPro | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
-    <!--全局脚本元素start-->
-    <script type="text/javascript">
-      var $Port    = 'https:';
-      $protocol    = location.protocol;
-      if ($protocol != $Port) {
-        location.href = $Port + location.href.substring($Port.length);
-      }
-      $port        = location.port;
-      $host        = location.hostname;
-      $path        = location.pathname;
-      $curl        = location.href;
-      $hosts       = $protocol + '//' + $host + '/';
-      $Chc_Copy    = true;
-      $update_Time = '202304041829';
-      $domain      = 'www.layuicdn.com';
-      $api         = '//api.layuicdn.com/';
-      if ($host != $domain) {
-        location.href = $protocol + '//' + $domain + '/';
-      }
-    </script>
+    <!-- LayuiCdn | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
+    <!--局部样式元素start-->
+    <style>
+      .body-visibility {margin-top: 10px;}
+    </style>
   </head>
   <!--主体元素start-->
   <body ondragstart="return false">
     <!--头部元素start-->
-    <div class="top-notice" style="top: 0px;text-align: center;color: #EEE;background-color: #646473;font-size: 14px;line-height: 20px;padding: 10px 20px;"></div>
-    <div class="layui-header header header-doc">
-      <div class="layui-main">
-        <a class="logo" href="/?rurl=CdnLogo">
-          <img src="./index/images/logo3.png" alt="LayuiCdn" />
-        </a>
-        <script src="./index/js/index_3.js"></script>
-        <script src="./index/js/index_4.js"></script>
-      </div>
-    </div>
-    <div class="layuicdnbanner">
-      <img class="layuicdnbanner-img" src="./index/images/banner.png" alt="LayuiCdnbanner" />
-      <span class="layuicdnbanner-text" style="line-height: 295px;">
-        心有大格局，麻雀岂能承载的了 · LayuiCdn
-      </span>
-    </div>
-    <ul class="site-dir">
-      <li>
-        <a href="#kssy">
-          <cite>
-            开始使用
-          </cite>
-        </a>
-      </li>
-      <li>
-        <a class="cursor-pointer" onClick="AutoLayui();">
-          <cite>
-            高级加载
-          </cite>
-          <span class="layui-badge-dot" style="position: relative;top: -3px;"></span>
-        </a>
-      </li>
-      <li>
-        <a href="#Layui">
-          <cite>
-            Layui
-          </cite>
-        </a>
-      </li>
-     <ul style="margin-left: 15px;" id="layuiuili"></ul>
-      <!-- <li>
-        <a href="#Layer">
-          <cite>
-            Layer
-          </cite>
-        </a>
-      </li>
-      <ul style="margin-left: 15px;" id="layeruili"></ul>
-      <li>
-        <a href="#LayDate">
-          <cite>
-            LayDate
-          </cite>
-        </a>
-      </li>
-      <ul style="margin-left: 15px;" id="laydateuili"></ul>
-      <li>
-        <a href="#FlyTemplate">
-          <cite>
-            fly
-          </cite>
-        </a>
-      </li>
-      <ul style="margin-left: 15px;" id="flyuili"></ul>
-      <li>
-        <a href="#Zip">
-          <cite>
-            全组件下载
-          </cite>
-        </a>
-      </li> -->
-    </ul>
-    <div class="layui-main site-inline">
-      <div class="site-tree">
-        <div class="layui-form" style="height: 38px; margin: 10px 13px 0 0;">
-          <select lay-filter="tabVersion">
-            <option value="index">v1</option>
-          </select>
-        </div>
-        <ul class="layui-tree">
-          <li>
-            <h2 style="color: #FFF;border-left: 3px solid #797c88 !important;background: linear-gradient(120deg, #16171A, #848790);">
-              全部服务&nbsp;
-              <span class="ys-gray" style="font-size: 11px;">
-                <script>document.write($update_Time);</script>
-                <a class="ys-gray" style="font-size: 11px;" rel="nofollow" target="_blank" href="https://gitee.com/LayuiCdn">码云</a>
-              </span>
-            </h2>
-          </li>
-          <li class="site-tree-noicon layui-this">
-            <a class="cursor-pointer" onClick="linkjump('_self','./');">
-              <cite>
-                <i class="layui-icon layui-icon-home" style="font-size: 12px;"></i>
-                开始使用
-              </cite>
-              <em>
-                Getting Started
-              </em>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" onClick="AutoLayui();">
-              <cite>
-                <i class="layui-icon layui-icon-slider" style="font-size: 13px;"></i>
-                高级加载
-              </cite>
-              <em>
-                全新 / 极速 / 自动
-              </em>
-              <span class="layui-badge-dot" style="position: relative;top: -3px;left: -3px;"></span>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" target="_blank" href="https://www.abxcdn.com/">
-              <cite>
-                <i class="layui-icon layui-icon-diamond" style="font-size: 13px;"></i>
-                付费计划
-              </cite>
-              <em>
-                全球 / 智能 / 调度
-              </em>
-              <span class="layui-badge-dot" style="position: relative;top: -3px;left: -3px;"></span>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" href="./api.html">
-              <cite>
-                <i class="layui-icon layui-icon-chart" style="font-size: 13px;"></i>
-                开放接口
-              </cite>
-              <em>
-                公共 / 开放 / 便捷
-              </em>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" href="./extend.html">
-              <cite>
-                <i class="layui-icon layui-icon-app" style="font-size: 13px;"></i>
-                组件加速
-              </cite>
-              <em>
-                自主 / 自由 / 自有
-              </em>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" onClick="Sponsor();">
-              <cite>
-                <i class="layui-icon layui-icon-fire" style="font-size: 13px;"></i>
-                赞助广告
-              </cite>
-              <em>
-                支持 / 支持 / 支柱
-              </em>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" onClick="SponsorList();">
-              <cite>
-                <i class="layui-icon layui-icon-auz" style="font-size: 13px;"></i>
-                赞助列表
-              </cite>
-              <em>
-                物质 / 意义 / 非凡
-              </em>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" href="./servers.html">
-              <cite>
-                <i class="layui-icon layui-icon-chart" style="font-size: 13px;"></i>
-                服务检测
-              </cite>
-              <em>
-                全面 / 安全 / 稳定
-              </em>
-            </a>
-          </li>
-          <li class="site-tree-noicon">
-            <a class="cursor-pointer" href="./feedback.html">
-              <cite>
-                <i class="layui-icon layui-icon-service" style="font-size: 13px;"></i>
-                问题反馈
-              </cite>
-              <em>
-                专业 / 专注 / 效率
-              </em>
-            </a>
-          </li>
-        </ul>
-        <ul class="layui-tree">
-          <li>
-            <h2 style="color: #FFF;border-left: 3px solid #029443 !important;background: linear-gradient(120deg, #0abf5b, #4affcc);">
-              爱心赞助
-            </h2>
-          </li>
-          <div id="SponsorView"></div>
-          <script type="text/html" id="SponsorTpl">
-            {{# layui.each(d.data, function(index, item){ }}
-              <li class="site-tree-noicon">
-                <a class="cursor-pointer" rel="{{ item.rel }}" target="{{ item.target }}" href="{{ item.url }}">
-                  <cite>
-                    {{ item.name }}
-                  </cite>
-                  <em>
-                    {{ item.names }}
-                  </em>
-                </a>
-              </li>
-            {{# }); }}
-          </script>
-        </ul>
-      </div>
-      <div class="site-content" id="kssy">
-        <h1 class="site-h1">
-          开始使用 - 接入Layui
-          <span class="layuicdn-notice"></span>
-        </h1>
-        <p style="margin-bottom: 20px;text-align: center;background: linear-gradient(120deg, #33CC99, #4EFFFB);">
-          <img src="./index/images/desc.png" alt="layuicdn" />
-        </p>
-        <blockquote class="layui-elem-quote" style="border-left: 3px solid #FF5722 !important;font-size: 12px !important;">
-          通知：因平台发展，原域名layui.hcwl520.com.cn已于2019年7月31正式下线，且全站301到
-          <a class="cursor-pointer" onClick="linkjump('_self','https://www.layuicdn.com/?rurl=index-v1.0');">
-            www.layuicdn.com
+    <div class="top-notice layui-hide-xs layui-hide"></div>
+    <div class="header">
+      <div class="layui-container">
+        <div class="logo">
+          <a href="/?form=LayuiCdnLogo">
+            <img src="./index/images/logo3.png" alt="LayuiCdn" />
           </a>
-           <button id="see_announce" type="button" class="layui-btn layui-btn-xs layui-bg-gray">
-             详情<span class="layui-badge-dot"></span>
-           </button>
-        </blockquote>
-        <style type="text/css">
-          #announce .cursor-pointer:hover {
-            color: #00a4ff !important;
-          }
-        </style>
-        <div id="announce" style="padding: 10px;background-color: #F2F2F2;margin-bottom: 10px;display: none;">
-          <div class="layui-row layui-col-space15">
-            <div class="layui-col-md12">
-              <div class="layui-card">
-                <div class="layui-card-header" style="color: #FF5722;font-weight: bold;">域名变更通知</div>
-                <div class="layui-card-body" style="font-size: 12px;">
-                  因平台需要更正式化的面向广大用户，新域名：
-                  <a class="cursor-pointer ys-blue" onClick="linkjump('_self','https://www.layuicdn.com/?rurl=index-v1.0',0);">
-                    www.layuicdn.com
-                  </a>
-                  原域名 layui.hcwl520.com.cn 已于2019年7月31正式下线，且全站301到新的域名，
-                  望 LayuiCdn 的广大用户将线上项目域名及时替换并更新为新域名，以免造成访问中断等不必要的损失。
-                </div>
-              </div>
+        </div>
+        <div class="theme layui-hide-xs"></div>
+        <div class="header-menu">
+          <ul class="layui-nav"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-banner layui-hide-xs">心有大格局，麻雀岂能承载的了 · LayuiCdn</div>
+    <div class="layui-container">
+      <div class="layui-row layui-col-space4">
+        <div class="layui-col-md3">
+          <div class="layui-panel left-menu">
+            <ul class="layui-menu layui-menu-lg" id="left-menu">
+              <li class="layui-menu-item-group left-menu-all layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+              <!-- <li class="layui-menu-item-divider layui-hide"></li> -->
+              <li class="layui-menu-item-group left-menu-sponsor layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+            </ul>
+          </div>
+          <script id="left-menu-all-tpl" type="text/html">
+            <div class="layui-menu-body-title">全部服务</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-all-{{= Menu.id }}' {{# if (Menu.call) { }} ,call: {{= Menu.call }} {{# } }} }" {{# if (Menu.url) { }} data-url="{{= Menu.url }}" {{# } }}>
+                  <div class="layui-menu-body-title">
+                      <a {{# if (!Menu.call) { }} rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}"{{# } }}>
+                      {{= Menu.title }}
+                      <span class="layui-font-12 layui-font-gray titles">{{= Menu.text }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
+                    </a>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+          <script id="left-menu-sponsor-tpl" type="text/html">
+            <div class="layui-menu-body-title">爱心赞助</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-sponsor-{{= Menu.names }}'}">
+                  <div class="layui-menu-body-title">
+                    <a rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}">
+                      {{= Menu.name }}
+                      <span class="layui-font-12 layui-font-gray names">{{= Menu.names }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge layui-bg-orange">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
+                    </a>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+        </div>
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md9">
+          <div class="layui-panel right-body">
+            <h1 class="body-h1">开始使用 - 接入Layui</h1>
+            <div class="desc-img"></div>
+            <div class="body-h2">
+              为
+              <a rel="nofollow" target="_blank" href="https://layui.dev/?from=layuicdn">
+                Layui
+              </a>
+              的广大用户提供免费的CDN静态库，非常稳定、快速、免费的
+              <a rel="nofollow" target="_blank" href="https://gitee.com/layui/layui?from=layuicdn">
+                Layui开源组件项目
+              </a>
+              国内CDN加速服务。
             </div>
-          </div>
-        </div>
-        <script type="text/javascript">
-          var $see_announce = document.getElementById('see_announce');
-          var $announce = document.getElementById('announce');
-          $see_announce.onclick = function (){
-            if ($announce.style.display == 'block') {
-              $announce.style.display = 'none';
-              $see_announce.innerHTML = '详情<span class="layui-badge-dot"></span>';
-            } else {
-              $announce.style.display = 'block';
-              $see_announce.innerHTML = '收起';
-            }
-          }
-        </script>
-        <!--<blockquote class="layui-elem-quote" style="border-left: 3px solid #FF5722 !important;font-size: 12px !important;">
-          HTTPS问题：因HTTPS证书需要一些时间，故预计将在2019-07-03前部署完成，在此之前将无法使用，您可以暂时使用上方旧域名进行HTTPS操作。
-        </blockquote>-->
-        <blockquote class="layui-elem-quote">
-          为
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui">
-            Layui
-          </a>
-          的广大用户提供免费的CDN静态库，非常稳定、快速、免费的
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui/layui">
-            Layui开源组件项目
-          </a>
-          国内CDN加速服务。
-        </blockquote>
-        <img class="cursor-pointer" width="100%" src="./index/images/layuicdnpro_banner.png" rel="nofollow" onClick="linkjump('_blank','https://www.abxcdn.com/?rurl=LayuiCdn',0);" alt="LayuiCDN赞助商" />
-        <fieldset class="layui-elem-field layui-field-title site-title">
-          <legend>
-            <a>
-              组件列表
-            </a>
-          </legend>
-        </fieldset>
-        <blockquote class="layui-elem-quote">
-          目前
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui">
-            Layui
-          </a>
-          免费开源的项目：
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui/layui">
-            Layui
-          </a>
-          、
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui/layer">
-            Layer
-          </a>
-          、
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui/laydate">
-            LayDate
-          </a>
-          、
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://gitee.com/layui/layui-vue">
-            Layui-vue
-          </a>
-          ，无论是前后WAP还是移动APP等，都是开发全栈最佳首选。
-        </blockquote>
-        <div class="site-text">
-          <p style="font-weight: bold;" id="demo">
-            常规-引用示例：
-          </p>
-          <textarea class="layui-textarea" spellcheck="false" readonly="readonly" style="min-height: 415px;">
+            <div class="body-banner">
+              <a target="_blank" href="https://www.abxcdn.com/?from=layuicdn-banner">
+                <img width="100%" src="./index/images/layuicdnpro_banner.png" alt="LayuiCDN赞助商" title="LayuiCDN赞助商" />
+              </a>
+            </div>
+            <div class="body-h2">
+              目前
+              <a rel="nofollow" target="_blank" href="https://layui.dev/?from=layuicdn">
+                Layui
+              </a>
+              免费开源的项目：
+              <a rel="nofollow" target="_blank" href="https://gitee.com/layui/layui?from=layuicdn">
+                Layui
+              </a>
+              、
+              <a rel="nofollow" target="_blank" href="https://gitee.com/layui/layer?from=layuicdn">
+                Layer
+              </a>
+              、
+              <a rel="nofollow" target="_blank" href="https://gitee.com/layui/laydate?from=layuicdn">
+                LayDate
+              </a>
+              、
+              <a rel="nofollow" target="_blank" href="https://gitee.com/layui/layui-vue?from=layuicdn">
+                Layui-vue
+              </a>
+              ，无论是前后WAP还是移动APP等，都是开发全栈最佳首选。
+            </div>
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend>常规引用-示例</legend>
+            </fieldset>
+            <pre class="layui-code code-default" lay-options="{preview: 'iframe',ln: false,lang: 'html',langMarker: true,codeStyle: 'height: 690px;',previewStyle: 'height: 690px;'}">
+              <textarea class="layui-hide">
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui-v2.8.0/css/layui.css" />
+    <title>常规引用-示例</title>
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui-v2.10.0/css/layui.css" />
+    <style>.demo-layuicdn .loading {text-align: center;}</style>
   </head>
   <body>
-    <script src="https://www.layuicdn.com/layui-v2.8.0/layui.js"></script>
-    <!--您的Layui代码start-->
+    <div class="layui-card">
+      <div class="layui-card-header">常规引用加载</div>
+      <div class="layui-card-body demo-layuicdn">
+        <div class="loading"><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i>加载中...</div>
+        <div class="layui-hide">当前面页总耗时：<span class="loadtime"></span>ms 当前Layui版本：<span class="version"></span></div>
+        <div class="layui-hide"><table class="layui-table modules" lay-size="sm"><thead><tr><th>已加载组件</th><th>类型</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+    <script src="https://www.layuicdn.com/layui-v2.10.0/layui.js"></script>
+    <!--您的Layui代码Start-->
     <script type="text/javascript">
-      layui.use(function(){
-        var layer = layui.layer; //弹层 示例...
-
-        // 弹出一个示例
-        layer.msg('Hello World', {icon: 6});
-
+      layui.use(()=> {
+        let $ = layui.$ // jQuery
+        ,layer = layui.layer; // 弹层 示例...
+        let demo = $('.demo-layuicdn'), timing = window.performance.timing || window.msPerformance.timing || window.webkitPerformance.timing;
+        demo.find('.loading').remove(); // 移除加载
+        demo.find('div').removeClass('layui-hide');
+        demo.find('.version').html(layui.v); // 当前版本
+        demo.find('.loadtime').html(timing.domContentLoadedEventEnd - timing.navigationStart); // 加载耗时
+        demo.find('.modules tbody').html($.map(layui.modules, val => layui[val] && `<tr><td>${val}</td><td>${typeof layui[val]}</td></tr>`).join('')); // 模块
+        layer.msg('Hello World'); // 弹出一个示例
       });
     </script>
   </body>
 </html>
-          </textarea>
-          <p style="font-weight: bold;margin-top: 10px;">
-            自动化-引用示例：<a class="cursor-pointer" onClick="AutoLayui();">高级加载</a>
-          </p>
-          <textarea class="layui-textarea" spellcheck="false" readonly="readonly" style="min-height: 395px;">
+              </textarea>
+            </pre>
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend><b>自动化引用-示例</b></legend>
+            </fieldset>
+            <pre class="layui-code code-auto" lay-options="{preview: 'iframe',ln: false,lang: 'html',langMarker: true,codeStyle: 'height: 690px;',previewStyle: 'height: 690px;',theme: 'dark'}">
+              <textarea class="layui-hide">
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <script src="https://www.layuicdn.com/auto/layui.js" v="2.8.0"></script>
+    <title>自动化引用-示例</title>
+    <!--引入自动化脚本-->
+    <script src="https://www.layuicdn.com/auto/layui.js" v="2.10.0"></script>
+    <style>.demo-layuicdn .loading {text-align: center;}</style>
   </head>
   <body>
-    <!--您的Layui代码start-->
+    <div class="layui-card">
+      <div class="layui-card-header">自动化引用加载</div>
+      <div class="layui-card-body demo-layuicdn">
+        <div class="loading"><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i>加载中...</div>
+        <div class="layui-hide">当前面页总耗时：<span class="loadtime"></span>ms 当前Layui版本：<span class="version"></span></div>
+        <div class="layui-hide"><table class="layui-table modules" lay-size="sm"><thead><tr><th>已加载组件</th><th>类型</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+    <!--您的Layui代码Start-->
     <script type="text/javascript">
-      layui.use(function(){
-        var layer = layui.layer; //弹层 示例...
-
-        // 弹出一个示例
-        layer.msg('Hello World', {icon: 6});
-
+      layui.use(()=> {
+        let $ = layui.$ // jQuery
+        ,layer = layui.layer; // 弹层 示例...
+        let demo = $('.demo-layuicdn'), timing = window.performance.timing || window.msPerformance.timing || window.webkitPerformance.timing;
+        demo.find('.loading').remove(); // 移除加载
+        demo.find('div').removeClass('layui-hide');
+        demo.find('.version').html(layui.v); // 当前版本
+        demo.find('.loadtime').html(timing.domContentLoadedEventEnd - timing.navigationStart); // 加载耗时
+        demo.find('.modules tbody').html($.map(layui.modules, val => layui[val] && `<tr><td>${val}</td><td>${typeof layui[val]}</td></tr>`).join('')); // 模块
+        layer.msg('Hello World'); // 弹出一个示例
       });
     </script>
   </body>
 </html>
-          </textarea>
-          <span id="Layui"></span>
-          <script type="text/html" id="LayuiListNewest">
-            {{# if(d.name == 'layui'){ }}
-              <div>最新版[自动更新]</div>
-            {{# } else { }}
-              <div>{{d.name}}</div>
-            {{# } }}
-          </script>
-          <script type="text/html" id="LayuiListToolsTpl">
-            {{#
-              var $url = $hosts + d.name;
-              var $css = $url + '/css/layui.css';
-              var $js  = $url + '/layui.js';
-            }}
-            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$css}}">CSS</button>
-            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">JS</button>
-            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="LayuiSee('{{d.name}}','{{$css}}','{{$js}}');">预览</button>
-          </script>
-          <fieldset class="layui-elem-field layui-field-title site-title">
-            <legend>
-              Layui组件
-            </legend>
-          </fieldset>
-          <div class="layui-text">
-            <table class="layui-table" lay-size="" lay-skin="line">
-              <tbody>
-                <tr>
-                  <td colspan="3" class="ttips">
-                    <span class="ctips">
-                      注意：引入/layui/不带版本号的即为引入最新的layui，带版本的格式为/layui-v0.0.0/ 强烈建议使用带版本格式！
-                    </span>
-                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getLayui();">刷新</button>
-                    <button class="layui-btn layui-btn-xs layui-bg-gray" onclick="AutoLayui();">高级加载</button>
-                  </td>
-                </tr>
-                <table class="layui-hide" id="LayuiList"></table>
-              </tbody>
-            </table>
-          </div>
-          <span id="Layer"></span>
-          <script type="text/html" id="LayerListNewest">
-            {{# if(d.name == 'layer'){ }}
-              <div>最新版[自动更新]</div>
-            {{# } else { }}
-              <div>{{d.name}}</div>
-            {{# } }}
-          </script>
-          <script type="text/html" id="LayerListToolsTpl">
-            {{#
-              var $url = $hosts + d.name;
-              var $js  = $url + '/layer.js';
-            }}
-            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">JS</button>
-            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="LayerSee('{{d.name}}','{{$js}}');">预览</button>
-          </script>
-          <fieldset class="layui-elem-field layui-field-title site-title">
-            <legend>
-              Layer组件
-            </legend>
-          </fieldset>
-          <div class="layui-text">
-            <table class="layui-table" lay-size="" lay-skin="line">
-              <tbody>
-                <tr>
-                  <td colspan="3" class="ttips">
-                    <span class="ctips">
-                      注意：引入/layer/不带版本号的即为引入最新的layer，带版本的格式为/layer-v0.0.0/ 强烈建议使用带版本格式！
-                    </span>
-                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getLayer();">刷新</button>
-                  </td>
-                </tr>
-                <table class="layui-hide" id="LayerList"></table>
-              </tbody>
-            </table>
-          </div>
-          <span id="LayDate"></span>
-          <script type="text/html" id="LayDateListNewest">
-            {{# if(d.name == 'layDate'){ }}
-              <div>最新版[自动更新]</div>
-            {{# } else { }}
-              <div>{{d.name}}</div>
-            {{# } }}
-          </script>
-          <script type="text/html" id="LayDateListToolsTpl">
-            {{#
-              var $url = $hosts + d.name;
-              var $js  = $url + '/laydate.js';
-            }}
-            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">JS</button>
-            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="LayDateSee('{{d.name}}','{{$js}}');">预览</button>
-          </script>
-          <fieldset class="layui-elem-field layui-field-title site-title">
-            <legend>
-              LayDate组件
-            </legend>
-          </fieldset>
-          <div class="layui-text">
-            <table class="layui-table" lay-size="" lay-skin="line">
-              <tbody>
-                <tr>
-                  <td colspan="3" class="ttips">
-                    <span class="ctips">
-                      注意：引入/layDate/不带版本号的即为引入最新的layDate，带版本的格式为/layDate-v0.0.0/ 强烈建议使用带版本格式！
-                    </span>
-                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getLayDate();">刷新</button>
-                  </td>
-                </tr>
-                <table class="layui-hide" id="LayDateList"></table>
-              </tbody>
-            </table>
-          </div>
-          <span id="FlyTemplate"></span>
-          <script type="text/html" id="FlyListNewest">
-            {{# if(d.name == 'fly'){ }}
-              <div>最新版[自动更新]</div>
-            {{# } else { }}
-              <div>{{d.name}}</div>
-            {{# } }}
-          </script>
-          <script type="text/html" id="FlyListToolsTpl">
-            {{#
-              var $url = $hosts + d.name;
-              var $js  = $url + '/fly.zip';
-            }}
-            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{$js}}">链接</button>
-            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="FlySee('{{d.name}}','{{$js}}');">预览</button>
-          </script>
-          <fieldset class="layui-elem-field layui-field-title site-title">
-            <legend>
-              FlyTemplate组件
-            </legend>
-          </fieldset>
-          <div class="layui-text">
-            <table class="layui-table" lay-size="" lay-skin="line">
-              <tbody>
-                <tr>
-                  <td colspan="3" class="ttips">
-                    <span class="ctips">
-                      注意：由于是模版文件，所以我们只提供版本迭代的压缩包文件进行下载。
-                    </span>
-                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="getFly();">刷新</button>
-                  </td>
-                </tr>
-                <table class="layui-hide" id="FlyList"></table>
-              </tbody>
-            </table>
-          </div>
-          <span id="Zip"></span>
-          <script type="text/html" id="ZipListMD5Tpl">
-            <div class="chc-copy" data-clipboard-text="{{d.ETag}}">{{d.ETag}}</div>
-          </script>
-          <script type="text/html" id="ZipListToolsTpl">
-            <button class="layui-btn layui-btn-xs layui-bg-blue chc-copy" data-clipboard-text="{{d.Url}}">链接</button>
-            <button class="layui-btn layui-btn-xs layui-btn-danger" onclick="linkjump('_self','{{d.Url}}',0);">下载</button>
-          </script>
-          <fieldset class="layui-elem-field layui-field-title site-title">
-            <legend>
-              Layui全组件下载
-            </legend>
-          </fieldset>
-          <div class="layui-text">
-            <table class="layui-table" lay-size="" lay-skin="line">
-              <tbody>
-                <tr>
-                  <td colspan="3" class="ttips">
-                    <span class="ctips">
-                      注意：由于是压缩文件，所以我们只提供版本迭代的压缩包文件进行下载。
-                    </span>
-                    <button class="layui-btn layui-btn-xs layui-bg-black" onclick="GetCoslist();">刷新</button>
-                  </td>
-                </tr>
-                <table class="layui-hide" id="ziplist"></table>
-                </script>
-              </tbody>
-            </table>
+              </textarea>
+            </pre>
+            <script id="popup-quote-tpl" type="text/html">
+              <div class="layui-form">
+                {{# layui.each(d, function(index, val) { }}
+                  <div class="layui-form-item">    
+                    <div class="layui-input-group">
+                      <div class="layui-input-prefix layui-input-split">{{= val.name }}</div>
+                      <input type="text" class="layui-input" readonly="readonly" value="{{= val.val }}" />
+                      <div class="layui-input-suffix layui-input-split copy-text" data-clipboard-text="{{= val.val }}" lay-tips="复制" lay-direction="2">
+                        <i class="layui-icon layui-icon-file-b"></i>
+                      </div>
+                    </div>
+                  </div>
+                {{# }); }}
+              </div>
+            </script>
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend>Layui组件</legend>
+            </fieldset>
+            <div class="layui-panel tips-panel">注意：引入/layui/不带版本号的即为引入最新的layui，带版本的格式为/layui-v0.0.0/ 强烈建议使用带版本格式！</div>
+            <table class="layui-hide" id="table-layui"></table>
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend>Layer组件</legend>
+            </fieldset>
+            <div class="layui-panel tips-panel">注意：引入/layer/不带版本号的即为引入最新的layer，带版本的格式为/layer-v0.0.0/ 强烈建议使用带版本格式！</div>
+            <table class="layui-hide" id="table-layer"></table>
+            <!-- <fieldset class="layui-elem-field layui-field-title">
+              <legend>LayDate组件</legend>
+            </fieldset>
+            <div class="layui-panel tips-panel">注意：引入/laydate/不带版本号的即为引入最新的laydate，带版本的格式为/laydate-v0.0.0/ 强烈建议使用带版本格式！</div>
+            <table class="layui-hide" id="table-laydate"></table> -->
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend>Layui全组件下载</legend>
+            </fieldset>
+            <div class="layui-panel tips-panel layui-font-gray">注意：由于是压缩文件，所以仅提供版本迭代的压缩包文件进行下载。</div>
+            <table class="layui-hide" id="table-zip"></table>
+            <hr />
+            <blockquote class="layui-elem-quote">
+              💖结语：
+              <b>LayuiCdn</b>
+              自 2018年01月09日 至今，一直持续无偿为广大用户提供组件加速服务，造福更多开发者和站长，感谢您的支持与厚爱。🎉
+            </blockquote>
+            <div class="layui-hide-v body-visibility"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="layui-footer footer">
-      <div class="chc-friendship">
+    <div class="footer">
+      <div class="friendlink"></div>
+      <script id="footer-friendlink-tpl" type="text/html">
         友情链接：
-        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://layui.dev" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          Layui
-        </a>
-        <a class="cursor-pointer" target="_blank" href="./sitemap.html" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          SiteMap
-        </a>
-        <a class="cursor-pointer" target="_blank" href="http://pro.layuicdn.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          LayuiCdnPro
-        </a>
-        <a class="cursor-pointer" target="_blank" href="https://www.abxcdn.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          ABXCDN
-        </a>
-      </div>
-      <div class="layui-main">
-        <p>
-          Copyright&nbsp;&copy;&nbsp;<script>document.write(new Date().getFullYear());</script>&nbsp;
-          <a class="cursor-pointer" onClick="linkjump('_self','//www.layuicdn.com/');">
-            www.layuicdn.com
+        {{# layui.each(d, function(index, FriendLink) { }}
+          <a rel="{{= FriendLink.rel }}" target="{{= FriendLink.target }}" href="{{- FriendLink.url }}" lay-tips="{{= FriendLink.name }}">
+            {{= FriendLink.name }}
           </a>
-          &nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://beian.miit.gov.cn/" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-            京ICP备17014996号-7
+        {{# }); }}
+      </script>
+      <div class="copyright"></div>
+      <script id="footer-beian-tpl" type="text/html">
+        <span>Copyright&nbsp;&copy;{{= new Date().getFullYear() }}</span>
+        <a href="/" target="_self">{{= location.hostname }}</a>
+        <span>All&nbsp;Rights&nbsp;Reserved.</span>
+        {{# layui.each(d, function(index, BeIan) { }}
+          <a rel="{{= BeIan.rel }}" target="{{= BeIan.target }}" href="{{- BeIan.url }}">
+            {{= BeIan.name }}
           </a>
-        </p>
-      </div>
+        {{# }); }}
+      </script>
     </div>
+    <div class="mobile-left-menu-spread">
+      <i class="layui-icon layui-icon-spread-left"></i>
+    </div>
+    <div class="mobile-left-menu-shade"></div>
     <!--内容主体元素end-->
     <!--公共脚本元素start-->
-    <script src="./index/js/clipboard.min.js"></script>
-    <script src="./index/js/typed.min.js"></script>
-    <!--前端脚本元素start-->
-    <script src="./index/js/index_1.js"></script>
-    <script src="./index/js/index_2.js"></script>
-    <script src="./index/js/index_8.js"></script>
+    <script>layui.config({base: '/index/js/'}).use('index');</script>
     <!--自动推送脚本元素start-->
     <script type="text/javascript">
       var _hmt = _hmt || [];
-      (function() {
-        var d = document
-        ,s = d.getElementsByTagName('script')[0]
-        ,hm = d.createElement('script')
-        hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-        ,s.parentNode.insertBefore(hm, s);
+      (() => {
+        let s = document.scripts[0];
+        ['https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852', '/ads.js']
+          .forEach(u => s.parentNode.insertBefore(Object.assign(document.createElement('script'), {src: u}), s));
       })();
     </script>
   </body>

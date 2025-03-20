@@ -3,59 +3,54 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--浏览器内核控制-->
     <meta name="renderer" content="webkit" />
     <title>网站地图 - LayuiCdn静态库 免费 CDN 加速服务</title>
-    <meta name="description" content="LayuiCdn 网站地图sitemap页 网站导航 为广大Layui用户提供免费前端UI框架cdn加速服务。" />
-    <meta name="keywords" content="LayuiCdn网站地图sitemap页,layui,layuicdn,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
-    <meta name="copyright" content="LayuiCdnPro" />
+    <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
+    <meta name="keywords" content="layui,layuicdn,abxcdn,LayuiCdnPro,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
+    <meta name="copyright" content="LayuiCdn" />
     <!--自动化加载start-->
-    <script src="./auto/layui.js" v="2.5.7" e="layui.all"></script>
-    <!--前端样式元素start-->
+    <script src="./auto/layui.js" v="2.10.0"></script>
+    <!--全局样式元素start-->
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- LayuiCdn | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
   </head>
+  <!--主体元素start-->
   <body>
     <table class="layui-hide" id="urlList"></table>
-    <script type="text/html" id="urlTpl">
-      <a href="{{ d.url }}" class="layui-table-link" target="_blank">{{ d.url }}</a>
-    </script>
-    <script type="text/javascript">
-      var $ = layui.$
-      ,table = layui.table;
-      $.post('//api.layuicdn.com/GetLayuiCdnMap',(res)=>{
-        table.render({
-          elem: '#urlList'
-          ,data: res.data.data
-          // ,parseData: function(res){
-          //   return {
-          //     code: res.code
-          //     ,msg: res.call
-          //     ,count: res.count
-          //     ,data: res.data.data
-          //   };
-          // }
-          ,cols: [[
-            {field:'url', title: '链接地址', sort: true, align: 'center', templet: '#urlTpl'}
-          ]]
-          ,skin: 'nob'
-          ,even: false
-          ,size: 'sm'
-          ,page: true
-          ,limit: 100
-          ,limits: [50,100,150,200,300,400,500,600,900]
+    <!--公共脚本元素start-->
+    <script>
+      layui.use(()=>{
+        let $ = layui.$,table = layui.table;
+        $.post('//api.layuicdn.com/GetLayuiCdnMap',(res)=>{
+          table.render({
+            elem: '#urlList'
+            ,data: res.data.data
+            ,cols: [[
+              {field:'url', title: '链接地址', sort: true, align: 'center', templet: (d)=>{
+                return `<a class="layui-table-link" target="_blank" href="${d.url}">${d.url}</a>`;
+              }}
+            ]]
+            ,skin: 'nob'
+            ,even: false
+            ,size: 'sm'
+            ,page: true
+            ,limit: 25
+            ,limits: [25,50,100,150,200,300,400,500,600,900]
+          });
         });
       });
     </script>
     <!--自动推送脚本元素start-->
     <script type="text/javascript">
       var _hmt = _hmt || [];
-      (function() {
-        var d = document
-        ,s = d.getElementsByTagName('script')[0]
-        ,hm = d.createElement('script')
-        hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-        ,s.parentNode.insertBefore(hm, s);
+      (() => {
+        let s = document.scripts[0];
+        ['https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852', '/ads.js']
+          .forEach(u => s.parentNode.insertBefore(Object.assign(document.createElement('script'), {src: u}), s));
       })();
     </script>
   </body>
+  <!--主体元素end-->
 </html>

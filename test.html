@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--浏览器内核控制-->
+    <meta name="renderer" content="webkit" />
+    <title>在线测试 - LayuiCdn静态库 免费 CDN 加速服务</title>
+    <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
+    <meta name="keywords" content="layui,layuicdn,abxcdn,LayuiCdnPro,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
+    <meta name="copyright" content="LayuiCdn" />
+    <!--自动化加载start-->
+    <script src="./auto/layui.js" v="2.10.0"></script>
+    <!--全局样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/css/index.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- LayuiCdn | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
+    <!--局部样式元素start-->
+    <style>
+      body {background: #DDD;}
+      .header * {z-index: 1000;}
+      .dark body {background: var(--lay-color-bg-2);}
+    </style>
+  </head>
+  <!--主体元素start-->
+  <body ondragstart="return false">
+    <script id="test-code-header-tpl" type="text/html">
+      <div class="Header-Left">
+        <div class="logo">
+          <a href="/?form=LayuiCdnLogo">
+            <img src="./index/images/logo3.png" alt="LayuiCdn" />
+          </a>
+        </div>
+      </div>
+      <div class="Header-Middle">
+        <button type="button" class="layui-btn layui-btn-xs layui-bg-red Header-Error layui-hide"><i class="layui-icon layui-icon-error layui-font-12"></i>检测到当前编辑器可能加载异常或不适配浏览器，建议在右侧切换版本。</button>
+        <button type="button" class="layui-btn layui-btn-xs layui-btn-primary layui-border-orange ResetCode layui-hide"><i class="layui-icon layui-icon-refresh layui-font-12"></i>重置代码</button>
+        <button type="button" class="layui-btn layui-btn-xs layui-btn-primary layui-border-green RunCode  {{= d.AutoRun && 'layui-hide' }}">运行<i class="layui-icon layui-icon-right layui-font-12"></i></button>
+      </div>
+      <div class="Header-Right">
+        <div class="layui-form" lay-filter="test-code-header-right-form">
+          <i class="layui-icon layui-icon-about CodeTips" data-tips="
+            使用技巧帮助
+            <br />1-重置代码：重置代码清空为初始状态。
+            <br /><br />2-自动运行：每次编辑代码后自动运行，否则需手动点击运行。Layui编辑器不建议开启！
+            <br /><br />3-当前版本：分别为 Vs / Layui 方式的编辑器，当浏览器无法加载Vs编辑器时建议切换为Layui。
+            <br /><br />3-1-Vs：
+            <br />优点：功能健全；
+            <br />缺点：小部分浏览器可能会出现无法加载编辑器。
+            <br /><br />3-1-Layui：
+            <br />优点：兼容性强；
+            <br />缺点：代码无法[实时]高亮，若开启自动运行 首次加载 或 切换主题颜色 时会造成预览页频闪，同时不支持自定义缩进。
+            <br /><br />4-缩进空格：代码将按照空格数量缩进。
+            <br /><br />5-记忆代码：代码每次变更将储存在浏览器，下次打开自动加载。
+            <br /><br />6-记忆布局：编辑器和预览页每次位置布局变更将储存在浏览器，下次打开自动加载。
+            <br /><br />7-清除记忆：清空当前所有配置在浏览器的记忆储存=恢复初始状态。
+            <br /><br />8-布局调整：可在编辑器和预览页顶部随意拖动切换位置，右边框和下边框均可拖拽尺寸大小变换。
+          "></i>
+          <input type="checkbox" name="AutoRun" lay-skin="tag" lay-filter="test-code-header-autorun-checkbox" {{= d.AutoRun && 'checked=""' }} />
+          <div lay-checkbox="">
+            <i class="layui-icon layui-icon-play"></i>
+            自动运行
+          </div>
+          <button type="button" class="layui-btn layui-btn-xs layui-btn-primary layui-border Dropdown-Icon Version" data-version="{{= d.Version || 'Vs' }}">
+            <span>当前版本：{{= d.Version || 'Vs' }}</span>
+            <i class="layui-icon layui-icon-down layui-font-12"></i>
+          </button>
+          <button type="button" class="layui-btn layui-btn-xs layui-btn-primary layui-border Dropdown-Icon TabSize" data-number="{{= d.TabSize || 2 }}">
+            <span>缩进空格：{{= d.TabSize || 2 }}</span>
+            <i class="layui-icon layui-icon-down layui-font-12"></i>
+          </button>
+          <input type="checkbox" name="CacheCode" lay-skin="tag" lay-filter="test-code-header-cachecode-checkbox" {{= d.CacheCode && 'checked=""' }} />
+          <div lay-checkbox="">
+            <i class="layui-icon layui-icon-fonts-code"></i>
+            记忆代码
+          </div>
+          <input type="checkbox" name="CacheLayout" lay-skin="tag" lay-filter="test-code-header-cachelayout-checkbox" {{= d.CacheLayout && 'checked=""' }} />
+          <div lay-checkbox="">
+            <i class="layui-icon layui-icon-layouts"></i>
+            记忆布局
+          </div>
+          <input type="checkbox" name="ThemeMode" lay-skin="switch" lay-filter="test-code-header-theme-switch" {{= d.ThemeMode == 'dark' && 'checked=""' }} />
+          <div lay-checkbox="">
+            <i class="layui-icon layui-icon-moon"></i>|
+            <i class="layui-icon layui-icon-light"></i>
+          </div>
+          <button type="button" class="layui-btn layui-btn-xs layui-btn-primary layui-border-red DelCache">清除记忆</button>
+        </div>
+      </div>
+    </script>
+    <textarea class="layui-hide" id="test-code-edit-tpl">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>自动化引用-示例</title>
+    <!--引入自动化脚本-->
+    <script src="https://www.layuicdn.com/auto/layui.js" v="2.10.0"></script>
+    <style>.demo-layuicdn .loading {text-align: center;}</style>
+  </head>
+  <body>
+    <div class="layui-card">
+      <div class="layui-card-header">自动化引用加载</div>
+      <div class="layui-card-body demo-layuicdn">
+        <div class="loading"><i class="layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i>加载中...</div>
+        <div class="layui-hide">当前面页总耗时：<span class="loadtime"></span>ms 当前Layui版本：<span class="version"></span></div>
+        <div class="layui-hide"><table class="layui-table modules" lay-size="sm"><thead><tr><th>已加载组件</th><th>类型</th></tr></thead><tbody></tbody></table></div>
+      </div>
+    </div>
+    <!--您的Layui代码Start-->
+    <script type="text/javascript">
+      layui.use(()=> {
+        let $ = layui.$ // jQuery
+        ,layer = layui.layer; // 弹层 示例...
+        let demo = $('.demo-layuicdn'), timing = window.performance.timing || window.msPerformance.timing || window.webkitPerformance.timing;
+        demo.find('.loading').remove(); // 移除加载
+        demo.find('div').removeClass('layui-hide');
+        demo.find('.version').html(layui.v); // 当前版本
+        demo.find('.loadtime').html(timing.domContentLoadedEventEnd - timing.navigationStart); // 加载耗时
+        demo.find('.modules tbody').html($.map(layui.modules, val => layui[val] && `<tr><td>${val}</td><td>${typeof layui[val]}</td></tr>`).join('')); // 模块
+        layer.msg('Hello World'); // 弹出一个示例
+      });
+    </script>
+  </body>
+</html>
+    </textarea>
+    <!--内容主体元素end-->
+    <!--公共脚本元素start-->
+    <script>layui.config({base: '/index/js/'}).use('testcode');</script>
+    <!--自动推送脚本元素start-->
+    <script type="text/javascript">
+      var _hmt = _hmt || [];
+      (() => {
+        let s = document.scripts[0];
+        ['https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852', '/ads.js']
+          .forEach(u => s.parentNode.insertBefore(Object.assign(document.createElement('script'), {src: u}), s));
+      })();
+    </script>
+  </body>
+  <!--主体元素end-->
+</html>

@@ -3,303 +3,208 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--浏览器内核控制-->
     <meta name="renderer" content="webkit" />
-    <title>API文档 - LayuiCdn静态库 免费 CDN 加速服务</title>
+    <title>API接口文档 - LayuiCdn静态库 免费 CDN 加速服务</title>
     <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
     <meta name="keywords" content="layui,layuicdn,abxcdn,LayuiCdnPro,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
-    <meta name="copyright" content="LayuiCdnPro" />
+    <meta name="copyright" content="LayuiCdn" />
     <!--自动化加载start-->
-    <script src="./auto/layui.js" v="2.5.7" e="layui.all"></script>
-    <!--前端样式元素start-->
-    <link rel="stylesheet" type="text/css" href="./index/css/index_1.css" />
-    <link rel="stylesheet" type="text/css" href="./index/css/index_2.css" />
+    <script src="./auto/layui.js" v="2.10.0"></script>
+    <!--全局样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/css/index.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <!-- LayuiCdnPro | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2019-06-09 | 官网：www.layuicdn.com -->
-    <!--全局脚本元素start-->
-    <script type="text/javascript">
-      var $Port    = 'https:';
-      $protocol    = location.protocol;
-      if ($protocol != $Port) {
-        location.href = $Port + location.href.substring($Port.length);
-      }
-      $port        = location.port;
-      $host        = location.hostname;
-      $path        = location.pathname;
-      $curl        = location.href;
-      $hosts       = $protocol + '//' + $host + '/';
-      $Chc_Copy    = true;
-      $update_Time = '202304041829';
-      $domain      = 'www.layuicdn.com';
-      $api         = '//api.layuicdn.com/';
-      if ($host != $domain) {
-        location.href = $protocol + '//' + $domain + '/';
-      }
-    </script>
-    <style type="text/css">
-      .layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
-        background-color: #01AAED !important;
-      }
-      .cursor-pointer {
-        cursor: pointer !important;
-      }
-      .api-a {
-        color: #0abf5b;
-      }
-      .api-a:hover {
-        color: #0abf5b;
-      }
-      .layui-field-title {
-        margin-top: 50px;
-      }
-      .faq {
-        margin-top: 20px;
-      }
-      .faq .layui-card-body {
-        padding: 20px 20px;
-      }
+    <!-- LayuiCdn | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
+    <!--局部样式元素start-->
+    <style>
+      .header {background: linear-gradient(120deg, #16B777, #0ABF5B);}
+      .theme-dark .header {background: linear-gradient(120deg, #16B777, #0ABF5B);}
+      .body-visibility {margin-top: 10px;}
+      .right-body .layui-table {table-layout: fixed;overflow-x: auto;white-space: normal;}
+      .right-body .layui-table td {word-wrap: break-word;overflow-wrap: break-word;white-space: normal;}
     </style>
   </head>
   <!--主体元素start-->
   <body ondragstart="return false">
     <!--头部元素start-->
-    <div class="layui-header header header-doc">
-      <div class="layui-main">
-        <a class="logo" href="/?rurl=CdnLogo">
-          <img src="./index/images/logo3.png" alt="LayuiCdn" />
-        </a>
-        <ul class="layui-nav">
-          <li class="layui-nav-item layui-hide-xs">
-            <a class="cursor-pointer" onclick="linkjump('_self','./index.html',0);">
-              首页
-            </a>
-          </li>
-          <li class="layui-nav-item layui-hide-xs">
-            <a class="cursor-pointer" onclick="linkjump('_blank','https://www.abxcdn.com/',0);">
-              定制CDN<span class="layui-badge-dot"></span>
-            </a>
-          </li>
-          <li class="layui-nav-item layui-this">
-            <a class="cursor-pointer">
-              API
-            </a>
-          </li>
-          <li class="layui-nav-item layui-hide-xs">
-            <a class="cursor-pointer" onclick="linkjump('_self','./extend.html',0);">
-              组件
-            </a>
-          </li>
-          <li class="layui-nav-item layui-hide-xs">
-            <a class="cursor-pointer" onclick="linkjump('_self','./servers.html',0);">
-              检测
-            </a>
-          </li>
-          <li class="layui-nav-item layui-hide-xs">
-            <a class="cursor-pointer" onclick="linkjump('_self','/docs/',0);">
-              文档<span class="layui-badge-dot"></span>
-            </a>
-          </li>
-          <li class="layui-nav-item layui-hide-xs">
-            <a class="cursor-pointer" onclick="linkjump('_self','./feedback.html',0);">
-              反馈
-            </a>
-          </li>
-        </ul>
+    <div class="top-notice layui-hide-xs layui-hide"></div>
+    <div class="header">
+      <div class="layui-container">
+        <div class="logo">
+          <a href="/?form=LayuiCdnLogo">
+            <img src="./index/images/logo3.png" alt="LayuiCdn" />
+          </a>
+        </div>
+        <div class="theme layui-hide-xs"></div>
+        <div class="header-menu">
+          <ul class="layui-nav"></ul>
+        </div>
       </div>
     </div>
-    <div class="layui-main">
-        <fieldset class="layui-elem-field layui-field-title">
-          <legend>
-            API接口列表 2023-04-28
-          </legend>
-        </fieldset>
-        <div style="padding: 20px;">
-          <div class="layui-row layui-col-space15">
-            <div class="layui-col-md6">
-              <div class="layui-card">
-                <div class="layui-card-header">
-                  获取LayuiCDN全版本
-                </div>
-                <div class="layui-card-body">
-                  接口：<a class="api-a">https://api.layuicdn.com/GetLayuiVersion</a>
-                  <a class="layui-btn layui-btn-xs layui-btn-warm cursor-pointer chc-copy" data-clipboard-text="https://api.layuicdn.com/GetLayuiVersion">
-                    复制
-                  </a>
-                  <a class="layui-btn layui-btn-xs layui-btn-danger cursor-pointer" rel="nofollow" target="_blank" href="https://api.layuicdn.com/GetLayuiVersion">
-                    打开
-                  </a>
-                  <br/><br />
-                  <p>
-                    返回JSON格式数据，data为各个组件的数组Array 如：layui layer...等，请求方式GET或POST
-                  </p>
-                  <p>
-                    其中：版本名称（name）、版本号（v）、更新时间（time）
-                  </p>
-                  <p>
-                    另外：data中的 time: 1564165660 为实际服务器当前的时间戳
-                  </p>
-                  <p>
-                    注意：如果数组内 例：name = layui，则为该组件最新版本 可凭此数据进行拼接URL
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="layui-col-md6">
-              <div class="layui-card">
-                <div class="layui-card-header">
-                  获取Layui压缩文件包
-                </div>
-                <div class="layui-card-body">
-                  接口：<a class="api-a">https://api.layuicdn.com/GetCosLayuiZipListObjects</a>
-                  <a class="layui-btn layui-btn-xs layui-btn-warm cursor-pointer chc-copy" data-clipboard-text="https://api.layuicdn.com/GetCosLayuiZipListObjects">
-                    复制
-                  </a>
-                  <a class="layui-btn layui-btn-xs layui-btn-danger cursor-pointer" rel="nofollow" target="_blank" href="https://api.layuicdn.com/GetCosLayuiZipListObjects">
-                    打开
-                  </a>
-                  <br/>
-                  <br />
-                  <p>
-                    返回JSON格式数据，data为各个组件的数组Array，请求方式GET或POST
-                  </p>
-                  <p>
-                    其中：文件名称（Key）、更新时间（LastModified）、MD5值（ETag）、文件大小（Size）、储存类型（StorageClass）、完整链接（Url）
-                  </p>
-                  <p>
-                    另外：data中的 time: 1564165660 为实际服务器当前的时间戳，count：53 为压缩文件数量
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="layui-col-md6">
-              <div class="layui-card">
-                <div class="layui-card-header">
-                  获取Layui第三方组件
-                </div>
-                <div class="layui-card-body">
-                  接口：<a class="api-a">https://api.layuicdn.com/GetLayuiExtends</a>
-                  <a class="layui-btn layui-btn-xs layui-btn-warm cursor-pointer chc-copy" data-clipboard-text="https://api.layuicdn.com/GetLayuiExtends">
-                    复制
-                  </a>
-                  <a class="layui-btn layui-btn-xs layui-btn-danger cursor-pointer" rel="nofollow" target="_blank" href="https://api.layuicdn.com/GetLayuiExtends">
-                    打开
-                  </a>
-                  <br/>
-                  <br />
-                  <p>
-                    返回JSON格式数据，必须为POST请求，传递分页参数 例：page:1，limit:10
-                  </p>
-                  <p>
-                    其中：名称（name）、版本（version）、状态（state）、唯一ID（token）、文档（url）
-                  </p>
-                  <p>
-                    另外：拼接组件地址为：https://www.layuicdn.com/{name}/{version}/
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="layui-col-md6">
-              <div class="layui-card">
-                <div class="layui-card-header">
-                  获取Layui赞助捐赠列表
-                </div>
-                <div class="layui-card-body">
-                  接口：<a class="api-a">https://api.layuicdn.com/GetLayuiSponsors</a>
-                  <a class="layui-btn layui-btn-xs layui-btn-warm cursor-pointer chc-copy" data-clipboard-text="https://api.layuicdn.com/GetLayuiSponsors">
-                    复制
-                  </a>
-                  <a class="layui-btn layui-btn-xs layui-btn-danger cursor-pointer" rel="nofollow" target="_blank" href="https://api.layuicdn.com/GetLayuiSponsors">
-                    打开
-                  </a>
-                  <br/>
-                  <br />
-                  <p>
-                    返回JSON格式数据，必须为POST请求，传递分页参数 例：page:1，limit:10
-                  </p>
-                  <p>
-                    其中：赞助者（name）、金额（price）、时间（time）、赞助方式（type）
-                  </p>
-                  <p>
-                    另外：data中的 赞助方式（type），type= [1则为支付宝，2则为微信，3则为其他渠道]
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="layui-col-md12 faq">
-              <div class="layui-card">
-                <div class="layui-card-header">
-                  关于API
-                </div>
-                <div class="layui-card-body">
-                  <a href="./api.html">
-                    LayuiCDN API
-                  </a>
-                  &nbsp;接口数据均为&nbsp;
-                  <a rel="nofollow" target="_blank" href="https://developer.github.com/">
-                    GitHub API
-                  </a>
-                  &nbsp;接口数据 进行数据缓存，LayuiCDN API更新频率为24小时每次，Methods支持GET、POST、OPTIONS
-                  <br/>
-                  基于腾讯云 无服务器云函数SCF + API网关 + 动态网络加速DSA 等，全局托管实现全年不休的云上计算业务，全程无需人为干预即可提供自动运行等计算能力
-                  <br />
-                  主要依托于SCF，对GitHub API进行实时监控，并24小时内更新到LayuiCDN API，为了节省平台的开支压力，则将LayuiCDN API的频限设为100QPS/s的频率
-                  <p>
-                    如果您有其他需求或者问题等，可以联系管理员-夏新龙 WeChat：
-                    <a class="chc-copy cursor-pointer" data-clipboard-text="xxl15110220250">
-                      xxl15110220250
+    <div class="header-banner layui-hide-xs">心有大格局，麻雀岂能承载的了 · LayuiCdn</div>
+    <div class="layui-container">
+      <div class="layui-row layui-col-space4">
+        <div class="layui-col-md3">
+          <div class="layui-panel left-menu">
+            <ul class="layui-menu layui-menu-lg" id="left-menu">
+              <li class="layui-menu-item-group left-menu-all layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+              <!-- <li class="layui-menu-item-divider layui-hide"></li> -->
+              <li class="layui-menu-item-group left-menu-sponsor layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+            </ul>
+          </div>
+          <script id="left-menu-all-tpl" type="text/html">
+            <div class="layui-menu-body-title">全部服务</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-all-{{= Menu.id }}' {{# if (Menu.call) { }} ,call: {{= Menu.call }} {{# } }} }" {{# if (Menu.url) { }} data-url="{{= Menu.url }}" {{# } }}>
+                  <div class="layui-menu-body-title">
+                      <a {{# if (!Menu.call) { }} rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}"{{# } }}>
+                      {{= Menu.title }}
+                      <span class="layui-font-12 layui-font-gray titles">{{= Menu.text }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
                     </a>
-                    点击即可复制
-                  </p>
-                </div>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+          <script id="left-menu-sponsor-tpl" type="text/html">
+            <div class="layui-menu-body-title">爱心赞助</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-sponsor-{{= Menu.names }}'}">
+                  <div class="layui-menu-body-title">
+                    <a rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}">
+                      {{= Menu.name }}
+                      <span class="layui-font-12 layui-font-gray names">{{= Menu.names }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge layui-bg-orange">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
+                    </a>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+        </div>
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md9">
+          <div class="layui-panel right-body">
+            <h1 class="body-h1">API接口文档</h1>
+            <div class="desc-img"></div>
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend><b>接口列表</b></legend>
+            </fieldset>
+            <blockquote class="layui-elem-quote">
+              接口地址：https://api.layuicdn.com/
+              <br />
+              流控频率：100 Qps/s
+            </blockquote>
+            <div class="layui-card">
+              <div class="layui-card-header layui-bg-black">
+                获取Layui全版本 GET/POST
+                <span class="fix-icon-right">
+                  GetLayuiVersion
+                  <i class="layui-icon layui-icon-file-b fix-icon-right copy-text" data-clipboard-text="https://api.layuicdn.com/GetLayuiVersion" lay-tips="点击快捷复制" lay-offset="-12"></i>
+                </span>
+              </div>
+              <div class="layui-card-body">
+                <table class="layui-table">
+                  <thead>
+                    <tr><th>参数名称</th><th>数据类型</th><th>参数说明</th><th>示例值</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>layui</td><td>Array</td><td>layui列表</td><td>详见下述</td></tr>
+                    <tr><td>layer</td><td>Array</td><td>layer列表</td><td>详见下述</td></tr>
+                    <tr><td>laydate</td><td>Array</td><td>laydate列表</td><td>详见下述</td></tr>
+                    <tr><td>├─&nbsp;name</td><td>String</td><td>版本名称</td><td>layui、layui-v2.10.0... 若为layui/layer/laydate则为最新版本。</td></tr>
+                    <tr><td>├─&nbsp;v</td><td>String</td><td>版本号</td><td>2.9.23</td></tr>
+                    <tr><td>└─&nbsp;time</td><td>String</td><td>更新时间</td><td>2018-01-09</td></tr>
+                  </tbody>
+                </table>
               </div>
             </div>
+            <div class="layui-card">
+              <div class="layui-card-header layui-bg-black">
+                获取Layui压缩包 GET/POST
+                <span class="fix-icon-right">
+                  GetCosLayuiZipListObjects
+                  <i class="layui-icon layui-icon-file-b fix-icon-right copy-text" data-clipboard-text="https://api.layuicdn.com/GetCosLayuiZipListObjects" lay-tips="点击快捷复制" lay-offset="-12"></i>
+                </span>
+              </div>
+              <div class="layui-card-body">
+                <table class="layui-table">
+                  <thead>
+                    <tr><th>参数名称</th><th>数据类型</th><th>参数说明</th><th>示例值</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Key</td><td>String</td><td>文件名称</td><td>layui-v2.10.0.zip</td></tr>
+                    <tr><td>Url</td><td>String</td><td>完整链接</td><td>https://***2.10.0.zip</td></tr>
+                    <tr><td>ETag</td><td>String</td><td>MD5校验</td><td>5d06e***d92ff</td></tr>
+                    <tr><td>Size</td><td>String</td><td>文件大小</td><td>1.79 MB</td></tr>
+                    <tr><td>LastModified</td><td>String</td><td>更新时间</td><td>2018-01-09 00:00:00</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <h4 class="layui-padding-3">
+              🌍关于API：
+              <a href="">LayuiCdn API</a>
+              接口数据均为
+              <a rel="nofollow" target="_blank" href="https://developer.github.com/">GitHub API</a>
+              接口数据 进行数据缓存，更新频率为24小时每次，对GitHub API进行实时监控。
+            </h4>
+            <h4 class="layui-padding-3">
+              最后, 如果您有更好的想法和建议，请点击
+              <a href="kf.html" class="a-link">联系我们</a>。
+            </h4>
+            <div class="layui-hide-v body-visibility"></div>
           </div>
         </div>
+      </div>
     </div>
-    <div class="layui-footer footer">
-      <div class="chc-friendship">
+    <div class="footer">
+      <div class="friendlink"></div>
+      <script id="footer-friendlink-tpl" type="text/html">
         友情链接：
-        <a class="cursor-pointer" rel="nofollow" target="_blank" href="https://layui.dev" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          Layui
-        </a>
-        <a class="cursor-pointer" target="_blank" href="./sitemap.html" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          SiteMap
-        </a>
-        <a class="cursor-pointer" target="_blank" href="http://pro.layuicdn.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          LayuiCdnPro
-        </a>
-        <a class="cursor-pointer" target="_blank" href="https://www.abxcdn.com/?rurl=LayuiCdn" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-          ABXCDN
-        </a>
-      </div>
-      <div class="layui-main">
-        <p>
-          Copyright&nbsp;&copy;&nbsp;<script>document.write(new Date().getFullYear());</script>&nbsp;
-          <a class="cursor-pointer" onClick="linkjump('_self','//www.layuicdn.com/');">
-            www.layuicdn.com
+        {{# layui.each(d, function(index, FriendLink) { }}
+          <a rel="{{= FriendLink.rel }}" target="{{= FriendLink.target }}" href="{{- FriendLink.url }}" lay-tips="{{= FriendLink.name }}">
+            {{= FriendLink.name }}
           </a>
-          &nbsp;All&nbsp;Rights&nbsp;Reserved.&nbsp;
-          <a class="cursor-pointer" rel="nofollow" target="_blank" href="http://beian.miit.gov.cn/" onmouseover="layer.tips(this.text,this,{tips:[1,'#000'],time:1000});">
-            京ICP备17014996号-7
+        {{# }); }}
+      </script>
+      <div class="copyright"></div>
+      <script id="footer-beian-tpl" type="text/html">
+        <span>Copyright&nbsp;&copy;{{= new Date().getFullYear() }}</span>
+        <a href="/" target="_self">{{= location.hostname }}</a>
+        <span>All&nbsp;Rights&nbsp;Reserved.</span>
+        {{# layui.each(d, function(index, BeIan) { }}
+          <a rel="{{= BeIan.rel }}" target="{{= BeIan.target }}" href="{{- BeIan.url }}">
+            {{= BeIan.name }}
           </a>
-        </p>
-      </div>
+        {{# }); }}
+      </script>
     </div>
+    <div class="mobile-left-menu-spread">
+      <i class="layui-icon layui-icon-spread-left"></i>
+    </div>
+    <div class="mobile-left-menu-shade"></div>
     <!--内容主体元素end-->
     <!--公共脚本元素start-->
-    <script src="./index/js/clipboard.min.js"></script>
-    <!--前端脚本元素start-->
-    <script src="./index/js/index_1.js"></script>
-    <script src="./index/js/index_2.js"></script>
+    <script>layui.config({base: '/index/js/'}).use('default');</script>
     <!--自动推送脚本元素start-->
     <script type="text/javascript">
       var _hmt = _hmt || [];
-      (function() {
-        var d = document
-        ,s = d.getElementsByTagName('script')[0]
-        ,hm = d.createElement('script')
-        hm.src = 'https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852'
-        ,s.parentNode.insertBefore(hm, s);
+      (() => {
+        let s = document.scripts[0];
+        ['https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852', '/ads.js']
+          .forEach(u => s.parentNode.insertBefore(Object.assign(document.createElement('script'), {src: u}), s));
       })();
     </script>
   </body>

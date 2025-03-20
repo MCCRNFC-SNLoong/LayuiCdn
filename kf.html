@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--浏览器内核控制-->
+    <meta name="renderer" content="webkit" />
+    <title>联系我们 - LayuiCdn静态库 免费 CDN 加速服务</title>
+    <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
+    <meta name="keywords" content="layui,layuicdn,abxcdn,LayuiCdnPro,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
+    <meta name="copyright" content="LayuiCdn" />
+    <!--自动化加载start-->
+    <script src="./auto/layui.js" v="2.10.0"></script>
+    <!--全局样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/css/index.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- LayuiCdn | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
+    <!--局部样式元素start-->
+    <style>
+      .body-visibility {margin-top: 10px;}
+      .right-body .body-h2 .layui-icon {padding-left: 15px;}
+      .right-body .body-h2 {padding-bottom: 0;}
+    </style>
+  </head>
+  <!--主体元素start-->
+  <body ondragstart="return false">
+    <!--头部元素start-->
+    <div class="top-notice layui-hide-xs layui-hide"></div>
+    <div class="header">
+      <div class="layui-container">
+        <div class="logo">
+          <a href="/?form=LayuiCdnLogo">
+            <img src="./index/images/logo3.png" alt="LayuiCdn" />
+          </a>
+        </div>
+        <div class="theme layui-hide-xs"></div>
+        <div class="header-menu">
+          <ul class="layui-nav"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-banner layui-hide-xs">心有大格局，麻雀岂能承载的了 · LayuiCdn</div>
+    <div class="layui-container">
+      <div class="layui-row layui-col-space4">
+        <div class="layui-col-md3">
+          <div class="layui-panel left-menu">
+            <ul class="layui-menu layui-menu-lg" id="left-menu">
+              <li class="layui-menu-item-group left-menu-all layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+              <!-- <li class="layui-menu-item-divider layui-hide"></li> -->
+              <li class="layui-menu-item-group left-menu-sponsor layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+            </ul>
+          </div>
+          <script id="left-menu-all-tpl" type="text/html">
+            <div class="layui-menu-body-title">全部服务</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-all-{{= Menu.id }}' {{# if (Menu.call) { }} ,call: {{= Menu.call }} {{# } }} }" {{# if (Menu.url) { }} data-url="{{= Menu.url }}" {{# } }}>
+                  <div class="layui-menu-body-title">
+                      <a {{# if (!Menu.call) { }} rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}"{{# } }}>
+                      {{= Menu.title }}
+                      <span class="layui-font-12 layui-font-gray titles">{{= Menu.text }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
+                    </a>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+          <script id="left-menu-sponsor-tpl" type="text/html">
+            <div class="layui-menu-body-title">爱心赞助</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-sponsor-{{= Menu.names }}'}">
+                  <div class="layui-menu-body-title">
+                    <a rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}">
+                      {{= Menu.name }}
+                      <span class="layui-font-12 layui-font-gray names">{{= Menu.names }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge layui-bg-orange">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
+                    </a>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+        </div>
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md9">
+          <div class="layui-panel right-body">
+            <h1 class="body-h1">联系我们</h1>
+            <div class="desc-img"></div>
+            <div class="body-h2">
+              <div class="layui-padding-1 layui-font-16">
+                专业工程师提供 1v1 精准、高效的服务支持，快速解决您的问题。
+              </div>
+              <div class="layui-padding-3 layui-font-14">
+                <i class="layui-icon layui-icon-ok layui-font-green layui-font-12"></i>
+                1v1 人工服务
+                <i class="layui-icon layui-icon-ok layui-font-green layui-font-12"></i>
+                7*24 小时
+                <i class="layui-icon layui-icon-ok layui-font-green layui-font-12"></i>
+                建议反馈
+                <i class="layui-icon layui-icon-ok layui-font-green layui-font-12"></i>
+                使用帮助
+              </div>
+            </div>
+            <div class="layui-row layui-col-space10 layui-padding-3 Staff"></div>
+            <script id="body-staff-tpl" type="text/html">
+              {{# layui.each(d, function(index, Staff) { }}
+                <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+                  <div class="Staff-Brief">
+                    <img class="Staff-Img" src="{{= Staff.Img }}" alt="{{= Staff.Name }}" title="{{= Staff.Name }}" />
+                    <div class="Staff-Text-Box">
+                      <p class="Staff-Text-Line-1">{{= Staff.Name }}</p>
+                      <p class="Staff-Text-Line-2">{{= Staff.Brief }}</p>
+                    </div>
+                  </div>
+                </div>
+              {{# }); }}
+            </script>
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend><b>客服人员</b></legend>
+            </fieldset>
+            <div class="layui-row layui-col-space4 layui-padding-3">
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 layui-form Kf-Item"></div>
+              <script id="body-kf-tpl" type="text/html">
+                {{# layui.each(d, function(index, Kf) { }}
+                  {{# if (Kf.type == 'qq') { }}
+                    <div class="layui-form-item">
+                      <div class="layui-input-group">
+                        <div class="layui-input-prefix Kf-Type">QQ：</div>
+                        <div class="Kf-Mumber copy-text" data-clipboard-text="{{= Kf.mumber }}" title="点击复制">{{= Kf.mumber }}</div>
+                        <div class="layui-input-suffix">
+                          <a class="Kf-Url" rel="nofollow" target="_blank" href="{{= Kf.url }}" title="点击这里给我发送消息" lay-tips="点击这里给我发送消息" lay-direction="2">
+                            <i class="layui-icon layui-icon-service"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  {{# } else if (Kf.type == 'wechat') { }}
+                    <div class="layui-form-item">
+                      <div class="layui-input-group">
+                        <div class="layui-input-prefix Kf-Type">微信：</div>
+                        <div class="Kf-Mumber copy-text" data-clipboard-text="{{= Kf.mumber }}" title="点击复制">{{= Kf.mumber }}</div>
+                        <div class="layui-input-suffix">
+                          <div class="Kf-Qrcode-Btn" data-img="{{= Kf.img }}" title="点击这里扫码添加好友" lay-tips="点击这里扫码添加好友" lay-direction="2">
+                            <i class="layui-icon layui-icon-chat"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {{# } }}
+                {{# }); }}
+              </script>
+              <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 Kf-Qrcode-Img"></div>
+            </div>
+            <div class="layui-hide-v body-visibility"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="friendlink"></div>
+      <script id="footer-friendlink-tpl" type="text/html">
+        友情链接：
+        {{# layui.each(d, function(index, FriendLink) { }}
+          <a rel="{{= FriendLink.rel }}" target="{{= FriendLink.target }}" href="{{- FriendLink.url }}" lay-tips="{{= FriendLink.name }}">
+            {{= FriendLink.name }}
+          </a>
+        {{# }); }}
+      </script>
+      <div class="copyright"></div>
+      <script id="footer-beian-tpl" type="text/html">
+        <span>Copyright&nbsp;&copy;{{= new Date().getFullYear() }}</span>
+        <a href="/" target="_self">{{= location.hostname }}</a>
+        <span>All&nbsp;Rights&nbsp;Reserved.</span>
+        {{# layui.each(d, function(index, BeIan) { }}
+          <a rel="{{= BeIan.rel }}" target="{{= BeIan.target }}" href="{{- BeIan.url }}">
+            {{= BeIan.name }}
+          </a>
+        {{# }); }}
+      </script>
+    </div>
+    <div class="mobile-left-menu-spread">
+      <i class="layui-icon layui-icon-spread-left"></i>
+    </div>
+    <div class="mobile-left-menu-shade"></div>
+    <!--内容主体元素end-->
+    <!--公共脚本元素start-->
+    <script>
+      layui.config({base: '/index/js/'}).use('default', ()=> {
+        let $ = layui.$
+        ,laytpl = layui.laytpl
+        ,Default = layui.default;
+        let StaffList = [
+          {Name: 'ABXCDN工程师', Img: './index/images/banner_long.jpg', Brief: `专注行业${new Date().getFullYear() - 2016}年实践开发经验`}
+          ,{Name: 'ABXCDN工程师', Img: './index/images/banner_peng.jpg', Brief: `专注行业${new Date().getFullYear() - 2021}年实践开发经验`}
+        ];
+        laytpl($('#body-staff-tpl').html()).render(StaffList, (html)=> {
+          $('.right-body .Staff').html(html);
+        });
+        $.get(`${Default.Paths.JSON}Kf.json`, (Kf)=> {
+          laytpl($('#body-kf-tpl').html()).render(Kf, (html)=> {
+            $('.right-body .Kf-Item').html(html);
+            let ImgList = Kf.filter(item => item.type == 'wechat');
+            if (ImgList[0]) {
+              let KfQrcodeImgItem = $('.Kf-Qrcode-Img');
+              let ImgOptions = {
+                src: ImgList[0].img
+                ,class: 'layui-anim layui-hide'
+                ,width: '300'
+                ,title: '微信扫码'
+              };
+              Default.LoadImg(KfQrcodeImgItem, ImgOptions, 'layui-anim-fadein');
+              $('.Kf-Qrcode-Btn').on('click mouseenter', function() {
+                let othis = $(this);
+                ImgOptions.src = othis.data('img');
+                Default.LoadImg(KfQrcodeImgItem, ImgOptions, 'layui-anim-fadein');
+              });
+            }
+          });
+        });
+      });
+    </script>
+    <!--自动推送脚本元素start-->
+    <script type="text/javascript">
+      var _hmt = _hmt || [];
+      (() => {
+        let s = document.scripts[0];
+        ['https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852', '/ads.js']
+          .forEach(u => s.parentNode.insertBefore(Object.assign(document.createElement('script'), {src: u}), s));
+      })();
+    </script>
+  </body>
+  <!--主体元素end-->
+</html>

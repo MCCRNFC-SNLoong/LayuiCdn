@@ -2,37 +2,43 @@
 <urlset>
   <url>
     <loc>https://www.layuicdn.com/</loc>
-    <lastmod>2020-11-27</lastmod>
+    <lastmod>2025-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.layuicdn.com/index.html</loc>
+    <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.layuicdn.com/api.html</loc>
-    <lastmod>2020-11-27</lastmod>
+    <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.layuicdn.com/extend.html</loc>
-    <lastmod>2020-11-27</lastmod>
+    <loc>https://www.layuicdn.com/auto.html</loc>
+    <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.layuicdn.com/servers.html</loc>
-    <lastmod>2020-11-27</lastmod>
+    <loc>https://www.layuicdn.com/kf.html</loc>
+    <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.layuicdn.com/feedback.html</loc>
-    <lastmod>2020-11-27</lastmod>
+    <loc>https://www.layuicdn.com/test.html</loc>
+    <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.layuicdn.com/sitemap.html</loc>
-    <lastmod>2020-11-27</lastmod>
+    <lastmod>2025-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

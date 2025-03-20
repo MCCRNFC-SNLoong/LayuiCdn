@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--浏览器内核控制-->
+    <meta name="renderer" content="webkit" />
+    <title>高级加载 - 自动化引入Layui - LayuiCdn静态库 免费 CDN 加速服务</title>
+    <meta name="description" content="LayuiCdn为广大Layui用户提供免费前端UI框架cdn加速服务。" />
+    <meta name="keywords" content="layui,layuicdn,abxcdn,LayuiCdnPro,免费cdn,ui,ui框架,前端框架,JS组件,layui免费CDN静态库" />
+    <meta name="copyright" content="LayuiCdn" />
+    <!--自动化加载start-->
+    <script src="./auto/layui.js" v="2.10.0"></script>
+    <!--全局样式元素start-->
+    <link rel="stylesheet" type="text/css" href="./index/css/index.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <!-- LayuiCdn | 设计：MCCRNFC.SNLoong | 重构：MCCRNFC.SNLoong | 创建：2018-01-09 | 官网：www.layuicdn.com -->
+    <!--局部样式元素start-->
+    <style>
+      .body-visibility {margin-top: 0;}
+    </style>
+  </head>
+  <!--主体元素start-->
+  <body ondragstart="return false">
+    <!--头部元素start-->
+    <div class="top-notice layui-hide-xs layui-hide"></div>
+    <div class="header">
+      <div class="layui-container">
+        <div class="logo">
+          <a href="/?form=LayuiCdnLogo">
+            <img src="./index/images/logo3.png" alt="LayuiCdn" />
+          </a>
+        </div>
+        <div class="theme layui-hide-xs"></div>
+        <div class="header-menu">
+          <ul class="layui-nav"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="header-banner layui-hide-xs">心有大格局，麻雀岂能承载的了 · LayuiCdn</div>
+    <div class="layui-container">
+      <div class="layui-row layui-col-space4">
+        <div class="layui-col-md3">
+          <div class="layui-panel left-menu">
+            <ul class="layui-menu layui-menu-lg" id="left-menu">
+              <li class="layui-menu-item-group left-menu-all layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+              <!-- <li class="layui-menu-item-divider layui-hide"></li> -->
+              <li class="layui-menu-item-group left-menu-sponsor layui-hide" lay-options="{type: 'group', isAllowSpread: false}"></li>
+            </ul>
+          </div>
+          <script id="left-menu-all-tpl" type="text/html">
+            <div class="layui-menu-body-title">全部服务</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-all-{{= Menu.id }}' {{# if (Menu.call) { }} ,call: {{= Menu.call }} {{# } }} }" {{# if (Menu.url) { }} data-url="{{= Menu.url }}" {{# } }}>
+                  <div class="layui-menu-body-title">
+                      <a {{# if (!Menu.call) { }} rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}"{{# } }}>
+                      {{= Menu.title }}
+                      <span class="layui-font-12 layui-font-gray titles">{{= Menu.text }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
+                    </a>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+          <script id="left-menu-sponsor-tpl" type="text/html">
+            <div class="layui-menu-body-title">爱心赞助</div>
+            <ul>
+              {{# layui.each(d, function(index, Menu) { }}
+                <li lay-options="{id: 'left-menu-sponsor-{{= Menu.names }}'}">
+                  <div class="layui-menu-body-title">
+                    <a rel="{{= Menu.rel }}" target="{{= Menu.target }}" href="{{- Menu.url }}">
+                      {{= Menu.name }}
+                      <span class="layui-font-12 layui-font-gray names">{{= Menu.names }}</span>
+                      {{# if (Menu.tips) { }}
+                        <span class="layui-badge layui-bg-orange">{{= Menu.tips }}</span>
+                      {{# } else if (Menu.tip) { }}
+                        <span class="layui-badge-dot"></span>
+                      {{# } }}
+                    </a>
+                  </div>
+                </li>
+              {{# }); }}
+            </ul>
+          </script>
+        </div>
+        <div class="layui-col-xs12 layui-col-sm12 layui-col-md9">
+          <div class="layui-panel right-body">
+            <h1 class="body-h1">高级加载 - 自动化引入Layui</h1>
+            <div class="desc-img"></div>
+            <div class="body-h2">自动化引入Layui，仅需一行JavaScript代码，即可加载Layui组件指定版本所需文件，无需额外加载CSS或JS文件。</div>
+            <h4 class="layui-padding-3">您只需要在面页头部代码的&lt;head&gt;&lt;/head&gt;标签内写下下述代码，即可引入自动化加载 layui.js 模块 以及 layui.css 等文件。</h4>
+            <blockquote class="layui-elem-quote quote-type-2 auto-script">
+              &lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.10.0"&gt;&lt;/script&gt;
+              <i class="layui-icon layui-icon-file-b fix-icon-right copy-text layui-anim layui-hide" data-clipboard-text='&lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.10.0"&gt;&lt;/script&gt;' lay-tips="点击快捷复制" lay-offset="-12"></i>
+            </blockquote>
+            <h4 class="layui-padding-3">下述为可选参数和具体使用方法：</h4>
+            <blockquote class="layui-elem-quote">
+              v参数为版本, 如v="2.10.0" 即自动引入2.10.0版本的layui, 如值为 layui 或 不携带v参数 则默认为最新版本的layui 例:
+              <br />&lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.10.0"&gt;&lt;/script&gt;
+              <hr class="layui-padding-1" />e参数为模块, <span class="layui-font-red">注：此模块仅支持2.6.0以下版本</span>, 如e="layui" 或 e="layui.all" 即自动引入 layui 或 layui.all 的js模块文件, 如不携带e参数则默认为layui 例:
+              <br />&lt;script src="https://www.layuicdn.com/auto/layui.js" e="layui.all"&gt;&lt;/script&gt;
+            </blockquote>
+            <blockquote class="layui-elem-quote quote-type-2">
+              最简写法: &lt;script src="https://www.layuicdn.com/auto/layui.js"&gt;&lt;/script&gt; 自动最新版
+              <br />建议写法: &lt;script src="https://www.layuicdn.com/auto/layui.js" v="2.10.0"&gt;&lt;/script&gt; 解析为2.10.0版本layui模块<span class="layui-badge layui-margin-1">推荐</span>
+            </blockquote>
+            <fieldset class="layui-elem-field layui-field-title">
+              <legend><b>自动化引用-示例</b></legend>
+            </fieldset>
+            <pre class="layui-code code-auto" lay-options="{preview: 'iframe',ln: false,lang: 'html',langMarker: true,codeStyle: 'height: 640px;',previewStyle: 'height: 640px;',theme: 'dark'}">
+              <textarea class="layui-hide">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>自动化引用-示例</title>
+    <!--引入自动化脚本-->
+    <script src="https://www.layuicdn.com/auto/layui.js" v="2.10.0"></script>
+    <style>.demo-layuicdn {word-wrap: break-word;overflow-wrap: break-word;white-space: normal;}</style>
+  </head>
+  <body>
+    <div class="layui-card">
+      <div class="layui-card-header">自动化引用加载</div>
+      <div class="layui-card-body demo-layuicdn">
+        <div>当前Layui版本：<span class="version"></span></div>
+        <div>当前已加载模块：<span class="modules"></span></div>
+      </div>
+    </div>
+    <!--您的Layui代码Start-->
+    <script type="text/javascript">
+      layui.use(()=> {
+        let $ = layui.$ // jQuery
+        ,layer = layui.layer; // 弹层 示例...
+    
+        $('.demo-layuicdn .version').html(layui.v); // 当前版本
+        $('.demo-layuicdn .modules').html($.map(layui.modules, val => val).join(';')); //模块
+        // 弹出一个示例
+        layer.msg('Hello World', {icon: 6});
+    
+      });
+    </script>
+  </body>
+</html>
+              </textarea>
+            </pre>
+            <h4 class="layui-padding-3">
+              最后, 如果您有更好的想法和建议，请点击
+              <a href="kf.html" class="a-link">联系我们</a>。
+            </h4>
+            <div class="layui-hide-v body-visibility"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="friendlink"></div>
+      <script id="footer-friendlink-tpl" type="text/html">
+        友情链接：
+        {{# layui.each(d, function(index, FriendLink) { }}
+          <a rel="{{= FriendLink.rel }}" target="{{= FriendLink.target }}" href="{{- FriendLink.url }}" lay-tips="{{= FriendLink.name }}">
+            {{= FriendLink.name }}
+          </a>
+        {{# }); }}
+      </script>
+      <div class="copyright"></div>
+      <script id="footer-beian-tpl" type="text/html">
+        <span>Copyright&nbsp;&copy;{{= new Date().getFullYear() }}</span>
+        <a href="/" target="_self">{{= location.hostname }}</a>
+        <span>All&nbsp;Rights&nbsp;Reserved.</span>
+        {{# layui.each(d, function(index, BeIan) { }}
+          <a rel="{{= BeIan.rel }}" target="{{= BeIan.target }}" href="{{- BeIan.url }}">
+            {{= BeIan.name }}
+          </a>
+        {{# }); }}
+      </script>
+    </div>
+    <div class="mobile-left-menu-spread">
+      <i class="layui-icon layui-icon-spread-left"></i>
+    </div>
+    <div class="mobile-left-menu-shade"></div>
+    <!--内容主体元素end-->
+    <!--公共脚本元素start-->
+    <script>layui.config({base: '/index/js/'}).use('auto');</script>
+    <!--自动推送脚本元素start-->
+    <script type="text/javascript">
+      var _hmt = _hmt || [];
+      (() => {
+        let s = document.scripts[0];
+        ['https://hm.baidu.com/hm.js?b0d8e3c07d38fb5a6fdc153dbd231852', '/ads.js']
+          .forEach(u => s.parentNode.insertBefore(Object.assign(document.createElement('script'), {src: u}), s));
+      })();
+    </script>
+  </body>
+  <!--主体元素end-->
+</html>
