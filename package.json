@@ -1,7 +1,7 @@
 {
   "name": "layuicdns",
-  "version": "1.6.3",
-  "description": "LayuiCdn ABXCdn",
+  "version": "1.6.4",
+  "description": "LayuiCdn",
   "main": "index.js",
   "directories": {},
   "author": "MCCRNFC.SNLoong",
